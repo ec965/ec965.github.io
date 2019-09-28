@@ -1,74 +1,83 @@
 <!DOCTYPE html>
-<html>
-
-
+<html lang="en">
 <head>
   <title>Enoch Chau</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </head>
 
-<body class="w3-pale-blue" style="font-family:helvetica;"
 
+<body>
 
-  <div class="w3-cell-top">
-    <!-- Main title  -->
-    <div class="w3-container w3-black">
-      <a style="font-size:150%;" href="index.html" class = "w3-button w3-hover-grey">Enoch Chau</a>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">Enoch Chau</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Projects
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="hc2.html">HC2: IoT Enviorment Sensor</a>
+             <a class="dropdown-item" href="3phasewatt.html">Poly Phase Wattmeter</a>
+             <a class="dropdown-item" href="proj_bud.html">Projector Buddy</a>
+             <a class="dropdown-item" href="micromouse.html">MicroMouse</a>
+             <a class="dropdown-item" href="cinghat.html">The C-ing Hat</a>
+           </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about_me.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.html">Resume</a>
+        </li>
+      </ul>
     </div>
-    <!-- Nav bar -->
-      <div class="w3-bar w3-border w3-light-grey w3-container">
-        <div class="w3-dropdown-hover">
-          <button class="w3-button w3-light-grey">Projects</button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a style="font-family:helvetica" href="proj_bud.html" class="w3-bar-item w3-button w3-light-grey">Projector Buddy</a>
-            <a style="font-family:helvetica" href="3phasewatt.html" class="w3-bar-item w3-button w3-light-grey">Poly-Phase Wattmeter</a>
-            <a style="font-family:helvetica" href="hc2.html" class="w3-bar-item w3-button w3-light-grey">IoT Enviorment Sensor</a>
-            <a style="font-family:helvetica" href="micromouse.html" class="w3-bar-item w3-button w3-light-grey">MicroMouse</a>
-            <a style="font-family:helvetica" href="https://devpost.com/software/the-c-ing-hat" class="w3-bar-item w3-button w3-light-grey">The C-ing Hat</a>
-          </div>
-        </div>
-        <a style="font-family:helvetica" href="about_me.html" class="w3-bar-item w3-button w3-light-grey">About Me</a>
-        <a style="font-family:helvetica" href="resume.html" class="w3-bar-item w3-button w3-light-grey">Resume</a>
-      </div>
-  </div>
+  </nav>
 
   <!-- sub heading -->
-  <div class="w3-container w3-cell-top w3-padding-16">
-    <h style="font-size:150%;">Poly-Phase Wattmeter</h>
-    <p>California Plug Load Research Center (UCI, Calit2)</p>
+  <div class="container-fluid">
+    <h1>Poly-Phase Wattmeter</h1>
+    <p>California Plug Load Research Center: UC Irvine</p>
     <img src="pics\CalPlug.png" alt="calpluglogo" style="width:114px;height:32px;"></img>
     <img src="pics\Calit2.png" alt="Calit2" style="width:114px;height:32px;"></img>
     <br>
-    <a href="https://github.com/CalPlug/ADE9078-3PhaseWattmeter">GitHub</a>
+    <a class="btn btn-info" href="https://github.com/CalPlug/ADE9078-3PhaseWattmeter" role="button">GitHub</a>
   </div>
 
 <!-- article -->
-  <div class="w3-container">
-    <div class="w3-container w3-cell">
-      <h>Poly-Phase Wattmeter Demo Setup</h>
-      <br>
-      <img src="pics\3phase_watt_demo.jpg" alt="demo" style="width:842px;height:400px;"></img>
-      <hr>
-
-      <h>FFT Processing Demo</h>
-      <br>
-      <img src="pics\3phase_watt_processing.png" alt="processing" style="width:721;height:400px;"></img>
-      <hr>
-
-      <h>Sine Wave</h>
-      <br>
+  <div class="container-fluid">
+    <br></br>
+    <h>Poly-Phase Wattmeter Demo Setup</h>
+    <br></br>
+    <img src="pics\3phase_watt_demo.jpg" class="img-fluid" alt="demo"></img>
+    <br></br>
+    <h>FFT Processing Demo</h>
+    <br></br>
+    <img src="pics\3phase_watt_processing.png" class="img-fluid" alt="processing"></img>
+    <br></br>
+    <h>Sine Wave</h>
+    <br></br>
+    <div class="embed-responsive embed-responsive-16by9">
       <video width="800" controls>
         <source src="pics/3phasewatt_sin.mov" type=video/mp4>
       </video>
-      <br>
-      <p>Square sections of the wave are due to delay in data processing</p>
-      <hr>
     </div>
-  </div>
-
-  <div class="w3-container w3-cell-bottom w3-padding-24">
-    <h></h>
+    <br></br>
+    <p>(Square sections of the wave are due to delay in data processing)</p>
   </div>
 
 </body>
