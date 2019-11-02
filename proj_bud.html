@@ -71,15 +71,31 @@
         </div>
       </div>
     </div>
-    <p>A power saving device that controls a projectors state based on human precense in the room.
-    The IR blaster and reciever can record remote signals to trigger a soft shutdown of the projector.
-   The motion sensor, light sensor, and microphone detect human precense in the room to adjust the projectors state.
-  The laser is used to warn the user if the projector is about to enter stand-by mode so the user can perform an action to keep the projector active.</p>
-  <p>My primary contribution was firmware development.</p>
-  <p>Because this research project has not been concluded, all code is private.
-    Please contact me at
-    <a href = "mailto: enoch965@gmail.com">enoch965@gmail.com</a>
-     if you are interested in more information on this project.</p>
+    <p>Projector Buddy is an advanced energy system that controls a projectors state based on human precense in the room.
+      Projector Buddy controls it's components using an ESP32 microcontroller. These components can be divded into two
+      groups: activity sensing and projector power control.
+    </p>
+    <p>
+      Human activity is determined through light, sound, and motion. A TSL2561 color sensor is configured to read light levels.
+      An electret microphone is configured to triger at a certain threshold volume. A PIR motion sensor detects motion in the room.
+      When any two of these three sensors detects no human presence, a control algorithm shines a laser to check if
+      anyone is still using the projector. If still no activity is detected, the power controller comes into play.
+    </p>
+    <p>
+      In order to preserve the projectors internal electronics and bulb, a soft shutdown must be implemented.
+      The user of Projector Buddy can store an IR code from the projectors stock remote. This IR code can then be sent out
+      to initiate a soft shutdown. After the projector is fully shutdown, a solid state relay is triggered to cut the main power
+      of the projector.
+    </p>
+    <p>
+      My primary contribution was firmware development. I updated the control algorithm including laser logic and microphone logic.
+      I also implemented the IR Reciever and IR Emitter functionality using the RMT API for ESP32.
+    </p>
+    <p>
+      Please contact me at
+      <a href = "mailto: enoch965@gmail.com">enoch965@gmail.com</a>
+      if you are interested in more information on this project.
+    </p>
   </div>
 
 <!-- article -->

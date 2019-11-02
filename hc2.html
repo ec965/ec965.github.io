@@ -55,11 +55,14 @@
   <!-- sub heading -->
   <div class="container">
     <h2>HC2: IoT Enviorment Sensor</h2>
-    <p>This is an IoT platform for the Rotronics HC2 humidity and temperature probe.
-      Using Raspberry Pi and Arduino, I am devloping communication over WiFi, SMS, Email, and LoRa.</p>
-    <p>I am creating an Arduino Library and R-Pi Python API for the HC2.</p>
-    <p>Because this is a consulting project, all my code is private.
-      Please contact me at
+    <p>I am creating an IoT platform for the Rotronics HC2 humidity and temperature probe.
+      Using Raspberry Pi and Arduino, I am devloping communication over WiFi, SMS, Email, and LoRa.
+    Temperature data is sent using Low-power radio from a Moteino (Arduino Uno + RFM95 LoRa chip)
+    to another Moteino that is connected to a Raspberry Pi. Warnings can then be triggered if the
+    temperature is too high or too low. These warnings will be sent out using the Twilio API for SMS and SMTP Python
+  API for Email</p>
+    <p>I have created an Arduino Library and Raspberry Pi Python API for interfacing with the HC2.</p>
+    <p>Please contact me at
       <a href = "mailto: enoch965@gmail.com">enoch965@gmail.com</a>
        if you are interested in more information on this project.</p>
   </div>
