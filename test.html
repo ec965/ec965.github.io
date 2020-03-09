@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+     jQuery.noConflict();
+     // Use jQuery via jQuery() instead of via $()
+     jQuery(function(){
+        jQuery("#includedContent").load("test2.html");
+     });
+     </script>
+  </head>
+
+  <body>
+    <h>test</h>
+     <div id="includedContent"></div>
+  </body>
+</html>

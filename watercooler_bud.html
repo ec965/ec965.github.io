@@ -30,13 +30,21 @@
              Electronics
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <a class="dropdown-item" href="watercooler_bud.html">Water Cooler Buddy</a>
-             <a class="dropdown-item" href="smartup.html">Scale Up</a>
+             <a class="dropdown-item" href="gpsss.html">GPS Sound Sensor</a>
+             <a class="dropdown-item" href="scaleup.html">Scale Up</a>
              <a class="dropdown-item" href="hc2.html">HC2: IoT Enviorment Sensor</a>
-             <a class="dropdown-item" href="3phasewatt.html">Poly Phase Wattmeter</a>
-             <a class="dropdown-item" href="proj_bud.html">Projector Buddy</a>
              <a class="dropdown-item" href="micromouse.html">MicroMouse</a>
              <a class="dropdown-item" href="cinghat.html">The C-ing Hat</a>
+           </div>
+        </li>
+        <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Calplug
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="watercooler_bud.html">Water Cooler Buddy</a>
+             <a class="dropdown-item" href="proj_bud.html">Projector Buddy</a>
+             <a class="dropdown-item" href="3phasewatt.html">Poly Phase Wattmeter</a>
            </div>
         </li>
         <li class="nav-item">
@@ -56,7 +64,7 @@
   <!-- sub heading -->
   <div class="container">
     <h2>Water Cooler Buddy</h2>
-
+    <p>September 2019 - Current</p>
     <p>California Plug Load Research Center: UC Irvine</p>
 
     <div class="container">
@@ -73,7 +81,7 @@
         </div>
       </div>
     </div>
-    <p>September 2019 - Current</p>
+
     <p>Water Cooler Buddy is an energy management system for a water cooler.
       Water Cooler Buddy controls it's sensors, relays, and user interface using an ESP32 microcontroller.
     </p>
@@ -83,7 +91,7 @@
     </p>
     <p>
       I used the freeRTOS API to create a task scheduler that ran tasks according to status variables. A binary semaphore was used to
-      handle interrupts from motion sensors, buttons, and a rotoary encoder.
+      handle interrupts from motion sensors, buttons, and a rotoary encoder. Other semaphores were used to lock and unlock I2C devices.
     </p>
     <p>
       Please contact me at
@@ -95,11 +103,28 @@
 <!-- article -->
   <div class="container">
     <br></br>
-    <h>Main and Interface PCBs</h>
+    <h>Main and Interface PCBs (Hand Populated!)</h>
     <br></br>
     <img src="pics\wcb_pcb.jpg" class="img-fluid" alt="demo"></img>
     <br></br>
   </div>
+
+  <div class="container">
+    <br></br>
+    <h>The Watercooler (wiring in progress...)</h>
+    <br></br>
+    <img src="pics\WCB_outside.JPG" class="img-fluid" alt="demo"></img>
+    <br></br>
+  </div>
+
+  <div class="container">
+    <br></br>
+    <h>Demo User Interface (Melinda and Hayden, best Team leads!)</h>
+    <br></br>
+    <img src="pics\WCB_fake_front.JPG" class="img-fluid" alt="demo"></img>
+    <br></br>
+  </div>
+
 </body>
 
 </html>
