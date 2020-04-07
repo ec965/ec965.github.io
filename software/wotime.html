@@ -36,64 +36,64 @@
     <p>I'll probably re-record the sounds at a later time... they annoy me too.</p>
   </div>
 
-  <div class=container>
-  <h1>Workout Timer</h1>
+  <div class="container">
+    <h1>Workout Timer</h1>
 
-  <div class=container>
-    <div class="row">
-      <form>
-        <div class="form-row">
-            <label for="active_time" class="col-sm col-form-label text-right">Active Time</label>
+    <div class="container">
+      <div class="row">
+        <form>
+          <div class="form-row">
+              <label for="active_time" class="col-sm col-form-label text-right">Active Time</label>
+              <div class="col-sm">
+                <input type="text" id="active_time" name="active_time"</input>
+              </div>
+          </div>
+          <div class="form-row">
+            <label for="rest_time" class="col-sm col-form-label text-right">Rest Time</label>
             <div class="col-sm">
-              <input type="text" id="active_time" name="active_time"</input>
+              <input type="text" id="rest_time" name="rest_time"</input>
             </div>
-        </div>
-        <div class="form-row">
-          <label for="rest_time" class="col-sm col-form-label text-right">Rest Time</label>
-          <div class="col-sm">
-            <input type="text" id="rest_time" name="rest_time"</input>
           </div>
-        </div>
-        <div class="form-row">
-          <label for="sets" class="col-sm col-form-label text-right">Sets</label>
-          <div class="col-sm">
-            <input type="text" id="sets" name="sets"</input>
+          <div class="form-row">
+            <label for="sets" class="col-sm col-form-label text-right">Sets</label>
+            <div class="col-sm">
+              <input type="text" id="sets" name="sets"</input>
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <label for="reps" class="col-sm col-form-label text-right">Repetitions</label>
-          <div class="col-sm">
-            <input type="text" id="reps" name="reps"</input>
+          <div class="form-row">
+            <label for="reps" class="col-sm col-form-label text-right">Repetitions</label>
+            <div class="col-sm">
+              <input type="text" id="reps" name="reps"</input>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-        <button type="button" id="start" class="btn btn-success" onclick="start()">Start</button>
-      </div>
-      <div class="col-sm-2">
-        <button type="button" id="stop" class="btn btn-danger" onclick="stop()">Stop</button>
+        </form>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <h5 id="set_count" class="col-sm-2">Sets: </h5>
-      <h5 id="rep_count" class="col-sm-2">Reps: </h5>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <button type="button" id="start" class="btn btn-success" onclick="start()">Start</button>
+        </div>
+        <div class="col-sm-2">
+          <button type="button" id="stop" class="btn btn-danger" onclick="stop()">Stop</button>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <h5 id="action" class="col-sm">Chill.</h5>
-    </div>
-    <div class="row">
-      <h5 id="timer" class="col-sm">0</h5>
+
+    <div class="container">
+      <div class="row">
+        <h2 id="set_count" class="col-sm-2">Sets: </h2>
+        <h2 id="rep_count" class="col-sm-2">Reps: </h2>
+      </div>
+      <div class="row">
+        <h2 id="action" class="col-sm">Chill.</h2>
+      </div>
+      <div class="row">
+        <h2 id="timer" class="col-sm">0</h2>
+      </div>
     </div>
   </div>
-</div>
 
 <!-- article -->
   <!-- <div class="container">
