@@ -1,8 +1,3 @@
-var start0_sound;
-var start1_sound;
-var move_sound;
-var rest_sound;
-
 var data = {
   sets:0,
   reps:0,
@@ -16,30 +11,8 @@ var stopped = 0;
 var in_progress = 0;
 var reset = 1;
 
-//from W3 school example sound code
-function sound(src) {
-  this.sound = document.createElement("audio");
-  this.sound.src = src;
-  this.sound.setAttribute("preload", "auto");
-  this.sound.setAttribute("controls", "none");
-  this.sound.style.display = "none";
-  document.body.appendChild(this.sound);
-  this.play = function(){
-    this.sound.play();
-  }
-  this.stop = function(){
-    this.sound.pause();
-  }
-}
-
 //start button
 function start(){
-  //load sounds
-  start0_sound = new sound("ready.mp3");
-  start1_sound = new sound("set.mp3");
-  move_sound = new sound("move.mp3");
-  rest_sound = new sound("stop.mp3");
-
   if (started==0){
     if (reset==1){
       //load workout variables
@@ -65,7 +38,6 @@ function start(){
 function stop(){
   if (stopped==0){
     if(started==1){
-      rest_sound.play();
       document.getElementById("stop").innerHTML="Reset";
       document.getElementById("stop").classList.remove("btn-danger");
       document.getElementById("stop").classList.add("btn-primary");
@@ -79,8 +51,8 @@ function stop(){
     document.getElementById("stop").classList.remove("btn-primary");
     document.getElementById("stop").classList.add("btn-danger");
     reset=1;
-    document.getElementById("sets").innerHTML="Sets: ";
-    document.getElementById("reps").innerHTML="Reps: ";
+    document.getElementById("sets").innerHTML="0";
+    document.getElementById("reps").innerHTML="0";
     document.getElementById("action").innerHTML="Chill.";
     document.getElementById("timer").innerHTML="0";
   }
@@ -88,6 +60,11 @@ function stop(){
 
 //workout sets/reps/time counter
 function count(sets, reps, active_time, rest_time, countdown){
+  var sets_id = document.getElementById("set_count");
+  var reps_id = document.getElementById("rep_count");
+  var action_id = document.getElementById("action");
+  var timer_id = document.getElementById("timer");
+
   if (in_progress==0){
     data.sets = sets;
     data.reps = reps;
@@ -96,53 +73,55 @@ function count(sets, reps, active_time, rest_time, countdown){
     data.countdown = countdown;
     return;
   }
-
-  document.getElementById("set_count").innerHTML="Sets: "+String(sets);
-  document.getElementById("rep_count").innerHTML="Reps: "+String(reps);
+  sets_id.innerHTML=sets;
+  reps_id.innerHTML=reps;
 
   //countdown
   if (countdown > 0){
-    document.getElementById("timer").innerHTML=countdown;
+    timer_id.innerHTML=countdown;
     if (countdown == 2){
-      start0_sound.play();
-      document.getElementById("action").innerHTML="Ready!";
+      action_id.innerHTML="Ready!";
     }
     if (countdown == 1){
-      start1_sound.play();
-      document.getElementById("action").innerHTML="Set!";
+      action_id.innerHTML="Set!";
     }
+    document.getElementById("beep0").play();
     setTimeout(count,1000,sets,reps,active_time,rest_time,countdown-1);
   }
 
   else if (sets>0){
     if (reps>0){
-
       if (active_time>0){
         if (active_time == document.getElementById("active_time").value){
-          move_sound.play();
+          document.getElementById("beep1").play();
         }
-        document.getElementById("action").innerHTML="Move!";
-        document.getElementById("timer").innerHTML=active_time;
+        action_id.innerHTML="Move!";
+        timer_id.innerHTML=active_time;
         setTimeout(count,1000,sets,reps,active_time-1,rest_time,0);
       }
 
       else if(rest_time>0){
         if (rest_time == document.getElementById("rest_time").value){
-          rest_sound.play();
+          document.getElementById("beep2").play();
         }
-        document.getElementById("action").innerHTML="Rest.";
-        document.getElementById("timer").innerHTML=rest_time;
+        action_id.innerHTML="Rest.";
+        timer_id.innerHTML=rest_time;
         setTimeout(count,1000,sets,reps,active_time,rest_time-1,0);
       }
       else {
-        setTimeout(count,1000,sets,reps-1,document.getElementById("active_time").value,document.getElementById("rest_time").value,0);
+        count(sets,reps-1,document.getElementById("active_time").value,document.getElementById("rest_time").value,0);
       }
     }
     else{
-      setTimeout(count,1000,sets-1,document.getElementById("reps").value,document.getElementById("active_time").value,document.getElementById("rest_time").value,0);
+      count(sets-1,document.getElementById("reps").value,document.getElementById("active_time").value,document.getElementById("rest_time").value,0);
     }
   }
   else {
-    document.getElementById("action").innerHTML="Finished!";
+    sets_id.innerHTML="0";
+    reps_id.innerHTML="0";
+    timer_id.innerHTML="0";
+    action_id.innerHTML="Finished!";
+    document.getElementById("finish_sound").play();
+    stop();
   }
 }
