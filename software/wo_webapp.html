@@ -1,77 +1,110 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2">
-    </div>
-    <div class="col-xl">
-      <div class="container-fluid">
-        <h1>Workout Timer</h1>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   -->
 
-        <div class="container">
-          <div class="row">
-            <form>
-              <div class="form-row">
-                  <label for="active_time" class="col-sm col-form-label text-right">Active Time</label>
+  <style>
+    p.ui {
+      /* font-family: Helvetica, Charcoal, sans-serif; */
+      font-size: 40px;
+    }
+    div.container{
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+    div.bx_col{
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-xl">
+        <div class="container-fluid">
+          <h1>Workout Timer</h1>
+
+          <div class="container">
+            <div class="row">
+              <form>
+                <div class="form-row">
+                    <label for="active_time" class="col-sm col-form-label">Active Time</label>
+                    <div class="col-sm">
+                      <input type="text" id="active_time" name="active_time"</input>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <label for="rest_time" class="col-sm col-form-label">Rest Time</label>
                   <div class="col-sm">
-                    <input type="text" id="active_time" name="active_time"</input>
+                    <input type="text" id="rest_time" name="rest_time"</input>
                   </div>
-              </div>
-              <div class="form-row">
-                <label for="rest_time" class="col-sm col-form-label text-right">Rest Time</label>
-                <div class="col-sm">
-                  <input type="text" id="rest_time" name="rest_time"</input>
                 </div>
-              </div>
-              <div class="form-row">
-                <label for="sets" class="col-sm col-form-label text-right">Sets</label>
-                <div class="col-sm">
-                  <input type="text" id="sets" name="sets"</input>
+                <div class="form-row">
+                  <label for="sets" class="col-sm col-form-label">Sets</label>
+                  <div class="col-sm">
+                    <input type="text" id="sets" name="sets"</input>
+                  </div>
                 </div>
-              </div>
-              <div class="form-row">
-                <label for="reps" class="col-sm col-form-label text-right">Repetitions</label>
-                <div class="col-sm">
-                  <input type="text" id="reps" name="reps"</input>
+                <div class="form-row">
+                  <label for="reps" class="col-sm col-form-label">Repetitions</label>
+                  <div class="col-sm">
+                    <input type="text" id="reps" name="reps"</input>
+                  </div>
                 </div>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <button type="button" id="start" class="btn btn-success" onclick="start()">Start</button>
-            </div>
-            <div class="col-sm">
-              <button type="button" id="stop" class="btn btn-danger" onclick="stop()">Stop</button>
+              </form>
             </div>
           </div>
-        </div>
-        <br></br>
-
-        <div class="container jumbotron">
-          <div class="row">
-            <h class="col display-4">Sets: </h>
-            <h id="set_count" class="col display-4">0</h>
-            <h class="col display-4">Reps: </h>
-            <h id="rep_count" class="col display-4">0</h>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm bx_col">
+                <button type="button" id="start" class="btn btn-success" onclick="start()">Start</button>
+              </div>
+                <div class="col-sm bx_col">
+                <button type="button" id="stop" class="btn btn-danger" onclick="stop()">Stop</button>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <h class="col display-4">Action: </h>
-            <h id="action" class="col display-4">Chill.</h>
-          </div>
-          <div class="row">
-            <h class="col display-4">Timer: </h>
-            <h id="timer" class="col display-4">0</h>
+          <div class="container jumbotron">
+            <div class="row">
+              <p class="col ui">Sets: </p>
+              <p id="set_count" class="col ui">0</p>
+              <p class="col ui">Reps: </p>
+              <p id="rep_count" class="col ui">0</p>
+            </div>
+            <div class="row">
+              <p class="col ui">Action: </p>
+              <p id="action" class="col ui">Chill.</p>
+            </div>
+            <div class="row">
+              <p class="col ui">Timer: </p>
+              <p id="timer" class="col ui">0</p>
+            </div>
           </div>
         </div>
       </div>
+      <div class="col-sm-2">
+      </div>
     </div>
-    <div class="col-sm-2">
-    </div>
+    <audio id="finish_sound" src="finish.mp3" preload="auto" controls="none" style="display: none;"></audio>
+    <audio id="beep1" src="beep1.mp3" preload="auto" controls="none" style="display: none;"></audio>
+    <audio id="beep0" src="beep0.mp3" preload="auto" controls="none" style="display: none;"></audio>
+    <audio id="beep2" src="beep2.mp3" preload="auto" controls="none" style="display: none;"></audio>
   </div>
-  <audio id="finish_sound" src="finish.mp3" preload="auto" controls="none" style="display: none;"></audio>
-  <audio id="beep1" src="beep1.mp3" preload="auto" controls="none" style="display: none;"></audio>
-  <audio id="beep0" src="beep0.mp3" preload="auto" controls="none" style="display: none;"></audio>
-  <audio id="beep2" src="beep2.mp3" preload="auto" controls="none" style="display: none;"></audio>
-</div>
+
+  <script type="text/javascript" src="wo.js"></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
