@@ -12,6 +12,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic&display=swap");
+@import url("/font/stylesheet.css");
 :root {
   --blue: #2C3E50;
   --indigo: #6610f2;
@@ -4650,6 +4651,7 @@ input[type="button"].btn-block {
   font-size: 1.3rem;
   line-height: inherit;
   white-space: nowrap;
+  font-family: "bellezaregular";
 }
 
 .navbar-brand:hover, .navbar-brand:focus {

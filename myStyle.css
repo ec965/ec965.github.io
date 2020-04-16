@@ -1,8 +1,14 @@
+@import url("/font/stylesheet.css");
+
 h.image_heading{
   padding-top:12px;
   padding-bottom:12px;
   font-size: 18px;
 }
+
+/* h2{
+  font-family: "bellezaregular";
+} */
 
 img.project{
   padding-top:5px;
