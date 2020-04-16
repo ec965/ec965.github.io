@@ -17,3 +17,28 @@ video{
 .site_footer{
   background-color: #4d4d4d;
 }
+
+/*card properties*/
+/* @keyframes hover-card {
+  0% {transform:translateY(0);}
+  100%{transform:translateY(-10px);}
+} */
+
+img.mycard{
+  height: 200px;
+}
+@keyframes cardFadeIn {
+  0% {transform: translateY(-20px); opacity: 0;}
+  100% {transform: translateY(0); opacity: 1;}
+}
+.card{
+  animation-name:cardFadeIn;
+  animation-duration: 1s;
+  background-color: #ECF0F1;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 500ms;
+}
+.card:hover{
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+}

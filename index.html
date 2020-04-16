@@ -28,24 +28,25 @@
       100% {opacity: 1;}
     }
     @keyframes slideInTop {
-      0% {transform: translateY(-100px);}
-      100% {transform: translateY(0);}
+      0% {transform: translateY(-100px);opacity:0;}
+      15% {transform: translateY(-60px);opacity:0;}
+      100% {transform: translateY(0);opacity:1;}
     }
     @keyframes slideInLeft {
-      0% {transform: translateX(-300px);}
-      100% {transform: translateX(0);}
+      0% {transform: translateX(-300px);opacity:0;}
+      100% {transform: translateX(0);opacity:1;}
     }
     .navbar-brand{
       animation-name:slideInTop;
-      animation-duration: 2.1s;
+      animation-duration: 1.5s;
     }
     .navbar{
       animation-name: slideInLeft;
-      animation-duration: 1s;
+      animation-duration: .8s;
     }
     .carousel{
       animation-name: fadeIn;
-      animation-duration: 1.5s;
+      animation-duration: 1s;
     }
   </style>
   <link rel="stylesheet" href="/myStyle.css">
