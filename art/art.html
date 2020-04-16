@@ -14,6 +14,30 @@
     padding-top:2px;
     padding-bottom:10px;
   }
+  @keyframes slideInRight {
+    0% {transform: translateX(500px); opacity:0;}
+    100% {transform: translateX(0); opacity:100;}
+  }
+  @keyframes slideInLeft {
+    0% {transform: translateX(-500px); opacity:0;}
+    100% {transform: translateX(0); opacity:100;}
+  }
+  @keyframes slideInBottom {
+    0% {transform: translateY(500px); opacity:0;}
+    100% {transform: translateY(0); opacity:100;}
+  }
+  img.ani_left{
+    animation-name:slideInLeft;
+    animation-duration: 1s;
+  }
+  img.ani_right{
+    animation-name:slideInRight;
+    animation-duration: 1s;
+  }
+  img.ani_bottom{
+    animation-name:slideInBottom;
+    animation-duration: 1s;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -38,13 +62,13 @@
     <div class="row">
       <div class="col" style="padding-top: 100px;">
         <h5>"face" 2018</h5>
-        <img src="face.JPG" alt="face" class="img-fluid"></img>
+        <img src="face.JPG" alt="face" class="img-fluid ani_left"></img>
       </div>
       <div class="col">
         <h5>"pot" 2018</h5>
-        <img src="pot.JPG" alt="pot" class="img-fluid"></img>
+        <img src="pot.JPG" alt="pot" class="img-fluid ani_right"></img>
         <h5>"averii" 2017</h5>
-        <img src="averii.JPG" alt="averii" class="img-fluid"></img>
+        <img src="averii.JPG" alt="averii" class="img-fluid ani_bottom"></img>
       </div>
     </div>
   </div>
