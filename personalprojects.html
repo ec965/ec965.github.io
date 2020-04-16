@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Enoch Chau</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="myStyle.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <style>
+    .row,
+    .col{
+      padding:10px;
+    }
+    .card{
+      background-color: #ECF0F1;
+    }
+    img{
+      height: 200px;
+      width: 300px;
+      object-fit: stretch;
+    }
+    @keyframes slideInTopFade {
+      0% {transform: translateY(-20px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
+    }
+    .card{
+      animation-name:slideInTopFade;
+      animation-duration: 1s;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="jquery-3.4.1.min.js"></script>
+
+  <script>
+   $(function(){
+      $("#navBar").load("nav_bar.html");
+      $("#footer").load("/footer.html");
+   });
+   </script>
+</head>
+
+
+<body>
+
+  <div id="navBar"></div>
+
+  <div class=container>
+    <div class="row">
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/software/wotime.html">
+            <img class="card-img-top" src="\pics\wo1.png" alt="workout_timer">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Workout Timer</h5>
+            <p class="card-text">2020</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/software/fishcakes.html">
+            <img class="card-img-top" src="\pics\fc.png" alt="fishcakes">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Fishcakes: PDF tool</h5>
+            <p class="card-text">2020</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/hardware/gpsss.html">
+            <img class="card-img-top" src="pics\GPSSS\GPSSS_1.jpg" alt="GPSSS">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">GPS Sound Sensor</h5>
+            <p class="card-text">Senior Design 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/hardware/scaleup.html">
+            <img class="card-img-top" src="pics\scale_up\hardware_all_view.JPG" alt="scale_up">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Scale Up</h5>
+            <p class="card-text">SD Hacks 2019</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/hardware/hc2.html">
+            <img class="card-img-top" src="\pics\hc2.JPG" alt="hc2">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">HC2: IoT Enviorment Sensor</h5>
+            <p class="card-text">2019</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/hardware/cinghat.html">
+            <img class="card-img-top" src="\pics\cing_hat\Cing_hat_2019.jpg" alt="C-ing_hat">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">The C-ing Hat</h5>
+            <p class="card-text">Hack UCI 2019</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <a href="/hardware/micromouse.html">
+            <img class="card-img-top" src="\pics\micromouse\micromosue_2019.JPG" alt="micromouse">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">MicroMouse</h5>
+            <p class="card-text">2019</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        
+      </div>
+      
+      <div class="col">
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+</body>
+
+</html>

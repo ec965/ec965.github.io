@@ -15,6 +15,7 @@
   <script>
    $(function(){
       $("#navBar").load("/nav_bar.html");
+      $("#footer").load("/footer.html");
    });
    </script>
 </head>
@@ -34,7 +35,7 @@
       <div class="row">
         <div class="col-sm">
           <a href="http://calplug.org/" class="">
-              <img src="\pics\logos\calpluglogo.jpg" alt="calpluglogo" class="" style="width:50%;">
+              <img src="\pics\logos\calpluglogo.png" alt="calpluglogo" class="" style="width:50%;">
           </a>
         </div>
         <div class="col-sm">
@@ -62,31 +63,24 @@
       if you are interested in code samples or more information on this project.
     </p>
   </div>
-
+  <br></br>
 <!-- article -->
   <div class="container">
-    <br></br>
-    <h>Main and Interface PCBs (Hand Populated!)</h>
-    <br></br>
-    <img src="\pics\WCB\wcb_pcb.jpg" class="img-fluid" alt="demo"></img>
-    <br></br>
+    <div class="row">
+      <div class="col">
+        <h class="image_heading">Main and Interface PCBs (Hand Populated!)</h>
+        <img src="\pics\WCB\wcb_pcb.jpg" class="img-fluid project" alt="demo"></img>
+        <h class="image_heading">Demo User Interface (Melinda and Hayden, best Team leads!)</h>
+        <img src="\pics\WCB\WCB_fake_front.JPG" class="img-fluid project" alt="demo"></img>
+      </div>
+      <div class="col">
+        <h class="image_heading">The Watercooler (wiring in progress.)</h>
+        <img src="\pics\WCB\WCB_outside.JPG" class="img-fluid project" alt="demo"></img>
+      </div>
+    </div>
   </div>
 
-  <div class="container">
-    <br></br>
-    <h>The Watercooler (wiring in progress.)</h>
-    <br></br>
-    <img src="\pics\WCB\WCB_outside.JPG" class="img-fluid" alt="demo"></img>
-    <br></br>
-  </div>
-
-  <div class="container">
-    <br></br>
-    <h>Demo User Interface (Melinda and Hayden, best Team leads!)</h>
-    <br></br>
-    <img src="\pics\WCB\WCB_fake_front.JPG" class="img-fluid" alt="demo"></img>
-    <br></br>
-  </div>
+  <div id="footer"></div>
 
 </body>
 

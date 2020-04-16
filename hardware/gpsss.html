@@ -16,6 +16,7 @@
   <script>
    $(function(){
       $("#navBar").load("/nav_bar.html");
+      $("#footer").load("/footer.html");
    });
    </script>
 </head>
@@ -42,20 +43,18 @@
   </div>
 
   <div class="container">
-    <br></br>
-    <div class="embed-responsive embed-responsive-16by9">
-      <video width="800" controls>
-        <source src="\pics\GPSSS\gpsss_vid.mp4" type=video/mp4>
-      </video>
+    <div class="row">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video width="800" controls>
+          <source src="\pics\GPSSS\gpsss_vid.mp4" type=video/mp4>
+        </video>
+      </div>
+    </div>
+    <div class="row">
+      <img src="\pics\GPSSS\GPSSS_2.jpg" class="img-fluid project" alt="demo"></img>
     </div>
   </div>
-
-  <div class="container">
-    <br></br>
-    <img src="\pics\GPSSS\GPSSS_2.jpg" class="img-fluid" alt="demo"></img>
-    <br></br>
-  </div>
-
+  <div id="footer"></div>
 </body>
 
 </html>

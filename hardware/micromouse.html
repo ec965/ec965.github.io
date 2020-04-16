@@ -16,6 +16,7 @@
   <script>
    $(function(){
       $("#navBar").load("/nav_bar.html");
+      $("#footer").load("/footer.html");
    });
    </script>
 </head>
@@ -38,16 +39,17 @@
   </div>
 
   <div class="container">
-    <img src="\pics\micromouse\micromosue_2019.JPG" alt="mouse" class="img-fluid"></img>
-    <br></br>
+    <div class="row">
+      <div class="col">
+        <img src="\pics\micromouse\micromosue_2019.JPG" alt="mouse" class="img-fluid"></img>
+      </div>
+      <div class="col">
+        <img src="\pics\micromouse\labeled_top_down_micromouse_2019.png" alt="topdown" class="img-fluid"></img>
+      </div>
+    </div>
   </div>
 
-  <div class="container">
-    <img src="\pics\micromouse\labeled_top_down_micromouse_2019.png" alt="topdown" class="img-fluid"></img>
-    <br></br>
-  </div>
-
-
+  <div id="footer"></div>
 </body>
 
 </html>
