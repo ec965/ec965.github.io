@@ -6,21 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    img{
+    .carousel-inner img {
+      margin: auto;
+    }
+    .gpsss,
+    .hc2,
+    .smsc,
+    .pot{
       object-fit: cover;
-      height: 600px;
-    }
-    img.gpsss{
-      object-position: 0% 10%;
-    }
-    img.hc2{
-      object-position: 0% 60%;
-    }
-    img.smsc{
-      object-position: 0% 45%;
-    }
-    img.pot{;
-      object-position: 0% 30%;
+      width:1200px;
+      height:900px;
     }
     @keyframes fadeIn {
       0% {opacity: 0;}
@@ -68,7 +63,7 @@
 <body>
   <div id="navBar"></div>
 
-  <div class="bg">
+  <header>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -107,9 +102,9 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  </div>
+  </header>
 
-
+  
 </body>
 
 </html>
