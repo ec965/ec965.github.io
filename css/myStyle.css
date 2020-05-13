@@ -35,7 +35,7 @@ footer.sourcecode{
   /* font-size: 12px; */
 }
 
-/*card properties*/
+/*_________card properties__________*/
 /* @keyframes hover-card {
   0% {transform:translateY(0);}
   100%{transform:translateY(-10px);}
@@ -58,6 +58,13 @@ img.mycard{
 }
 .card:hover{
   box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-shadow-dark{
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3) !important;
+}
+.card-shadow-dark:hover{
+  box-shadow: 0 10px 50px 0 rgba(255, 255, 255, 0.5) !important;
 }
 
 /*______DARK MODE______*/
