@@ -77,10 +77,12 @@ img.mycard{
 #desktop_darkmode_label {display: block;}
 #desktop_darkmode_toggle {display: block;}
 #dark_toggle {display: block;}
+#dark_switch {display: block;}
 @media screen and (max-width: 768px) {
   #desktop_darkmode {display: none;}
   #desktop_darkmode_toggle {display: none;}
   #dark_toggle {display: none;}
+  #dark_switch {display: none;}
 }
 
 /*_____________toggle__________*/
