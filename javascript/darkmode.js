@@ -1,3 +1,4 @@
+window.onload = dark_mode_storage;
 /*check the state of the toggle on click*/
 //nav_bar.html contains the onclick javascript
 function check_toggle() {
@@ -17,7 +18,7 @@ function dark_mode_storage() {
   var navbar = document.getElementById("navbar1");
   var toggle_state = document.getElementById("dark_toggle");
   var card = document.getElementsByClassName('card');
-  var jumbotron = document.getElementsByClassName('card');
+  var jumbotron = document.getElementsByClassName('jumbotron');
 
   //check localStorage to see if darkmode is enabled
   if (localStorage.getItem('darkmode') === 'ON') {
