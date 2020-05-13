@@ -74,12 +74,12 @@ img.mycard{
 /*for nav bar, change navbar-light to navbar-dark and bg-light to bg-primary*/
 
 /*dark mode is buggy on modile so don't show it*/
-#desktop_darkmode_label {display: block;}
+/* #desktop_darkmode_label {display: block;}
 #desktop_darkmode_toggle {display: block;}
 @media screen and (max-width: 768px) {
   #desktop_darkmode_label {display: none;}
   #desktop_darkmode_toggle {display: none;}
-}
+} */
 
 /*_____________toggle__________*/
 .switch {

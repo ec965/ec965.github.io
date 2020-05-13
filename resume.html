@@ -24,7 +24,7 @@
   <div class="container">
     <object data="public_resume.pdf" type="application/pdf" width="100%" height="800px">
       <p>It appears you don't have a PDF plugin for this browser.
-        That's ok. <a href="public_resume.pdf">click here to
+        That's ok, <a href="public_resume.pdf">click here to
           download the PDF file.</a></p>
     </object>
   </div>
@@ -42,11 +42,9 @@
   </script>
   <script src=/javascript/darkmode.js></script>
   <script>
-    document.getElementsByTagName('body')[0].onload = function(){load_scripts()};
+    window.onload = load_scripts;
     function load_scripts(){
       dark_mode_storage();
-      dm_element('card');
-      dm_toggle_storage();
     }
   </script>
 

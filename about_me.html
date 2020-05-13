@@ -84,10 +84,9 @@
   </script>
   <script type="text/javascript" src="/javascript/darkmode.js"></script>
   <script>
-    document.getElementsByTagName('body')[0].onload = function(){load_scripts()};
+    window.onload = load_scripts;
     function load_scripts(){
       dark_mode_storage();
-      dm_toggle_storage();
     }
   </script>
 

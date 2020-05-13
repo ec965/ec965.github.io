@@ -11,12 +11,14 @@ function check_toggle(){
   window.location.reload(false);
 }
 
-/*change body and navbar to dark mode*/
+//for body, navbar, and toggle switch; these elements exist on every page
 function dark_mode_storage() {
   var body_element = document.getElementsByTagName('body');
   var navbar = document.getElementById("navbar1");
+  var toggle_state = document.getElementById("dark_toggle");
   if(localStorage.getItem('darkmode') === 'ON'){
     body_element[0].classList.add('dark-body');
+    toggle_state.checked = true;
     navbar.classList.add('navbar-dark');
     navbar.classList.add('bg-primary');
     navbar.classList.remove('navbar-light');
@@ -24,6 +26,7 @@ function dark_mode_storage() {
   }
   else if(localStorage.getItem('darkmode') === null){
     body_element[0].classList.remove('dark-body');
+    toggle_state.checked = false;
     navbar.classList.remove('navbar-dark');
     navbar.classList.remove('bg-primary');
     navbar.classList.add('navbar-light');
@@ -31,16 +34,43 @@ function dark_mode_storage() {
   }
 }
 
-/*darkmode for the toggle checkbox*/
-function dm_toggle_storage(){
-  var toggle_state = document.getElementById("dark_toggle");
-  if(localStorage.getItem('darkmode') === 'ON'){
-    toggle_state.checked = true;
-  }
-  else if(localStorage.getItem('darkmode') === null){
-    toggle_state.checked = false;
-  }
-}
+/*change body and navbar to dark mode*/
+// function dark_mode_storage() {
+//   var body_element = document.getElementsByTagName('body');
+//   if(localStorage.getItem('darkmode') === 'ON'){
+//     body_element[0].classList.add('dark-body');
+//   }
+//   else if(localStorage.getItem('darkmode') === null){
+//     body_element[0].classList.remove('dark-body');
+//   }
+// }
+
+// function dm_navbar(){
+//   var navbar = document.getElementById("navbar1");
+//   if(localStorage.getItem('darkmode') === 'ON'){
+//     navbar.classList.add('navbar-dark');
+//     navbar.classList.add('bg-primary');
+//     navbar.classList.remove('navbar-light');
+//     navbar.classList.remove('bg-light');
+//   }
+//   else if(localStorage.getItem('darkmode') === null){
+//     navbar.classList.remove('navbar-dark');
+//     navbar.classList.remove('bg-primary');
+//     navbar.classList.add('navbar-light');
+//     navbar.classList.add('bg-light');
+//   }
+// }
+//
+// /*darkmode for the toggle checkbox*/
+// function dm_toggle_storage(){
+//   var toggle_state = document.getElementById("dark_toggle");
+//   if(localStorage.getItem('darkmode') === 'ON'){
+//     toggle_state.checked = true;
+//   }
+//   else if(localStorage.getItem('darkmode') === null){
+//     toggle_state.checked = false;
+//   }
+// }
 
 /*dark mode for specific page elemnet classes*/
 function dm_element(element_class){
