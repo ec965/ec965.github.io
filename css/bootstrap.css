@@ -90,6 +90,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-family: "madaregular";
 }
 
 p {
@@ -4649,7 +4650,7 @@ input[type="button"].btn-block {
   font-size: 1.3rem;
   line-height: inherit;
   white-space: nowrap;
-  font-family: "bellezaregular";
+  font-family: "madaregular";
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
