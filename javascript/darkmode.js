@@ -10,7 +10,7 @@ function check_toggle(){
   dark_mode_storage();
 }
 
-/*change body to dark mode*/
+/*change body and navbar to dark mode*/
 function dark_mode_storage() {
   var body_element = document.getElementsByTagName('body');
   var navbar = document.getElementById("navbar1");
@@ -30,6 +30,7 @@ function dark_mode_storage() {
   }
 }
 
+/*darkmode for the toggle checkbox*/
 function dm_toggle_storage(){
   var toggle_state = document.getElementById("dark_toggle");
   if(localStorage.getItem('darkmode') == 'ON'){
@@ -40,6 +41,7 @@ function dm_toggle_storage(){
   }
 }
 
+/*dark mode for specific page elemnet classes*/
 function dm_element(element_class){
   var element = document.getElementsByClassName(element_class);
   if(localStorage.getItem('darkmode') == 'ON'){
