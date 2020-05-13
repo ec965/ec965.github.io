@@ -7,8 +7,8 @@ function check_toggle(){
   else{
     localStorage.removeItem('darkmode','ON')
   }
-  dark_mode_storage();
-  // window.location.reload(false);
+  // dark_mode_storage();
+  window.location.reload(false);
 }
 
 /*change body and navbar to dark mode*/
