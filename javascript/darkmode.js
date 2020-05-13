@@ -1,67 +1,48 @@
-
-
 /*check the state of the toggle on click*/
-function check_toggle(){
+//nav_bar.html contains the onclick javascript
+function check_toggle() {
   var toggle_state = document.getElementById("dark_toggle").checked;
-  if (toggle_state){
-    localStorage.setItem('darkmode','ON');
-  }
-  else{
-    localStorage.removeItem('darkmode','ON')
+  if (toggle_state) {
+    localStorage.setItem('darkmode', 'ON');
+  } else {
+    localStorage.removeItem('darkmode', 'ON')
   }
   // dark_mode_storage();
   window.location.reload(false);
 }
 
-//for body, navbar, and toggle switch; these elements exist on every page
 function dark_mode_storage() {
+  //get the document element
   var body_element = document.getElementsByTagName('body');
   var navbar = document.getElementById("navbar1");
   var toggle_state = document.getElementById("dark_toggle");
-  if(localStorage.getItem('darkmode') === 'ON'){
-    body_element[0].classList.add('dark-body');
-    navbar.classList.add('navbar-dark');
-    navbar.classList.add('bg-primary');
-    navbar.classList.remove('navbar-light');
-    navbar.classList.remove('bg-light');
-    toggle_state.checked = true;
-  }
-  else if(localStorage.getItem('darkmode') === null){
-    body_element[0].classList.remove('dark-body');
-    navbar.classList.remove('navbar-dark');
-    navbar.classList.remove('bg-primary');
-    navbar.classList.add('navbar-light');
-    navbar.classList.add('bg-light');
-    toggle_state.checked = false;
-  }
-}
+  var card = document.getElementsByClassName('card');
+  var jumbotron = document.getElementsByClassName('card');
 
-/*dark mode for specific page elemnet classes*/
-function dm_element(element_class){
-  var element = document.getElementsByClassName(element_class);
-  if(localStorage.getItem('darkmode') === 'ON'){
-    for(var i=0; i<element.length; i++){
-      element[i].classList.add('dark');
+  //check localStorage to see if darkmode is enabled
+  if (localStorage.getItem('darkmode') === 'ON') {
+    if (body_element[0] != null) {
+      body_element[0].classList.add('dark-body');
     }
-  }
-  else if(localStorage.getItem('darkmode') === null){
-    for(var i=0; i<element.length; i++){
-      element[i].classList.remove('dark');
+    if (navbar != null) { //check if the element exists on the page
+      navbar.classList.add('navbar-dark'); //change color
+      navbar.classList.add('bg-primary');
+      navbar.classList.remove('navbar-light');
+      navbar.classList.remove('bg-light');
     }
-  }
-}
-
-//change box shadows for cards and hover element
-function dm_card_shadow(){
-  var element = document.getElementsByClassName('card');
-  if(localStorage.getItem('darkmode') === 'ON'){
-    for(var i=0; i<element.length; i++){
-      element[i].classList.add('card-shadow-dark');
+    if (toggle_state != null) {
+      toggle_state.checked = true;
     }
-  }
-  else if(localStorage.getItem('darkmode') === null){
-    for(var i=0; i<element.length; i++){
-      element[i].classList.remove('card-shadow-dark');
+    if (card[0] != null) {
+      for (var i = 0; i < card.length; i++) {
+        card[i].classList.add('dark');
+        card[i].classList.add('card-shadow-dark');
+      }
+    }
+    if (jumbotron[0] != null) {
+      for (var i = 0; i < jumbotron.length; i++) {
+        jumbotron[i].classList.add('dark');
+      }
     }
   }
 }

@@ -60,6 +60,7 @@ img.mycard{
   box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
 }
 
+/*card dark mode shadow css*/
 .card-shadow-dark{
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3) !important;
 }
