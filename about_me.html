@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/css/myStyle.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/toggle.css">
+  <link rel="stylesheet" href="/css/dark.css">
+
   <style>
   .icon{
     width:10%;
@@ -16,6 +18,7 @@
     padding-right: 5px
   }
   </style>
+
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
   <script>
@@ -24,11 +27,18 @@
       $("#footer").load("footer.html");
     });
   </script>
+
+  <script>
+    function check_toggle(){
+      var element = document.getElementById("main");
+      element.classList.toggle("dark");
+    }
+  </script>
+
 </head>
 
 
-<body>
-
+<body id="main">
   <div id="navBar"></div>
 
   <!-- article -->
@@ -62,9 +72,10 @@
 
         <div class="row" style="padding-top:20px;">
             <div class="container">
-              <p>Dark Mode</p>
+              <p>Dark Mode (preview)</p>
+
               <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" onclick="check_toggle()" id="dark_toggle_box">
                 <span class="slider round"></span>
               </label>
             </div>
