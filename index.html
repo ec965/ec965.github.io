@@ -1,110 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Enoch Chau</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    .carousel-inner img {
-      margin: auto;
-    }
-    .gpsss,
-    .hc2,
-    .smsc,
-    .pot{
-      object-fit: cover;
-      width:1200px;
-      height:900px;
-    }
-    @keyframes fadeIn {
-      0% {opacity: 0;}
-      20% {opacity: 0;}
-      100% {opacity: 1;}
-    }
-    @keyframes slideInTop {
-      0% {transform: translateY(-100px);opacity:0;}
-      15% {transform: translateY(-60px);opacity:0;}
-      100% {transform: translateY(0);opacity:1;}
-    }
-    @keyframes slideInLeft {
-      0% {transform: translateX(-300px);opacity:0;}
-      100% {transform: translateX(0);opacity:1;}
-    }
-    .navbar-brand{
-      animation-name:slideInTop;
-      animation-duration: 1.5s;
-    }
-    .navbar{
-      animation-name: slideInLeft;
-      animation-duration: .8s;
-    }
-    .carousel{
-      animation-name: fadeIn;
-      animation-duration: 1s;
-    }
-  </style>
-  <link rel="stylesheet" href="/myStyle.css">
-  <link rel="stylesheet" href="bootstrap.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/myStyle.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/index.css">
 
-  <script src="jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
   <script>
-   $(function(){
+    $(function(){
       $("#navBar").load("nav_bar.html");
       $("#footer").load("footer.html");
-   });
-   </script>
+    });
+  </script>
+
 </head>
 
 <body>
   <div id="navBar"></div>
 
-  <header>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="hardware\scaleup.html" class="">
-            <img src="pics\scale_up\hardware_all_view.JPG" alt="smartscale" class="smsc d-block w-100"></img>
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="hardware\gpsss.html" class="">
-            <img src="pics\GPSSS\GPSSS_1.jpg" alt="gpsss_1" class="gpsss d-block w-100"></img>
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="hardware\hc2.html" class="">
-            <img src="pics\hc2.JPG" alt="hc2" class="hc2 d-block w-100"></img>
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="art\art.html" class="">
-            <img src="art\pot.JPG" alt="face" class="pot d-block w-100"></img>
-          </a>
-        </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="\projects.html" class="">
+          <img src="pics\scale_up\hardware_all_view.JPG" alt="smartscale" class="smsc d-block w-100"></img>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="carousel-item">
+        <a href="\projects.html" class="">
+          <img src="pics\GPSSS\GPSSS_1.jpg" alt="gpsss_1" class="gpsss d-block w-100"></img>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="\projects.html" class="">
+          <img src="pics\hc2.JPG" alt="hc2" class="hc2 d-block w-100"></img>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="art\art.html" class="">
+          <img src="art\pot.JPG" alt="face" class="pot d-block w-100"></img>
+        </a>
+      </div>
     </div>
-  </header>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
-  
+<!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
