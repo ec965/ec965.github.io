@@ -1,3 +1,5 @@
+
+
 /*check the state of the toggle on click*/
 function check_toggle(){
   var toggle_state = document.getElementById("dark_toggle").checked;
@@ -18,19 +20,19 @@ function dark_mode_storage() {
   var toggle_state = document.getElementById("dark_toggle");
   if(localStorage.getItem('darkmode') === 'ON'){
     body_element[0].classList.add('dark-body');
-    toggle_state.checked = true;
     navbar.classList.add('navbar-dark');
     navbar.classList.add('bg-primary');
     navbar.classList.remove('navbar-light');
     navbar.classList.remove('bg-light');
+    toggle_state.checked = true;
   }
   else if(localStorage.getItem('darkmode') === null){
     body_element[0].classList.remove('dark-body');
-    toggle_state.checked = false;
     navbar.classList.remove('navbar-dark');
     navbar.classList.remove('bg-primary');
     navbar.classList.add('navbar-light');
     navbar.classList.add('bg-light');
+    toggle_state.checked = false;
   }
 }
 

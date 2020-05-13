@@ -35,8 +35,12 @@
       dark mode
     </span>
     <label class="switch">
-      <input type="checkbox" id="dark_toggle" onclick="check_toggle()">
+      <input type="checkbox" id="dark_toggle">
       <span class="slider round"></span>
     </label>
   </form>
 </nav>
+
+<script>
+  document.getElementById("dark_toggle").onclick = function(){check_toggle()};
+</script>
