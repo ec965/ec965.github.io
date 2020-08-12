@@ -1,15 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
+//routing
+import { Link, useRouteMatch } from 'react-router-dom';
 
 function MyCard (props){
+  
   return( 
-    <Card>
-      <Card.Img 
-        variant="top" 
-        src={props.img} 
-        alt={props.alt}
-      />
+    <Card style={{width: "18rem", margin: 12}}>
+      <Link to={props.url}>
+        <Card.Img
+          fluid
+          variant="top"
+          className="mycard"
+          src={props.img} 
+          alt={props.alt}
+        />
+      </Link>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>{props.text}</Card.Text>
@@ -19,6 +26,7 @@ function MyCard (props){
 }
 
 MyCard.propTypes={
+  url: PropTypes.string,
   img: PropTypes.string,
   alt: PropTypes.string,
   title: PropTypes.string,

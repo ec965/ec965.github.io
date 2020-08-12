@@ -7,20 +7,20 @@ import Col from 'react-bootstrap/Col';
 //myStuff
 import MyCard from './card';
 
-function ProjectSkeleton (props){
-
+function ProjectSkeleton (props){  
 
   return(
-    <Container fluid>
+    <Container>
       <Row>
         {props.cards.map((card,index)=>(
-          <Col key={index}>
-            <MyCard
-              img={card.img}
-              alt={card.alt}
-              title={card.title}
-              text={card.text}
-            />
+          <Col key={index} xs="auto">
+              <MyCard
+                url={card.url}
+                img={card.img}
+                alt={card.alt}
+                title={card.title}
+                text={card.text}
+              />
           </Col>
         ))}
       </Row>
@@ -31,6 +31,7 @@ function ProjectSkeleton (props){
 ProjectSkeleton.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
+      url: PropTypes.string,
       img: PropTypes.string,
       alt: PropTypes.string,
       title: PropTypes.string,
