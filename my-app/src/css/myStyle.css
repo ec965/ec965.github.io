@@ -43,6 +43,7 @@ footer.sourcecode{
 
 img.mycard{
   height: 200px;
+  object-fit: cover;
 }
 @keyframes cardFadeIn {
   0% {transform: translateY(-20px); opacity: 0;}

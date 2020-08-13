@@ -23,7 +23,7 @@ import Project from './projects/index';
 function App (props){
   return(
     <HashRouter>
-      <Navbar>
+      <Navbar bg="light" variant="light" expand="md">
         <Link to="/">
           <Navbar.Brand>Enoch Chau</Navbar.Brand>
         </Link>

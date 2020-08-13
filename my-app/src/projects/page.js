@@ -20,16 +20,18 @@ function ProjectPage(props){
         </Col>
       </Row>
       <Row>
-        {props.buttons.map((button, index)=>(
-          <Col>
-            <Button
-              variant="info"
-              href={button.url}
-            >
-              {button.title}
-            </Button>
-          </Col>
-        ))}
+        {(props.buttons) ? 
+          props.buttons.map((button, index)=>(
+            <Col xs={1}>
+              <Button
+                variant="info"
+                href={button.url}
+              >
+                {button.title}
+              </Button>
+            </Col>
+          )) : null
+        }
       </Row>
       <Row>
         <Col>

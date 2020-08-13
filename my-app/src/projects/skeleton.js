@@ -20,6 +20,7 @@ function ProjectSkeleton (props){
                 alt={card.alt}
                 title={card.title}
                 text={card.text}
+                anchor={card.anchor}
               />
           </Col>
         ))}
