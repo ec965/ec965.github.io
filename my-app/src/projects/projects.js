@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { ProjectPage, ImgFormat, VidFormat } from './page';
 import WorkoutApp from './workoutTimer';
-//bootstrap
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+
+const calplugLogos = [
+  {src: "/pics/logos/calpluglogo.png", url: 'http://calplug.org/', alt: 'calplugLogo'},
+  {src: "/pics/logos/Calit2.png", url: 'http://calit2.uci.edu/', alt: 'calit2Logo'}
+];
 
 
 export function CoffeeGrams(){
@@ -108,6 +107,58 @@ export function HC2(){
     />
   );
 }
+
+export function ProjectorBuddy(){
+  return(
+    <ProjectPage
+      title="Projector Buddy"
+      dates="March 2019 - June 2020"
+      logos={calplugLogos}
+      description={
+        <>
+          Projector Buddy is an advanced energy system that controls a projectors electricity usage based on human precense in the room. 
+          Human activity is determined through light, sound, and motion. 
+          In order to preserve the projectors internal electronics and bulb, a soft shutdown is initiated using an IR blaster. 
+          <br/><br/>
+          My primary contribution was firmware development. 
+          I implemented freeRTOS firmware, updated the control algorithm, and created IR Reciever and IR Emitter functionality.
+        </>
+      }
+      media={
+        <ImgFormat img1src="/pics/projector_buddy/topdown.jpg" img2src="/pics/projector_buddy/PIR_pic.jpg"/>
+      }
+    />
+  );
+}
+
+export function PolyPhase(){
+  return(
+    <ProjectPage
+      title="Poly-Phase Wattmeter"
+      dates="March 2019 - June 2019"
+      logos={calplugLogos}
+      buttons={[
+        {title: 'GitHub', url: "https://github.com/CalPlug/ADE9078-3PhaseWattmeter"}
+      ]}
+      description={
+        <>
+          Using the ADE9078, our group created a PCB and wrote firmware to create a small portable three phase wattmeter. 
+          Our demo setup was designed to detect faults in a three phase motor. 
+          By performing a Fast Fourier Transform (FFT) on the power data and looking for irregularites, we were able to determine if the motor was faulty.
+          <br/><br/>
+          My primary contribution was configuring the waveform buffer firmware and creating a graphical interface for FFT.
+        </>
+      }
+      media={
+        <>
+          <ImgFormat img1head="Demo Setup" img1src="/pics/3phase/3phase_watt_demo.jpg" img2head="FFT Processing Graph" img2src="/pics/3phase/3phase_watt_processing.png"/>
+          <VidFormat vidsrc="/pics/3phase/3phasewatt_sin.mov" vidhead="One Power Phase"/>
+        </>
+      }
+    />
+  );
+}
+
 
 export function CingHat(){
   return(

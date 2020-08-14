@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 //routing
-import { Link } from 'react-router-dom';
-
+import { LinkContainer } from 'react-router-bootstrap'
 
 //use props.anchor to toggle between <a> and <Link>
 //anchors are used for redirecting to an external site
@@ -21,14 +20,14 @@ function MyCard (props){
           />
         </a>)
         :
-        (<Link to={props.url}>
+        (<LinkContainer to={props.url}>
           <Card.Img
             variant="top"
             className="mycard"
             src={props.img} 
             alt={props.alt}
           />
-        </Link>)
+        </LinkContainer>)
       }
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>

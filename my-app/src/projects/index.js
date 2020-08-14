@@ -1,21 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ProjectSkeleton from './skeleton';
-import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse } from './projects';
+import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse, PolyPhase, ProjectorBuddy } from './projects';
 //routing
 import {
   HashRouter,
   Switch,
   Route,
-  Link,
   useRouteMatch
 } from "react-router-dom";
 //bootstrap
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container'
-
 
 function Projects (props){
 
@@ -68,6 +61,22 @@ function Projects (props){
       title: 'HC2: IoT Environment Sensor',
       text: '2019',
       component: <HC2/>
+    },
+    {
+      url: url + '/projectorBuddy',
+      img: "/pics/projector_buddy/image.png",
+      alt: "projectorBuddy",
+      title: 'Projector Buddy',
+      text: 'Calplug 2019',
+      component: <ProjectorBuddy/>
+    },
+    {
+      url: url + '/3phasewatt',
+      img: '/pics/3phase/3phase_watt_demo.jpg',
+      alt: '3phasewatt',
+      title: "Poly-Phase Wattmeter",
+      text: 'Calplug 2019',
+      component: <PolyPhase/>
     },
     {
       url: url + '/cingHat',

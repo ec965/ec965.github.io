@@ -14,19 +14,19 @@ export function ImgFormat (props){
     <>
       <Row> 
         <Col>
-          {/* <h5 className="image_heading">{img1head}</h5> */}
+          <h5 className="image_heading">{img1head}</h5>
           <Image className="project" src={img1src} fluid/>
         </Col>
         {img2src && (
         <Col>
-          {/* <h5 className="image_heading">{img2head}</h5> */}
+          <h5 className="image_heading">{img2head}</h5>
           <Image className="project" src={img2src} fluid/>
         </Col>
         )}
       </Row>
       {img3src && (
       <Row>
-        {/* <h5 className="image_heading">{img3head}</h5> */}
+        <h5 className="image_heading">{img3head}</h5>
         <Image className="project" src={img3src} fluid/>
       </Row>
       )}
@@ -48,6 +48,7 @@ export function VidFormat(props){
     <>
       <Row>
         <Col>
+          <h5 className="image_heading">{props.vidhead}</h5>
           <ResponsiveEmbed aspectRatio="16by9">
             {props.youtube 
             ? 
@@ -66,6 +67,7 @@ export function VidFormat(props){
 VidFormat.propTypes = {
   youtube: PropTypes.bool,
   vidsrc: PropTypes.string,
+  vidhead: PropTypes.string,
 }
 
 export function ProjectPage(props){
@@ -76,15 +78,32 @@ export function ProjectPage(props){
           <Row>
             <h2>{props.title}</h2>
           </Row>
-          {/* <Row> */}
-          {/*   <h3>{props.subtitle}</h3> */}
-          {/* </Row> */}
+
+          {props.subtitle && (
+            <Row>
+              <h3>{props.subtitle}</h3>
+            </Row>
+          )}
+
+          {props.logos && (
+            <Row xs>
+              <Col xs>
+              {props.logos.map((logo, index)=>(
+                  <a href={logo.url}>
+                    <Image src={logo.src} alt={logo.alt} style={{marginRight:10}} className="logo"/>
+                  </a>
+              ))}
+              </Col>
+            </Row>
+          )}
+
           <Row>
             <h4>{props.dates}</h4>
           </Row>
+
+          {(props.buttons) && (
           <Row>
-            {(props.buttons) ? 
-              props.buttons.map((button, index)=>(
+            {props.buttons.map((button, index)=>(
                   <Button
                     key={index}
                     style={{marginRight: 10}}
@@ -93,9 +112,9 @@ export function ProjectPage(props){
                   >
                     {button.title}
                   </Button>
-              )) : null
-            }
+              ))}
           </Row>
+          )}
           <Row>
             <h5 style={{paddingTop: '15px', paddingBottom: '15px'}}>
               {props.description}
@@ -111,6 +130,14 @@ export function ProjectPage(props){
 
 ProjectPage.propTypes={
   title: PropTypes.string,
+  subtitle: PropTypes.string,
+  logos: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string,
+      alt: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ),
   dates: PropTypes.string,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
