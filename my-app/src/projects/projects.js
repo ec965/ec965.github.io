@@ -7,7 +7,30 @@ const calplugLogos = [
   {src: "/pics/logos/Calit2.png", url: 'http://calit2.uci.edu/', alt: 'calit2Logo'}
 ];
 
-
+export function BoulderField(){
+  return(
+    <ProjectPage
+      title="Boulder Field"
+      dates="August 2020"
+      buttons={[
+        {title: 'GitHub', url: 'https://github.com/ec965/MP-Recs'},
+        {title: 'Project Site', url: 'https://ec965.github.io/MP-Recs/index.html'
+      }]}
+      description={
+        <>
+          Find some bouldering projects near you. (Requires a Mountain Project account.)
+          This idea came about as an exercise to learn React.
+        </>        
+      }
+      media={
+        <ImgFormat
+          img1src="/pics/boulderField/boulderField.png"
+          img2src="/pics/boulderField/dataTable.png"
+        />
+      }
+    />
+  );
+}
 export function CoffeeGrams(){
   return(
     <ProjectPage
@@ -18,9 +41,9 @@ export function CoffeeGrams(){
       media={ 
         <>
           <ImgFormat
-            img1src="\pics\coffee_grams\cg_pcb.png"
-            img2src="\pics\coffee_grams\3d_cg_pcb.png"
-            img3src="\pics\coffee_grams\breadboard.JPG"
+            img1src="/pics/coffee_grams/cg_pcb.png"
+            img2src="/pics/coffee_grams/3d_cg_pcb.png"
+            img3src="/pics/coffee_grams/breadboard.JPG"
           />
         </>
       }
@@ -62,6 +85,30 @@ export function GPSSS(){
         />
       </>
      }
+    />
+  );
+}
+
+
+export function WCBuddy(){
+  return(
+    <ProjectPage
+      title="Water Cooler Buddy"
+      dates="September 2019 - June 2020"
+      logos={calplugLogos}
+      description={
+        <>
+          Water Cooler Buddy is an energy management system for a water cooler. Water Cooler Buddy controls it's sensors, relays, and user interface using an ESP32 microcontroller.
+          <br/><br/>
+          My primary contribution was firmware development. I updated firmware for ESP32 implementation and created an RTOS scheduling system. I also assisted with PCB population and water cooler wiring.
+        </>
+      }
+      media={
+        <ImgFormat img1head="Main and Interface PCB" img1src="\pics\WCB\wcb_pcb.jpg"
+          img3head="Watercooler" img3src="\pics\WCB\WCB_outside.JPG"
+          img2head="Demo User Interface" img2src="\pics\WCB\WCB_fake_front.JPG"
+        />
+      }
     />
   );
 }

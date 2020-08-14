@@ -4,7 +4,11 @@ import Image from 'react-bootstrap/Image';
 
 export default function SlideShow (props){
   return(
-    <Carousel className="slide-deck">
+    <Carousel
+      className="slide-deck"
+      controls={false}
+      fade={true}
+    >
       <Carousel.Item>
         <Image
           src="./pics/scale_up/hardware_all_view.JPG"

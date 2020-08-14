@@ -21,16 +21,16 @@
   --red: #E74C3C;
   --orange: #fd7e14;
   --yellow: #F39C12;
-  --green: #18BC9C;
-  --teal: #20c997;
-  --cyan: #3498DB;
+  --green:  #4caf50;
+  --teal: #26a69a;
+  --cyan: #42a5f5;
   --white: #fff;
   --gray: #95a5a6;
   --gray-dark: #343a40;
   --primary: #2C3E50;
   --secondary: #95a5a6;
-  --success: #18BC9C;
-  --info: #3498DB;
+  --success: #4caf50;
+  --info: #42a5f5;
   --warning: #F39C12;
   --danger: #E74C3C;
   --light: #ecf0f1;
@@ -167,13 +167,13 @@ sup {
 }
 
 a {
-  color: #18BC9C;
+  color: #64b5f6;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0f7864;
+  color: #2286c3;
   text-decoration: underline;
 }
 
@@ -4566,7 +4566,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #7b8a8b;
+  color: #7b8a8b !important;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -7132,13 +7132,13 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #18BC9C !important;
+  background-color: #4caf50 !important;
 }
 
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #128f76 !important;
+  background-color: #087f23 !important;
 }
 
 .bg-info {

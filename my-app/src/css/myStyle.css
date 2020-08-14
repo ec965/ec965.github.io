@@ -42,7 +42,7 @@ footer.sourcecode{
 }
 .pageFade{
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 300ms;
 }
 
 /*_________card properties__________*/
@@ -61,7 +61,7 @@ img.mycard{
 }
 .card{
   animation-name:cardFadeIn;
-  animation-duration: 1s;
+  animation-duration: 300ms;
   background-color: #ECF0F1;
   position: relative;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -170,7 +170,6 @@ input:checked + .slider:before {
 
 
 .slide-deck{
-  margin: 20px;
   animation-name: fadeIn;
   animation-duration: 1s;
 }
@@ -180,20 +179,6 @@ input:checked + .slider:before {
   width: 100vw;
   height: 88vh;
   outline: 1px;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  20% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes slideInTop {
@@ -226,16 +211,33 @@ input:checked + .slider:before {
 }
 
 .navbar-brand {
-  animation-name: slideInTop;
-  animation-duration: 1.5s;
+  /* animation-name: slideInTop; */
+  /* animation-duration: 1.5s; */
 }
 
 .navbar {
-  animation-name: slideInLeft;
-  animation-duration: .8s;
+  /* animation-name: slideInLeft; */
+  /* animation-duration: .8s; */
+  margin-bottom: 24px;
 }
 
 .carousel {
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 300ms;
+}
+
+
+/*-------Calplug/calit2 logos------*/
+.logo {
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/*------about me social media icons---------*/
+.icon{
+  width:50px;
+  padding-left: 5px;
+  padding-right: 5px;
 }

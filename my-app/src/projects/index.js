@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectSkeleton from './skeleton';
-import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse, PolyPhase, ProjectorBuddy } from './projects';
+import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse, PolyPhase, ProjectorBuddy, WCBuddy, BoulderField } from './projects';
 //routing
 import {
   HashRouter,
@@ -15,12 +15,12 @@ function Projects (props){
   let { path, url } = useRouteMatch();    
   const projects = [
     {
-      url: 'https://ec965.github.io/MP-Recs/index.html',
-      anchor: true, 
-      img: 'pics/boulderField.png',
+      url: url + '/boulderField',
+      img: 'pics/boulderField/dataTable.png',
       alt: 'boulderField',
       title: 'Boulder Field',
       text: '2020',
+      component: <BoulderField/>
     },
     {
       url: url + '/coffeeGrams',
@@ -45,6 +45,14 @@ function Projects (props){
       title: 'GPS Sound Sensor',
       text: 'Senior Design 2020',
       component: <GPSSS/>
+    },
+    {
+      url: url + '/watercoolerbuddy',
+      img: '/pics/WCB/wcb_pcb.jpg',
+      alt: 'watercoolerbuddy',
+      title: 'Water Cooler Buddy',
+      text: 'Calplug 2019',
+      component: <WCBuddy/>
     },
     {
       url: url + '/scaleUp',
