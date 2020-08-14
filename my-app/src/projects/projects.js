@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectPage from './page';
+import WorkoutApp from './workoutTimer';
 //bootstrap
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
 
 export function CoffeeGrams(){
   return(
@@ -36,24 +39,15 @@ export function CoffeeGrams(){
   );
 }
 
-export function Redirect(){
-  return(
-    <ProjectPage
-      title="Redirecting..."/>
-  );
-}
 export function WorkoutTimer(){
+
   return(
     <ProjectPage
       title="Workout Timer"
       dates="April 2020"
       buttons={[{title: 'Github',url: 'https://github.com/ec965/workout_timer' }]}
       media={
-        <>
-          <Row> 
-           {/* might have to remake this webapp... */} 
-          </Row>
-        </>
+        <WorkoutApp/>
       }
     />
   );

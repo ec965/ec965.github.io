@@ -22,7 +22,7 @@ function ProjectPage(props){
       <Row>
         {(props.buttons) ? 
           props.buttons.map((button, index)=>(
-            <Col xs={1}>
+            <Col key={index} xs={1}>
               <Button
                 variant="info"
                 href={button.url}
