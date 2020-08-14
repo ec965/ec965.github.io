@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectSkeleton from './skeleton';
-import { Redirect, CoffeeGrams, WorkoutTimer } from './projects';
+import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse } from './projects';
 //routing
 import {
   HashRouter,
@@ -50,28 +50,32 @@ function Projects (props){
       img: 'pics/GPSSS/GPSSS_1.jpg',
       alt: 'GPSSS',
       title: 'GPS Sound Sensor',
-      text: 'Senior Design 2020'
+      text: 'Senior Design 2020',
+      component: <GPSSS/>
     },
     {
       url: url + '/scaleUp',
       img: 'pics/scale_up/hardware_all_view.JPG',
       alt: "scaleUp",
       title: 'Scale Up',
-      text: 'SD Hacks 2019'
+      text: 'SD Hacks 2019',
+      component: <ScaleUp/>
     },
     {
       url: url + '/hc2',
       img: 'pics/hc2.JPG',
       alt: 'hc2',
       title: 'HC2: IoT Environment Sensor',
-      text: '2019'
+      text: '2019',
+      component: <HC2/>
     },
     {
       url: url + '/cingHat',
       img: 'pics/cing_hat/Cing_hat_2019.jpg',
       alt: 'cingHat',
       title: 'The C-ing Hat',
-      text: 'Hack UCI 2019'
+      text: 'Hack UCI 2019',
+      component: <CingHat/>
     },
     {
       url: url + '/micromouse',
@@ -79,6 +83,7 @@ function Projects (props){
       alt: 'micromouse',
       title: 'MicroMouse',
       text: '2019',
+      component: <MicroMouse/>
     }
 
   ];

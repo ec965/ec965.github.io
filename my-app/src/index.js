@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //css
 import './css/bootstrap.css';
-import './css/index.css';
 import './css/myStyle.css';
 //fonts
 import './font/stylesheet.css';

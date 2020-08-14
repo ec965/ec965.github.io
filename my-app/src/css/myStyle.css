@@ -1,4 +1,4 @@
-@import url("/font/stylesheet.css");
+@import url("../font/stylesheet.css");
 
 
 h.image_heading{
@@ -33,6 +33,16 @@ footer.sourcecode{
   padding-right: 25px;
   text-align: right;
   /* font-size: 12px; */
+}
+
+/*page fade in*/
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.pageFade{
+  animation-name: fadeIn;
+  animation-duration: 1s;
 }
 
 /*_________card properties__________*/
@@ -151,4 +161,81 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/*---------INDEX/HOME PAGE-------------*/
+.carousel-inner img {
+  margin: auto;
+}
+
+
+.slide-deck{
+  margin: 20px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.slides {
+  object-fit: cover;
+  width: 100vw;
+  height: 88vh;
+  outline: 1px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  15% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar-brand {
+  animation-name: slideInTop;
+  animation-duration: 1.5s;
+}
+
+.navbar {
+  animation-name: slideInLeft;
+  animation-duration: .8s;
+}
+
+.carousel {
+  animation-name: fadeIn;
+  animation-duration: 1s;
 }

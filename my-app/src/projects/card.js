@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function MyCard (props){
   
   return( 
-    <Card style={{width: "18rem", margin: 12}}>
+    <Card style={{width: "18rem", margin: 20}}>
       {props.anchor ? 
         (<a href={props.url}>
           <Card.Img

@@ -9,9 +9,11 @@ import SlideShow from './slide';
 
 export default function Home (props){
   return(
-    <Container fluid>
+    <Container>
       <Row>
-        <SlideShow/>
+        <Col>
+          <SlideShow/>
+        </Col>
       </Row>
     </Container>
   );
