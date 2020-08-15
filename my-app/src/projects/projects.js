@@ -25,7 +25,9 @@ export function BoulderField(){
       media={
         <ImgFormat
           img1src="/pics/boulderField/boulderField.png"
+          img1head="Form"
           img2src="/pics/boulderField/dataTable.png"
+          img2head="Boulder Table"
         />
       }
     />
@@ -42,8 +44,11 @@ export function CoffeeGrams(){
         <>
           <ImgFormat
             img1src="/pics/coffee_grams/cg_pcb.png"
+            img1head="PCB"
             img2src="/pics/coffee_grams/3d_cg_pcb.png"
+            img2head="3-D Render of PCB"
             img3src="/pics/coffee_grams/breadboard.JPG"
+            img3head="Raspberry Pi Prototype"
           />
         </>
       }
@@ -80,7 +85,7 @@ export function GPSSS(){
          vidsrc="\pics\GPSSS\gpsss_vid.mp4"
         />
         <ImgFormat
-          img1head=""
+          img1head="Sensor Internals"
           img1src="\pics\GPSSS\GPSSS_2.jpg"
         />
       </>
@@ -104,8 +109,8 @@ export function WCBuddy(){
         </>
       }
       media={
-        <ImgFormat img1head="Main and Interface PCB" img1src="\pics\WCB\wcb_pcb.jpg"
-          img3head="Watercooler" img3src="\pics\WCB\WCB_outside.JPG"
+        <ImgFormat img3head="Main and Interface PCB" img3src="\pics\WCB\wcb_pcb.jpg"
+          img1head="Watercooler" img1src="\pics\WCB\WCB_outside.JPG"
           img2head="Demo User Interface" img2src="\pics\WCB\WCB_fake_front.JPG"
         />
       }
@@ -130,7 +135,7 @@ export function ScaleUp(){
       media={
         <>
           <VidFormat youtube vidsrc='https://www.youtube.com/embed/G3OunuLPnXA'/>
-          <ImgFormat img1src="\pics\scale_up\hardware_all_view_labeled.JPG" img1head=""/>
+          <ImgFormat img1src="\pics\scale_up\hardware_all_view_labeled.JPG" img1head="Demo"/>
         </>
       }
     />
@@ -145,7 +150,8 @@ export function HC2(){
       buttons={[
         {title: 'GitHub', url: 'https://github.com/ec965/HC2_arduino_python'}
       ]}
-      description={<>A prototype IoT network for the Rotronics HC2 Temperature and Humididty sensor. Connections include WiFi, Email, and LoRa.</>}
+      description={<>I created fimrware libraries in Python (for Raspberry Pi) and Arduino to interface with the industry standard Rotronics HC2 temperature and humidity sensor. 
+                      I also designed a prototype IoT network for the HC2 sensor (currently a private repository). Connections include WiFi, Email, and LoRa.</>}
       media={
         <>
           <ImgFormat img1head="" img1src='\pics\hc2.JPG'/>
@@ -172,7 +178,12 @@ export function ProjectorBuddy(){
         </>
       }
       media={
-        <ImgFormat img1src="/pics/projector_buddy/topdown.jpg" img2src="/pics/projector_buddy/PIR_pic.jpg"/>
+        <ImgFormat 
+          img1src="/pics/projector_buddy/topdown.jpg"
+          img1head="Topdown View"
+          img2head="Side View"
+          img2src="/pics/projector_buddy/PIR_pic.jpg"
+        />
       }
     />
   );
@@ -216,11 +227,16 @@ export function CingHat(){
         {title: 'DevPost', url: "https://devpost.com/software/the-c-ing-hat"},
         {title: 'GitHub', url: "https://github.com/ec965/the_all_C-ing_eye"}
       ]}
-      description={<>A prototype hat for object detection.</>}
+      description={<>A prototype hat for object detection. Checkout the DevPost for more information.</>}
       media={
         <>
           <VidFormat vidsrc="https://www.youtube.com/embed/SFQxsU8La4k" youtube/>
-          <ImgFormat img1src="\pics\cing_hat\Cing_hat_2019.jpg" img2src='\pics\cing_hat\Cing_hat_2019 (2).jpg' />
+          <ImgFormat 
+            img1src="\pics\cing_hat\Cing_hat_2019.jpg" 
+            img1head="Side View"
+            img2src='\pics\cing_hat\Cing_hat_2019 (2).jpg'
+            img2head="Topdown View"
+          />
         </>
       }
     />

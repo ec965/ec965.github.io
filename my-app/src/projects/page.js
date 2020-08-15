@@ -7,27 +7,47 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
 import Image from 'react-bootstrap/Image';
+import Figure from 'react-bootstrap/Figure';
 
 export function ImgFormat (props){
-  const { img1head, img2head, img3head, img1src, img2src, img3src } = props;
-  return( 
+  const { img1src, img2src, img3src, img1head, img2head, img3head } = props;
+  return(
     <>
       <Row> 
         <Col>
-          <h5 className="image_heading">{img1head}</h5>
-          <Image className="project" src={img1src} fluid/>
+          <Figure>
+            <Figure.Image
+              src={img1src}
+            />
+            <Figure.Caption>
+              {img1head}
+            </Figure.Caption>
+          </Figure>
         </Col>
         {img2src && (
         <Col>
-          <h5 className="image_heading">{img2head}</h5>
-          <Image className="project" src={img2src} fluid/>
+          <Figure>
+            <Figure.Image
+              src={img2src}
+            />
+            <Figure.Caption>
+              {img2head}
+            </Figure.Caption>
+          </Figure>
+
         </Col>
         )}
       </Row>
       {img3src && (
       <Row>
-        <h5 className="image_heading">{img3head}</h5>
-        <Image className="project" src={img3src} fluid/>
+        <Figure>
+          <Figure.Image
+            src={img3src}
+          />
+          <Figure.Caption>
+            {img3head}
+          </Figure.Caption>
+        </Figure>
       </Row>
       )}
     </>
@@ -43,10 +63,45 @@ ImgFormat.propTypes = {
   img3src: PropTypes.string,
 };
 
+// export function ImgFormat2 (props){
+//   const { img1head, img2head, img3head, img1src, img2src, img3src } = props;
+//   return( 
+//     <>
+//       <Row> 
+//         <Col>
+//           <h5 className="image_heading">{img1head}</h5>
+//           <Image className="project" src={img1src} fluid/>
+//         </Col>
+//         {img2src && (
+//         <Col>
+//           <h5 className="image_heading">{img2head}</h5>
+//           <Image className="project" src={img2src} fluid/>
+//         </Col>
+//         )}
+//       </Row>
+//       {img3src && (
+//       <Row>
+//         <h5 className="image_heading">{img3head}</h5>
+//         <Image className="project" src={img3src} fluid/>
+//       </Row>
+//       )}
+//     </>
+//   );
+// }
+
+// ImgFormat2.propTypes = {
+//   img1head: PropTypes.string,
+//   img2head: PropTypes.string,
+//   img3head: PropTypes.string,
+//   img1src: PropTypes.string,
+//   img2src: PropTypes.string,
+//   img3src: PropTypes.string,
+// };
+
 export function VidFormat(props){
   return(
     <>
-      <Row>
+      <Row style={{marginBottom: 10}}>
         <Col>
           <h5 className="image_heading">{props.vidhead}</h5>
           <ResponsiveEmbed aspectRatio="16by9">
