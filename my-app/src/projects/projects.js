@@ -199,7 +199,7 @@ export function PolyPhase(){
       media={
         <>
           <ImgFormat img1head="Demo Setup" img1src="/pics/3phase/3phase_watt_demo.jpg" img2head="FFT Processing Graph" img2src="/pics/3phase/3phase_watt_processing.png"/>
-          <VidFormat vidsrc="/pics/3phase/3phasewatt_sin.mov" vidhead="One Power Phase"/>
+          <VidFormat vidsrc="/pics/3phase/3phasewatt_sin.mov" vidhead="Power Graph"/>
         </>
       }
     />

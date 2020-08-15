@@ -42,6 +42,8 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --highlightColor: #64B6F6;
+  --highlightColorHover: #2286C3;
 }
 
 *,
@@ -167,13 +169,13 @@ sup {
 }
 
 a {
-  color: #64b5f6;
+  color: var(--highlightColor);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #2286c3;
+  color: var(--highlightColorHover);
   text-decoration: underline;
 }
 
@@ -5352,7 +5354,7 @@ input[type="button"].btn-block {
   margin-left: 0;
   line-height: 1.25;
   color: #fff;
-  background-color: #18BC9C;
+  background-color: var(--highlightColor);
   border: 0 solid transparent;
 }
 
@@ -5360,7 +5362,7 @@ input[type="button"].btn-block {
   z-index: 2;
   color: #fff;
   text-decoration: none;
-  background-color: #0f7864;
+  background-color: var(--highlightColorHover);
   border-color: transparent;
 }
 
@@ -5385,7 +5387,7 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #0f7864;
+  background-color: var(--highlightColorHover);
   border-color: transparent;
 }
 

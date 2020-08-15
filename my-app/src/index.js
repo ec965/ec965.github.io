@@ -21,7 +21,7 @@ import Project from './projects/index';
 import ScrollToTop from './utility/scrollup';
 import AboutMe from './about/index';
 import Resume from './resume/index';
-
+import Fun from './fun/index';
 
 function App (props){
   return(
@@ -45,6 +45,9 @@ function App (props){
             <LinkContainer to="/resume">
               <Nav.Link>Resume</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/gallery">
+              <Nav.Link>Gallery</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -59,6 +62,10 @@ function App (props){
           <footer class="sourcecode">
             <a class="myFoot" href="https://github.com/ec965/ec965.github.io">View this site's source code.</a>
           </footer>
+        </Route>
+        
+        <Route path="/gallery">
+          <Fun/>
         </Route>
 
         <Route path="/about">

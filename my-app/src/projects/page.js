@@ -52,9 +52,13 @@ export function VidFormat(props){
           <ResponsiveEmbed aspectRatio="16by9">
             {props.youtube 
             ? 
-            (<iframe title="youtube video" width="560" height="315" src={props.vidsrc} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>)
+            (<iframe title="youtube video"
+              src={props.vidsrc} 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen></iframe>)
             :
-            (<video width="800" controls>
+            (<video controls>
               <source src={props.vidsrc}></source>
             </video>)}
           </ResponsiveEmbed>
@@ -100,8 +104,8 @@ export function ProjectPage(props){
           <Row>
             <h4>{props.dates}</h4>
           </Row>
-
-          {(props.buttons) && (
+          
+          {props.buttons && (
           <Row>
             {props.buttons.map((button, index)=>(
                   <Button
@@ -115,6 +119,7 @@ export function ProjectPage(props){
               ))}
           </Row>
           )}
+          
           <Row>
             <h5 style={{paddingTop: '15px', paddingBottom: '15px'}}>
               {props.description}
