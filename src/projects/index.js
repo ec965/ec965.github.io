@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectSkeleton from './skeleton';
-import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse, PolyPhase, ProjectorBuddy, WCBuddy, BoulderField } from './projects';
+import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse, PolyPhase, ProjectorBuddy, WCBuddy, BoulderField, MacroPad } from './projects';
 //routing
 import {
   HashRouter,
@@ -14,6 +14,14 @@ function Projects (props){
 
   let { path, url } = useRouteMatch();    
   const projects = [
+    {
+      url: url + '/macropad',
+      img: 'pics/macropad/pcb_schem.jpg',
+      alt: 'macropad',
+      title: 'Macro Pad',
+      text: '2020',
+      component: <MacroPad/>
+    },
     {
       url: url + '/boulderField',
       img: 'pics/boulderField/dataTable.png',

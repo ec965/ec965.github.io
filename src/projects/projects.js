@@ -7,6 +7,30 @@ const calplugLogos = [
   {src: "/pics/logos/Calit2.png", url: 'http://calit2.uci.edu/', alt: 'calit2Logo'}
 ];
 
+export function MacroPad(){
+  return(
+    <ProjectPage
+      title="Macro Pad"
+      dates="November 2020"
+      buttons={[{title: 'GitHub', url: 'https://github.com/ec965/macropad2'}]}
+      description={
+        <>
+          I've been getting into mechanical keyboards recently. 
+          This mechanical macro pad (or num pad) takes mx-style switches and includes a rotary encoder. 
+          It uses a <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the controller because I wanted the whole thing to be relatively easy to hand solder. 
+          The ProMicro is also compatible with QMK, an open source keyboard firmware, which I will use in the completed build.
+        </>
+      }
+      media={
+        <ImgFormat 
+          img1src="/pics/macropad/pcb_schem.jpg"
+          img1head="PCB"
+        />
+      }
+    />
+
+  );
+}
 export function BoulderField(){
   return(
     <ProjectPage
