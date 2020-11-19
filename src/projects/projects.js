@@ -18,7 +18,7 @@ export function MacroPad(){
           I've been getting into mechanical keyboards recently. 
           This mechanical macro pad (or num pad) takes mx-style switches and includes a rotary encoder. 
           It uses a <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the controller because I wanted the whole thing to be relatively easy to hand solder. 
-          The ProMicro is also compatible with QMK, an open source keyboard firmware, which I will use in the completed build.
+          The ProMicro is also compatible with <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source keyboard firmware, which I will use in the completed build.
         </>
       }
       media={
