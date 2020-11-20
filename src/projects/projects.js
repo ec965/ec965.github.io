@@ -61,18 +61,18 @@ export function CoffeeGrams(){
   return(
     <ProjectPage
       title="Coffee Grams"
-      dates="March 2020 - June 2020"
+      dates="March 2020 - June 2020, December 2020"
       buttons={[{title: 'GitHub',url: 'https://github.com/ec965/coffee_grams' }]}
       description={<>IoT Coffee Scale PCB design and LAMP stack webapp. <a href="./cg_example/Coffee Grams.html">Click here</a> for a static example of the webapp.</>}
       media={ 
         <>
           <ImgFormat
-            img1src="/pics/coffee_grams/cg_pcb.png"
-            img1head="PCB"
-            img2src="/pics/coffee_grams/3d_cg_pcb.png"
+            img3src="/pics/coffee_grams/pcb_rev2.jpg"
+            img3head="PCB"
+            img2src="/pics/coffee_grams/3d_rev2.jpg"
             img2head="3-D Render of PCB"
-            img3src="/pics/coffee_grams/breadboard.JPG"
-            img3head="Raspberry Pi Prototype"
+            img1src="/pics/coffee_grams/breadboard.JPG"
+            img1head="Raspberry Pi Prototype"
           />
         </>
       }

@@ -32,7 +32,7 @@ function Projects (props){
     },
     {
       url: url + '/coffeeGrams',
-      img: 'pics/coffee_grams/3d_cg_pcb.jpg',
+      img: 'pics/coffee_grams/3d_rev2.jpg',
       alt: 'coffeeGrams',
       title: 'Coffee Grams',
       text: '2020',
