@@ -1,0 +1,57 @@
+@import url("../font/stylesheet.css");
+
+:root {
+  --main-color: white;
+  --second-color: grey;
+  --link-color: #64ccf5;
+  --linkhover-color: #87d6f5;
+  --bg-color: black;
+}
+
+html {
+  font-family: madaregular, Helvetica, Arial, sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  color:var(--link-color);
+}
+a:hover{
+  text-decoration:underline;
+  color:var(--linkhover-color);
+}
+
+.nav-link, .nav-logo {
+  display:inline;
+}
+.nav-link{
+  display:flex-left;
+}
+.nav-bar{
+  list-style-type: none;
+  margin:0;
+  padding:10px;
+  overflow:hidden;
+  background-color: var(--bg-color);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-link-text, .nav-logo-text{
+  color:var(--main-color);
+  padding:5px;
+}
+.nav-link-text:hover, .nav-logo-text:hover{
+  text-decoration: none;
+  color: var(--second-color) !important;
+}
+.nav-link-text{
+  font-size:14px;
+}
+.nav-logo-text{
+  font-size:24px;
+  color:var(--main-color);
+}

@@ -14,8 +14,9 @@ export default function AboutMe(){
   return(
     <AboutPage
       title="Hello!"
-      greeting="My name is Enoch (pronounced E-knock)"
-      blurb={<>I'm a masters student at UC Irvine studying Embedded and Cyber-Physical systems. I did my B.S. in Electrical Engineering there too! 
+      greeting="I'm Enoch."
+      blurb={<>I'm a masters student at UC Irvine studying Embedded and Cyber-Physical systems. 
+        I completed my B.S. at UCI in Electrical Engineering. 
         I'm interested in the merging of electronics and the internet through IoT. 
         When I'm not in front of the computer, I like to cook and climb rocks.</>}
       email="enoch965@gmail.com"
