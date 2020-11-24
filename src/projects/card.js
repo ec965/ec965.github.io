@@ -11,11 +11,11 @@ export default function Card(props){
       <div className="card-image-frame">
         {props.anchor ? 
           ( <a href={props.url}>
-              <img className="card-image" src={props.img} alt={props.alt}/> 
+              <img className={`card-image ${props.axis}`} src={props.img} alt={props.alt}/> 
             </a>)
         :
           ( <Link to={props.url}>
-              <img className="card-image" src={props.img} alt={props.alt}/>
+              <img className={`card-image ${props.axis}`} src={props.img} alt={props.alt}/>
             </Link>)
         }
       </div>
@@ -34,6 +34,7 @@ Card.propTypes={
   alt: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
+  axis: PropTypes.string,
   anchor: PropTypes.bool,
 };
 

@@ -20,7 +20,8 @@ function Projects (props){
       alt: 'macropad',
       title: 'Macro Pad',
       text: '2020',
-      component: <MacroPad/>
+      component: <MacroPad/>,
+      axis: "w-image"
     },
     {
       url: url + '/boulderField',
@@ -28,7 +29,8 @@ function Projects (props){
       alt: 'boulderField',
       title: 'Boulder Field',
       text: '2020',
-      component: <BoulderField/>
+      component: <BoulderField/>,
+      axis: "h-image"
     },
     {
       url: url + '/coffeeGrams',
@@ -37,6 +39,7 @@ function Projects (props){
       title: 'Coffee Grams',
       text: '2020',
       component: <CoffeeGrams/>,
+      axis: "h-image"
     },
     {
       url: url + '/workoutTimer',
@@ -44,7 +47,8 @@ function Projects (props){
       alt: 'workoutTimer',
       title: 'Workout Timer',
       text: '2020',
-      component: <WorkoutTimer/>
+      component: <WorkoutTimer/>,
+      axis: "h-image"
     },
     {
       url: url + '/GPSSS',
@@ -52,7 +56,8 @@ function Projects (props){
       alt: 'GPSSS',
       title: 'GPS Sound Sensor',
       text: 'Senior Design 2020',
-      component: <GPSSS/>
+      component: <GPSSS/>,
+      axis: "h-image"
     },
     {
       url: url + '/watercoolerbuddy',
@@ -60,7 +65,8 @@ function Projects (props){
       alt: 'watercoolerbuddy',
       title: 'Water Cooler Buddy',
       text: 'Calplug 2019',
-      component: <WCBuddy/>
+      component: <WCBuddy/>,
+      axis: "h-image"
     },
     {
       url: url + '/scaleUp',
@@ -68,7 +74,8 @@ function Projects (props){
       alt: "scaleUp",
       title: 'Scale Up',
       text: 'SD Hacks 2019',
-      component: <ScaleUp/>
+      component: <ScaleUp/>,
+      axis: "h-image"
     },
     {
       url: url + '/hc2',
@@ -76,7 +83,8 @@ function Projects (props){
       alt: 'hc2',
       title: 'HC2: IoT Sensor',
       text: '2019',
-      component: <HC2/>
+      component: <HC2/>,
+      axis: "h-image"
     },
     {
       url: url + '/projectorBuddy',
@@ -84,7 +92,8 @@ function Projects (props){
       alt: "projectorBuddy",
       title: 'Projector Buddy',
       text: 'Calplug 2019',
-      component: <ProjectorBuddy/>
+      component: <ProjectorBuddy/>,
+      axis: "h-image"
     },
     {
       url: url + '/3phasewatt',
@@ -92,7 +101,8 @@ function Projects (props){
       alt: '3phasewatt',
       title: "Poly-Phase Wattmeter",
       text: 'Calplug 2019',
-      component: <PolyPhase/>
+      component: <PolyPhase/>,
+      axis: "h-image"
     },
     {
       url: url + '/cingHat',
@@ -100,7 +110,8 @@ function Projects (props){
       alt: 'cingHat',
       title: 'The C-ing Hat',
       text: 'Hack UCI 2019',
-      component: <CingHat/>
+      component: <CingHat/>,
+      axis: "h-image"
     },
     {
       url: url + '/micromouse',
@@ -108,7 +119,8 @@ function Projects (props){
       alt: 'micromouse',
       title: 'MicroMouse',
       text: '2019',
-      component: <MicroMouse/>
+      component: <MicroMouse/>,
+      axis: "h-image"
     }
 
   ];

@@ -12,7 +12,7 @@ export default function ProjectSkeleton (props){
     <div className="container">
       <div className="row">
         {props.cards.map((card,index)=>(
-          <div className="column">
+          <div className="column four">
             <Card
               url={card.url}
               img={card.img}
@@ -20,6 +20,7 @@ export default function ProjectSkeleton (props){
               title={card.title}
               text={card.text}
               anchor={card.anchor}
+              axis={card.axis}
             />
           </div>
         ))}
@@ -35,7 +36,8 @@ ProjectSkeleton.propTypes = {
       img: PropTypes.string,
       alt: PropTypes.string,
       title: PropTypes.string,
-      text: PropTypes.string
+      text: PropTypes.string,
+      axis: PropTypes.string
     })
   ),
 };

@@ -13,7 +13,7 @@ import ScrollToTop from '../utility/scrollup';
 import AboutMe from '../about/index';
 import Resume from '../resume/index';
 import Fun from '../fun/index';
-import ProjectFooter from '../projects/footer.js';
+import Footer from './footer.js';
 
 export default function Navigation(props){
   return(
@@ -36,11 +36,12 @@ export default function Navigation(props){
 
         <Route path="/projects">
           <Project/>
-          <ProjectFooter/>
+          <Footer/>
         </Route>
         
         <Route path="/gallery">
           <Fun/>
+          <Footer/>
         </Route>
 
         <Route path="/about">
@@ -49,6 +50,7 @@ export default function Navigation(props){
 
         <Route path="/resume">
           <Resume/>
+          <Footer/>
         </Route>
       </Switch>
       <div style={{margin: '24px'}}/>
