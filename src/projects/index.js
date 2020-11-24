@@ -74,7 +74,7 @@ function Projects (props){
       url: url + '/hc2',
       img: 'pics/hc2.JPG',
       alt: 'hc2',
-      title: 'HC2: IoT Environment Sensor',
+      title: 'HC2: IoT Sensor',
       text: '2019',
       component: <HC2/>
     },

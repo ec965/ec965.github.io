@@ -1,31 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 //bootstrap
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-//myStuff
-import MyCard from './card';
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 
-function ProjectSkeleton (props){  
+import Card from './card';
 
+export default function ProjectSkeleton (props){  
   return(
-    <Container>
-      <Row>
+    <div className="container">
+      <div className="row">
         {props.cards.map((card,index)=>(
-          <Col key={index} xs="auto">
-              <MyCard
-                url={card.url}
-                img={card.img}
-                alt={card.alt}
-                title={card.title}
-                text={card.text}
-                anchor={card.anchor}
-              />
-          </Col>
+          <div className="column">
+            <Card
+              url={card.url}
+              img={card.img}
+              alt={card.alt}
+              title={card.title}
+              text={card.text}
+              anchor={card.anchor}
+            />
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
 
@@ -40,5 +39,3 @@ ProjectSkeleton.propTypes = {
     })
   ),
 };
-
-export default ProjectSkeleton;

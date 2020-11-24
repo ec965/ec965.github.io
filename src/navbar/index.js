@@ -13,6 +13,7 @@ import ScrollToTop from '../utility/scrollup';
 import AboutMe from '../about/index';
 import Resume from '../resume/index';
 import Fun from '../fun/index';
+import ProjectFooter from '../projects/footer.js';
 
 export default function Navigation(props){
   return(
@@ -35,9 +36,7 @@ export default function Navigation(props){
 
         <Route path="/projects">
           <Project/>
-          <footer class="sourcecode">
-            <a class="myFoot" href="https://github.com/ec965/ec965.github.io">View this site's source code.</a>
-          </footer>
+          <ProjectFooter/>
         </Route>
         
         <Route path="/gallery">
