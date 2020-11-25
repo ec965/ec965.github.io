@@ -1,10 +1,26 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Link, useLocation} from 'react-router-dom';
 
 export function NavLink(props){
+  const [highlight, setHighlight] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === props.link){
+      setHighlight(true);
+    }
+    else{
+      setHighlight(false);
+    }
+  }, [location.pathname, props.link])
+
   return(
     <li className="nav-link">
-      <Link className="nav-link-text" to={props.link}>{props.name}</Link>
+      <Link className={`nav-link-text ${highlight && "hover"}`} 
+        to={props.link}
+      >
+        {props.name}
+      </Link>
     </li>
   );
 }

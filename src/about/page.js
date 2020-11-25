@@ -15,18 +15,16 @@ export default function AboutPage(props){
 
             <p>{props.blurb}</p>
             <div className="row about-logos">
-              <div className="column">
-                <a href={props.github}>
-                  <i className="logo fab fa-github"/>
-                </a>
-                <a href={props.linkedin}>
-                  <i className="logo fab fa-linkedin-in"/>
-                </a>
-                <a href={props.mountainproject}>
-                  <img className="logo" src="/pics/logos/mountainproject.png" alt="mountain_project"/>
-                </a>
-                <a href={'mailto:' + props.email} className="courier">{props.email}</a>
-              </div>
+              <a href={props.github}>
+                <i className="footer-logo fab fa-github"/>
+              </a>
+              <a href={props.linkedin}>
+                <i className="footer-logo fab fa-linkedin-in"/>
+              </a>
+              <a href={props.mountainproject}>
+                <img className="footer-logo" src="/pics/logos/mountainproject.png" alt="mountain_project"/>
+              </a>
+              <a href={'mailto:' + props.email} className="courier">{props.email}</a>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {LinkButton,} from '../utility/button';
 
 function Figure(props){
   return(
@@ -17,22 +18,20 @@ export function MediaFormat (props){
       <div className="figure-container">
           {img1src && (
             <Figure caption={img1head}>
-              <img src={img1src} alt={img1head} className="project-image large"/>
+              <img src={img1src} alt={img1head} className="project-image"/>
             </Figure>
 
           )}
-          <div className="figure-container">
-            {img2src && (
-              <Figure caption={img2head}>
-                <img src={img2src} alt={img2head} className="project-image"/>
-              </Figure>
-            )}
-            {img3src && (
-              <Figure caption={img3head}>
-                <img src={img3src} alt={img3head} className="project-image"/>
-              </Figure>
-            )}
-          </div>
+          {img2src && (
+            <Figure caption={img2head}>
+              <img src={img2src} alt={img2head} className="project-image"/>
+            </Figure>
+          )}
+          {img3src && (
+            <Figure caption={img3head}>
+              <img src={img3src} alt={img3head} className="project-image"/>
+            </Figure>
+          )}
           {vidsrc && (
             <Figure caption={vidhead}>
               <Video youtube={youtube} vidsrc={vidsrc}/>
@@ -81,16 +80,8 @@ Video.propTypes = {
 function CompanyLogo(props){
   return(
     <a href={props.url}>
-      <img src={props.src} alt={props.alt} className="logo"/>
+      <img src={props.src} alt={props.alt} className="company-logo"/>
     </a>
-  );
-}
-
-function LinkButton(props){
-  return(
-    <button className={`link-button ${props.color}`}>
-      <a className={`link-button ${props.color} courier`} href={props.url}>{props.children}</a>
-    </button>
   );
 }
 
@@ -125,7 +116,9 @@ export function ProjectPage(props){
             {props.buttons && (
               <li className="project-description">
                 {props.buttons.map((button,index)=>(
-                  <LinkButton color={button.color} key={index} url={button.url}>{button.title}</LinkButton>
+                  <LinkButton color={button.color} key={index} url={button.url}>
+                    {button.title}
+                  </LinkButton>
                 ))}
               </li>
             )}
@@ -137,9 +130,7 @@ export function ProjectPage(props){
             </li>
           </ul>
         </div>
-        <div className="column">
-          {props.media}
-        </div>
+        {props.media}
       </div>
     </div>
   );

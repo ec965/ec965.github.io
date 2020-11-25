@@ -22,8 +22,8 @@ export default function Navigation(props){
       <NavBar>
         <NavLogo link="/" name="Enoch Chau"/>
         <div>
-          <NavLink link="/projects" name="Projects"/>
           <NavLink link="/about" name="About"/>
+          <NavLink link="/projects" name="Portfolio"/>
           <NavLink link="/resume" name="Resume"/>
           <NavLink link="/gallery" name="Gallery"/>
         </div>
