@@ -263,18 +263,18 @@ h1.cover-text{
   border-radius: 7px 7px 0px 0px;
 }
 .card-image.h-image{
-  height:205px;
+  height:220px;
   transition: height .5s;
 }
 .card-image.h-image:hover{
-  height:220px;
+  height:205px;
 }
 .card-image.w-image{
-  width:200px;
+  width:220px;
   transition: width .5s;
 }
 .card-image.w-image:hover{
-  width:220px;
+  width:200px;
 }
 .card-body{
   color: var(--main-color);
