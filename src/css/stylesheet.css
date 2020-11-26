@@ -1,5 +1,5 @@
 @import url("../font/stylesheet.css");
-
+@import url("./reset.css");
 :root {
   --main-color: #ECEFF4;
   --second-color: #D8DEE9;
@@ -490,6 +490,7 @@ input.range{
 .slide-button:hover{
   color: var(--linkhover-color);
 }
+/*uses CSSTransistion from react-transistion-group*/
 .slide-node-enter{
   opacity: 0;
 }
