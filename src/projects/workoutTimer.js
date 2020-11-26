@@ -4,12 +4,7 @@ import PropTypes from 'prop-types';
 import { Formik, Form as FMKForm, useField } from 'formik';
 import * as Yup from 'yup';
 //bootstrap
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 //sounds
 import useSound from 'use-sound';
 import countDownSfx from './sounds/beep0.mp3';
@@ -17,22 +12,27 @@ import moveSfx from './sounds/beep1.mp3';
 import stopSfx from './sounds/beep2.mp3';
 import finishSfx from './sounds/finish.mp3';
 
-function FormInput (props){
-  const [field, meta] = useField(props);
+import Button from '../utility/button';
+import Range from '../utility/range';
 
+function FormInput(props){
+  const [field, meta] = useField(props);
   return(
-    <Form.Group controlId={props.controlId}>
-      <Form.Label>{props.label}</Form.Label>
-      <Form.Control
-        type="text"
+    <div className="form-group"> 
+      <label for={props.name} className="form-label">
+        {props.label}
+      </label>
+      <input 
+        type="text" 
+        id={props.controlId} 
         name={props.name}
-        isInvalid={meta.touched && meta.error}
         {...field}
+        className="form-input courier"
       />
-      <Form.Control.Feedback type="invalid">
+      <span for={props.name} className="form-label invalid">
         {meta.error}
-      </Form.Control.Feedback>
-    </Form.Group>
+      </span>
+    </div>
   );
 }
 
@@ -74,57 +74,41 @@ function WorkoutForm (props){
         onSubmit={props.onSubmit}
       >
         <FMKForm>
-          <Form.Row>
-            <Col xs={props.colSpace}>
-              <FormInput
-                controlId="sets"
-                name="sets"
-                label="Sets"
-              />
-            </Col>
-            <Col xs={props.colSpace}>
-              <FormInput
-                controlId="reps"
-                name="reps"
-                label="Repititions"
-              />
-            </Col>
-          </Form.Row>
-          <Form.Row>
-            <Col xs={props.colSpace}>
-              <FormInput
-                controlId="active"
-                name="active"
-                label="Active Time"
-              />
-            </Col>
-            <Col xs={props.colSpace}>
-              <FormInput
-                controlId="rest"
-                name="rest"
-                label="Rest Time"
-              />
-            </Col>
-          </Form.Row>
-          <Row>
-            <Col xs={props.colSpace}>
-              <Button 
-                variant="success" 
-                type={props.B1Type} 
-                onClick={props.B1OnClick}
-              >
-                Start
-              </Button>
-            </Col>
-            <Col xs={props.colSpace}>
-              <Button 
-                variant={props.B2Variant} 
-                onClick={props.B2OnClick}
-              >
-                {props.B2Label}
-              </Button>
-            </Col>
-          </Row>
+          <div className="grid">
+            <FormInput
+              controlId="sets"
+              name="sets"
+              label="Sets"
+            />
+            <FormInput
+              controlId="reps"
+              name="reps"
+              label="Repititions"
+            />
+            <FormInput
+              controlId="active"
+              name="active"
+              label="Active Time"
+            />
+            <FormInput
+              controlId="rest"
+              name="rest"
+              label="Rest Time"
+            />
+            <Button 
+              color="green" 
+              type={props.B1Type} 
+              onClick={props.B1OnClick}
+            >
+              Start
+            </Button>
+            <Button 
+              color={props.B2Variant} 
+              onClick={props.B2OnClick}
+            >
+              {props.B2Label}
+            </Button>
+          </div>
         </FMKForm>
       </Formik>
     </>
@@ -146,24 +130,12 @@ WorkoutForm.propTypes = {
 
 function Display (props){
   return(
-    <Jumbotron >
-      <Row>
-        <Col>
-          <h4 style={{fontSize: props.fontSize}}>Sets: {props.sets}</h4>
-        </Col>
-        <Col>
-          <h4 style={{fontSize: props.fontSize}}>Reps: {props.reps}</h4>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <h4 style={{fontSize: props.fontSize}}>Action: {props.action}</h4>
-        </Col>
-        <Col>
-          <h4 style={{fontSize: props.fontSize}}>Time: {props.time}</h4>
-        </Col>
-      </Row>
-    </Jumbotron>
+    <div className="display-flex">
+      <h4 className="display-item" style={{fontSize: props.fontSize}}>Sets: {props.sets}</h4>
+      <h4 className="display-item" style={{fontSize: props.fontSize}}>Reps: {props.reps}</h4>
+      <h4 className="display-item" style={{fontSize: props.fontSize}}>Action: {props.action}</h4>
+      <h4 className="display-item" style={{fontSize: props.fontSize}}>Time: {props.time}</h4>
+    </div>
   );
 }
 
@@ -328,43 +300,23 @@ export default function WorkoutApp (){
   
   return(
     <>
-      <Row>
-        <Col>
+      <div className='figure-container app'> 
+        <div className="app-item">
           <WorkoutForm
             onSubmit={handleSubmit}
             colSpace={2}
             B1Type={inProgress ? null : 'submit'}
             B1OnClick={inProgress && pause ? handleRestart : null}
-            B2Variant={inProgress && pause ? "info" : "danger"}
+            B2Variant={inProgress && pause ? "blue" : "orange"}
             B2Label={inProgress && pause ? 'Reset' : 'Stop'}
             B2OnClick={inProgress && pause ? handleReset : handlePause}
           />
-        </Col>
-      </Row>
-      <Row style={{marginTop: 20}}>
-        <Col>
-          <Form.Group controlId='soundRangeSlider'>
-            <Form.Label>Volume: {Math.round(volume*100)}</Form.Label>
-            <Form.Control 
-              value={volume*100}
-              type="range"
-              onChange={handleVolume}
-            />
-          </Form.Group>
-        </Col>
-        <Col>
-          <Form.Group controlId='fontRangeSlider'>
-            <Form.Label>Font Size: {Math.round(fontSize*10)}</Form.Label>
-            <Form.Control 
-              value={fontSize*10}
-              type="range"
-              onChange={handleFontSize}
-            />
-          </Form.Group>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
+        </div>
+        <div className="app-item">
+          <Range id="volume" value={volume*100} onChange={handleVolume}>Volume: {Math.round(volume*100)}</Range>
+          <Range id="font_size" value={fontSize*10} onChange={handleFontSize}>Font Size: {Math.round(fontSize*10)}</Range>
+        </div>
+        <div className="app-item">
           <Display
             sets={currSets}
             reps={currReps}
@@ -372,8 +324,8 @@ export default function WorkoutApp (){
             action={currAction}
             fontSize= {fontSize+'em'}
           />
-        </Col>
-      </Row>
+        </div>
+      </div>
     </>
   );
 }

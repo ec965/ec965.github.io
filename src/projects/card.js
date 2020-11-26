@@ -1,49 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from 'react-bootstrap/Card';
 //routing
 import { Link } from 'react-router-dom';
 
 //use props.anchor to toggle between <a> and <Link>
 //anchors are used for redirecting to an external site
-function MyCard (props){
-  
-  return( 
-    <Card style={{width: "18rem", margin: 20}}>
-      {props.anchor ? 
-        (<a href={props.url}>
-          <Card.Img
-            variant="top"
-            className="mycard"
-            src={props.img} 
-            alt={props.alt}
-          />
-        </a>)
+export default function Card(props){
+  return(
+    <div className="card">
+      <div className="card-image-frame">
+        {props.anchor ? 
+          ( <a href={props.url}>
+              <img className={`card-image ${props.axis}`} src={props.img} alt={props.alt}/> 
+            </a>)
         :
-        (<Link to={props.url}>
-          <Card.Img
-            variant="top"
-            className="mycard"
-            src={props.img} 
-            alt={props.alt}
-          />
-        </Link>)
-      }
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text>{props.text}</Card.Text>
-      </Card.Body>
-    </Card>
+          ( <Link to={props.url}>
+              <img className={`card-image ${props.axis}`} src={props.img} alt={props.alt}/>
+            </Link>)
+        }
+      </div>
+      <div className="card-body">
+        <h4 className="card-title">{props.title}</h4>
+        <h6 className="card-text">{props.text}</h6>
+      </div>
+    </div>
   );
 }
 
-MyCard.propTypes={
+
+Card.propTypes={
   url: PropTypes.string,
   img: PropTypes.string,
   alt: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
+  axis: PropTypes.string,
   anchor: PropTypes.bool,
 };
 
-export default MyCard;

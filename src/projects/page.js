@@ -1,190 +1,138 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//bootstrap
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
-import Image from 'react-bootstrap/Image';
-import Figure from 'react-bootstrap/Figure';
+import {LinkButton,} from '../utility/button';
 
-export function ImgFormat (props){
-  const { img1src, img2src, img3src, img1head, img2head, img3head } = props;
+export function Figure(props){
+  return(
+    <div className="figure">
+      {props.children}
+      <h5 className="figure-caption courier">{props.caption}</h5>
+    </div>
+  );
+}
+
+export function MediaFormat (props){
+  const { img1src, img2src, img3src, img1head, img2head, img3head, vidsrc, vidhead, youtube } = props;
   return(
     <>
-      <Row> 
-        <Col>
-          <Figure>
-            <Figure.Image
-              src={img1src}
-            />
-            <Figure.Caption>
-              {img1head}
-            </Figure.Caption>
-          </Figure>
-        </Col>
-        {img2src && (
-        <Col>
-          <Figure>
-            <Figure.Image
-              src={img2src}
-            />
-            <Figure.Caption>
-              {img2head}
-            </Figure.Caption>
-          </Figure>
+      <div className="figure-container">
+          {img1src && (
+            <Figure caption={img1head}>
+              <img src={img1src} alt={img1head} className="project-image"/>
+            </Figure>
 
-        </Col>
-        )}
-      </Row>
-      {img3src && (
-      <Row>
-        <Figure>
-          <Figure.Image
-            src={img3src}
-          />
-          <Figure.Caption>
-            {img3head}
-          </Figure.Caption>
-        </Figure>
-      </Row>
-      )}
+          )}
+          {img2src && (
+            <Figure caption={img2head}>
+              <img src={img2src} alt={img2head} className="project-image"/>
+            </Figure>
+          )}
+          {img3src && (
+            <Figure caption={img3head}>
+              <img src={img3src} alt={img3head} className="project-image"/>
+            </Figure>
+          )}
+          {vidsrc && (
+            <Figure caption={vidhead}>
+              <Video youtube={youtube} vidsrc={vidsrc}/>
+            </Figure>
+          )}
+      </div>
     </>
   );
 }
 
-ImgFormat.propTypes = {
+MediaFormat.propTypes = {
   img1head: PropTypes.string,
   img2head: PropTypes.string,
   img3head: PropTypes.string,
   img1src: PropTypes.string,
   img2src: PropTypes.string,
   img3src: PropTypes.string,
+  vidsrc: PropTypes.string,
+  vidhead: PropTypes.string,
+  youtube: PropTypes.bool
 };
 
-// export function ImgFormat2 (props){
-//   const { img1head, img2head, img3head, img1src, img2src, img3src } = props;
-//   return( 
-//     <>
-//       <Row> 
-//         <Col>
-//           <h5 className="image_heading">{img1head}</h5>
-//           <Image className="project" src={img1src} fluid/>
-//         </Col>
-//         {img2src && (
-//         <Col>
-//           <h5 className="image_heading">{img2head}</h5>
-//           <Image className="project" src={img2src} fluid/>
-//         </Col>
-//         )}
-//       </Row>
-//       {img3src && (
-//       <Row>
-//         <h5 className="image_heading">{img3head}</h5>
-//         <Image className="project" src={img3src} fluid/>
-//       </Row>
-//       )}
-//     </>
-//   );
-// }
-
-// ImgFormat2.propTypes = {
-//   img1head: PropTypes.string,
-//   img2head: PropTypes.string,
-//   img3head: PropTypes.string,
-//   img1src: PropTypes.string,
-//   img2src: PropTypes.string,
-//   img3src: PropTypes.string,
-// };
-
-export function VidFormat(props){
+export function Video(props){
   return(
-    <>
-      <Row style={{marginBottom: 10}}>
-        <Col>
-          <h5 className="image_heading">{props.vidhead}</h5>
-          <ResponsiveEmbed aspectRatio="16by9">
-            {props.youtube 
-            ? 
-            (<iframe title="youtube video"
-              src={props.vidsrc} 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen></iframe>)
-            :
-            (<video controls>
-              <source src={props.vidsrc}></source>
-            </video>)}
-          </ResponsiveEmbed>
-        </Col>
-      </Row>
-    </>
+    <div className={`video-frame ${props.className}`}>
+      {props.youtube 
+      ? 
+      (<iframe className="video" title="youtube video"
+        src={props.vidsrc} 
+        frameBorder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowFullScreen></iframe>)
+      :
+      (<video className="video" controls>
+        <source src={props.vidsrc}></source>
+      </video>)}
+    </div>
   );
 }
 
-VidFormat.propTypes = {
+Video.propTypes = {
   youtube: PropTypes.bool,
   vidsrc: PropTypes.string,
-  vidhead: PropTypes.string,
+}
+
+function CompanyLogo(props){
+  return(
+    <a href={props.url}>
+      <img src={props.src} alt={props.alt} className="company-logo"/>
+    </a>
+  );
 }
 
 export function ProjectPage(props){
   return(
-    <Container className="pageFade">
-      <Row>
-        <Col>
-          <Row>
-            <h2>{props.title}</h2>
-          </Row>
+    <div className="container">
+      <div className="row">
+        <div className="column">
+          <ul className="project-description">
+            <li className="project-description">
+              <h2>{props.title}</h2>
+            </li>
+            {props.subtitle && (
+              <li className="project-description">
+                <h3>{props.subtitleA}</h3>
+              </li>  
+            )}
 
-          {props.subtitle && (
-            <Row>
-              <h3>{props.subtitle}</h3>
-            </Row>
-          )}
 
-          {props.logos && (
-            <Row xs>
-              <Col xs>
-              {props.logos.map((logo, index)=>(
-                  <a href={logo.url}>
-                    <Image src={logo.src} alt={logo.alt} style={{marginRight:10}} className="logo"/>
-                  </a>
-              ))}
-              </Col>
-            </Row>
-          )}
+            {props.logos && (
+              <li className="project-description">
+                {props.logos.map((logo,index)=>(
+                  <CompanyLogo src={logo.src} alt={logo.alt} url={logo.url}/>
+                ))}
+              </li>
+            )}
 
-          <Row>
-            <h4>{props.dates}</h4>
-          </Row>
-          
-          {props.buttons && (
-          <Row>
-            {props.buttons.map((button, index)=>(
-                  <Button
-                    key={index}
-                    style={{marginRight: 10}}
-                    variant="info"
-                    href={button.url}
-                  >
+            <li className="project-description">
+              <h4>{props.dates}</h4>
+            </li>
+
+            {props.buttons && (
+              <li className="project-description">
+                {props.buttons.map((button,index)=>(
+                  <LinkButton color={button.color} key={index} url={button.url}>
                     {button.title}
-                  </Button>
-              ))}
-          </Row>
-          )}
-          
-          <Row>
-            <h5 style={{paddingTop: '15px', paddingBottom: '15px'}}>
-              {props.description}
-            </h5>
-          </Row>
-        </Col>
-      </Row>
-        {props.media}
-    </Container>     
+                  </LinkButton>
+                ))}
+              </li>
+            )}
 
+            <li className="project-description">
+              <h5>
+                {props.description}
+              </h5>
+            </li>
+          </ul>
+        </div>
+        {props.media}
+      </div>
+    </div>
   );
 }
 
