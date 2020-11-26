@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 //112.9px is the height of the navbar combined with the footer
 //subtracting 112.9px from 100% of the view height will perfectly fit the pdf object
+//turn the backgroundColor to white for better visibility on mobile.
 function ResumeObject(props){
   return(
-    <div className="container">
+    <div className="container" style={{backgroundColor: "white"}}>
       <object data={props.data} type="application/pdf" width="100%" style={{height:'calc(100vh - 112.9px)'}}>
         <p>It appears you don't have a PDF plugin for this browser.
           That's ok, <a href={props.src}>click here to download the PDF file.</a></p>

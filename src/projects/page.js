@@ -4,7 +4,7 @@ import {LinkButton,} from '../utility/button';
 
 export function Figure(props){
   return(
-    <div className="figure">
+    <div className={`figure ${props.className}`}>
       {props.children}
       <h5 className="figure-caption courier">{props.caption}</h5>
     </div>

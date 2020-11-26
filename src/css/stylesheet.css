@@ -490,21 +490,9 @@ input.range{
 .slide-button:hover{
   color: var(--linkhover-color);
 }
-/*uses CSSTransistion from react-transistion-group*/
-.slide-node-enter{
-  opacity: 0;
+.slide-node{
+  animation: fadeIn 1s;
 }
-.slide-node-enter-active{
-  opacity: 1;
-  transition: opacity 500ms;
-}
-/* .slide-node-exit{
-  opacity:1;
-}
-.slide-node-exit-active{
-  opacity:0;
-  transition: opacity 500ms;
-} */
 
 
 @media (max-width:830px){
@@ -540,16 +528,16 @@ input.range{
     overflow:hidden;
   }
   .slide-image{
-    width:300px;
+    width:245px;
   }
   .slide-video{
-    width:300px !important;
+    width:245px !important;
   }
   .slide-control{
     width:30px;
   }
   .slide-button{
-    font-size:30px;
+    font-size:28px;
     padding:5px;
   }
   .slide-player{
