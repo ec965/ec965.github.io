@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {LinkButton,} from '../utility/button';
 
-function Figure(props){
+export function Figure(props){
   return(
     <div className="figure">
       {props.children}
@@ -56,7 +56,7 @@ MediaFormat.propTypes = {
 
 export function Video(props){
   return(
-    <div className="video-frame">
+    <div className={`video-frame ${props.className}`}>
       {props.youtube 
       ? 
       (<iframe className="video" title="youtube video"

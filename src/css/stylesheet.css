@@ -109,6 +109,10 @@ footer{
   color: var(--main-color); 
   padding-right:5px;
   padding-left:5px;
+  transition: color .5s;
+}
+.footer-logo:hover{
+  color: var(--linkhover-color);
 }
 i.footer-logo{
   font-size:40px;
@@ -116,6 +120,10 @@ i.footer-logo{
 img.footer-logo{
   width:40px;
   filter: grayscale(100%);
+  transition: filter .5s;
+}
+img.footer-logo:hover{
+  filter: none;
 }
 p.footer-text{
   font-size: 14px;
@@ -200,6 +208,7 @@ a.footer-text{
 .nav-link-text, .nav-logo-text{
   color:var(--main-color);
   padding:5px;
+  transition: color .5s;
 }
 .nav-link-text:hover, .nav-logo-text:hover, .nav-link-text.hover{
   text-decoration: none;
@@ -255,17 +264,17 @@ h1.cover-text{
 }
 .card-image.h-image{
   height:205px;
-  transition: height 5s;
+  transition: height .5s;
 }
 .card-image.h-image:hover{
-  height:400px;
+  height:220px;
 }
 .card-image.w-image{
   width:200px;
-  transition: width 5s;
+  transition: width .5s;
 }
 .card-image.w-image:hover{
-  width:400px;
+  width:220px;
 }
 .card-body{
   color: var(--main-color);
@@ -391,6 +400,7 @@ ul.project-description{
   width:200px;
   padding: 0 10px 0 10px;
   filter: grayscale(50%) contrast(100%);
+  transition: filter 0.5s;
 }
 .company-logo:hover{
   filter: grayscale(0%);
@@ -453,6 +463,48 @@ input.range{
   width:fit-content;
 }
 
+/*----- gallery -----*/
+.slide-image{
+  width: 650px;
+  overflow:hidden;
+}
+.slide-video{
+  width:650px !important;
+}
+.slide-player{
+  padding-top:20px;
+  padding-bottom:20px;
+  height:900px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide-control{
+  width:60px;
+}
+.slide-button{
+  font-size:60px;
+  padding:10px;
+  color: var(--main-color);
+}
+.slide-button:hover{
+  color: var(--linkhover-color);
+}
+.slide-node-enter{
+  opacity: 0;
+}
+.slide-node-enter-active{
+  opacity: 1;
+  transition: opacity 500ms;
+}
+/* .slide-node-exit{
+  opacity:1;
+}
+.slide-node-exit-active{
+  opacity:0;
+  transition: opacity 500ms;
+} */
+
 
 @media (max-width:830px){
   :root{
@@ -463,9 +515,6 @@ input.range{
   }
   i.footer-logo{
     font-size:27px;
-  }
-  img.footer-logo{
-    width:0px;
   }
   img.about-image{
     max-width: 300px;
@@ -488,5 +537,21 @@ input.range{
   .display-item{
     width:fit-content;
     overflow:hidden;
+  }
+  .slide-image{
+    width:300px;
+  }
+  .slide-video{
+    width:300px !important;
+  }
+  .slide-control{
+    width:30px;
+  }
+  .slide-button{
+    font-size:30px;
+    padding:5px;
+  }
+  .slide-player{
+    height:500px;
   }
 }
