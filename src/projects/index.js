@@ -1,6 +1,20 @@
 import React from 'react';
 import ProjectSkeleton from './skeleton';
-import { CoffeeGrams, WorkoutTimer, GPSSS, ScaleUp, HC2, CingHat, MicroMouse, PolyPhase, ProjectorBuddy, WCBuddy, BoulderField, MacroPad } from './projects';
+import { 
+  FKRestoration, 
+  CoffeeGrams, 
+  WorkoutTimer, 
+  GPSSS, 
+  ScaleUp, 
+  HC2, 
+  CingHat, 
+  MicroMouse, 
+  PolyPhase, 
+  ProjectorBuddy, 
+  WCBuddy, 
+  BoulderField, 
+  MacroPad 
+} from './projects';
 //routing
 import {
   HashRouter,
@@ -15,8 +29,17 @@ function Projects (props){
   let { path, url } = useRouteMatch();    
   const projects = [
     {
+      url: url + '/fk2001',
+      img: 'pics/fk2001/fk-1.JPG',
+      alt: 'fk2001',
+      title: 'FK-2001 Restoration',
+      text: '2020',
+      component: <FKRestoration/>,
+      axis: "h-image"
+    },
+    {
       url: url + '/macropad',
-      img: 'pics/macropad/pcb_schem.jpg',
+      img: 'pics/macropad/pcb_schem.png',
       alt: 'macropad',
       title: 'Macro Pad',
       text: '2020',
@@ -138,7 +161,7 @@ function Projects (props){
         This doesn't need a route as it is an external webapge*/}
         {projects.map((project, index) => (
           project.anchor ? null : (
-            <Route key={index} path={path + '/' + project.alt}>
+            <Route key={index} path={project.url}>
               {project.component}
             </Route> )
         ))}

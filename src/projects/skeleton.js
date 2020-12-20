@@ -9,20 +9,20 @@ import Card from './card';
 
 export default function ProjectSkeleton (props){  
   return(
-    <div className="container">
-      <div className="row">
+    <div className="container lr-padding center">
+      <div className="row row-card">
         {props.cards.map((card,index)=>(
-          <div className="column four">
-            <Card
-              url={card.url}
-              img={card.img}
-              alt={card.alt}
-              title={card.title}
-              text={card.text}
-              anchor={card.anchor}
-              axis={card.axis}
-            />
-          </div>
+        <div className="column five">
+          <Card
+            url={card.url}
+            img={card.img}
+            alt={card.alt}
+            title={card.title}
+            text={card.text}
+            anchor={card.anchor}
+            axis={card.axis}
+          />
+        </div>
         ))}
       </div>
     </div>

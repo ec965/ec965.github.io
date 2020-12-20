@@ -15,7 +15,7 @@ export function MediaFormat (props){
   const { img1src, img2src, img3src, img1head, img2head, img3head, vidsrc, vidhead, youtube } = props;
   return(
     <>
-      <div className="figure-container">
+      <div className="figure-container lr-padding">
           {img1src && (
             <Figure caption={img1head}>
               <img src={img1src} alt={img1head} className="project-image"/>
@@ -87,7 +87,7 @@ function CompanyLogo(props){
 
 export function ProjectPage(props){
   return(
-    <div className="container">
+    <div className="container lr-padding">
       <div className="row">
         <div className="column">
           <ul className="project-description">

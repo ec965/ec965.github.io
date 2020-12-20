@@ -7,12 +7,74 @@ const calplugLogos = [
   {src: "/pics/logos/Calit2.png", url: 'http://calit2.uci.edu/', alt: 'calit2Logo'}
 ];
 
+export function FKRestoration(){
+  return(
+    <ProjectPage
+      title="FK-2001 Restoration"
+      dates="October 2020"
+      description={
+        <>
+          I found a <a href="https://deskthority.net/wiki/Focus_FK-2001">Focus FK-2001</a>terminal keyboard in the garage. 
+          My dad first used it in the 90's when he started programming.
+          <MediaFormat
+            img1src="/pics/fk2001/fk-0.JPG"
+            img1head="Focus FK-2001 (Asian 102 layout)"
+          />
+          To connect the 5 pin DIN cable to my modern computer, 
+          I used a 5 pin DIN to PS/2 adapter and a PS/2 to USB adapter. 
+          Looks kinda janky, but I'll fix that in a sec.
+          <MediaFormat
+            img1src="/pics/fk2001/fk-5.JPG"
+          />
+          First things first, I took it apart and cleaned it throughly. 
+          I dusted out the innards with an air duster and wiped down all the keycaps.
+          I found that some of the keys (space and left ctrl) seemed to be double pressing. 
+          I desoldered and swapped the troublesome switches with less used but working switches.
+          <MediaFormat
+            img1src="/pics/fk2001/fk-1.JPG"
+            img2src="/pics/fk2001/fk-2.JPG"
+          />
+          I really like the beige retro color of tech from this time period.
+          The switches are Alps SKCM whites or a clone, I'm not entirely sure.
+          <MediaFormat
+            img1src="/pics/fk2001/fk-3.JPG"
+            img2src="/pics/fk2001/fk-4.JPG"
+          />
+          Since the adapter chain is bit unsightly, I decided to use a <a href="https://www.sparkfun.com/products/12640">Pro-Micro </a>
+          to adapter the keyboard to use USB.
+          The pins of the original cable connector are labelled C, D, G, and V for clock, data, ground, and voltage respectivley.
+          I connected these pins to the Pro-Micro's PD0, PD1, RAW, and GND, 
+          then I flashed the Pro-Micro with  
+          <a href="https://github.com/tmk/tmk_keyboard/tree/master/converter/ibmpc_usb"> Hasu's terminal keyboard converter</a>. 
+          <MediaFormat
+            img1src="/pics/fk2001/fk-6.JPG"
+            img2src="/pics/fk2001/fk-7.JPG"
+          />
+          Luckily, there was a hole in the back of the case that was just big enough for a USB mini port so I didn't have to do any drilling.
+          And yes, I did hot glue the wires for insulation (don't worry, I soldered them first).
+          I didn't have heat shrink at the time so I went for the next best option.
+          I also used a stack of cardboard and electrical tape to support the Pro-Micro in the case.
+          Not the prettiest solution, but no one's going to see it anyways.
+          <MediaFormat
+            img1src="/pics/fk2001/fk-8.JPG"
+            img2src="/pics/fk2001/fk-9.JPG"
+          />
+          <MediaFormat
+            img1src="/pics/fk2001/fk-10.JPG"
+            img1head="Restored FK-2001"
+          />
+        </>
+      }
+    />
+  )
+}
+
 export function MacroPad(){
   return(
     <ProjectPage
       title="Macro Pad"
       dates="November 2020"
-      buttons={[{title: 'GitHub', url: 'https://github.com/ec965/macropad2', color:"purple"}]}
+      buttons={[{title: 'GitHub', url: 'https://github.com/ec965/dropout-numpad', color:"purple"}]}
       description={
         <>
           I've been getting into mechanical keyboards recently. 
@@ -23,7 +85,7 @@ export function MacroPad(){
       }
       media={
         <MediaFormat 
-          img1src="/pics/macropad/pcb_schem.jpg"
+          img1src="/pics/macropad/pcb_schem.png"
           img1head="PCB"
         />
       }
@@ -86,7 +148,9 @@ export function WorkoutTimer(){
       dates="April 2020"
       buttons={[{title: 'GitHub',url: 'https://github.com/ec965/workout_timer', color: 'purple' }]}
       media={
-        <WorkoutApp/>
+        <div className="lr-padding">
+          <WorkoutApp/>
+        </div>
       }
     />
   );
