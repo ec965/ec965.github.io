@@ -3,7 +3,7 @@ import {Link,} from "react-router-dom";
 
 export default function Home (props){
   return(
-    <div className="container">
+    <div className="container lr-padding center">
       <Link to="/projects">
         <h1 className="cover-text">Click Here.</h1>
       </Link>

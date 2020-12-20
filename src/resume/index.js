@@ -7,8 +7,8 @@ import { withRouter } from 'react-router-dom';
 //turn the backgroundColor to white for better visibility on mobile.
 function ResumeObject(props){
   return(
-    <div className="container" style={{backgroundColor: "white"}}>
-      <object data={props.data} type="application/pdf" width="100%" style={{height:'calc(100vh - 112.9px)'}}>
+    <div className="container lr-padding">
+      <object data={props.data} type="application/pdf" width="100%" style={{height:'calc(100vh - 112.9px)', backgroundColor:"white"}}>
         <p>It appears you don't have a PDF plugin for this browser.
           That's ok, <a href={props.src}>click here to download the PDF file.</a></p>
       </object>

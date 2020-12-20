@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function AboutPage(props){
   return(
-    <div className="container">
+    <div className="container lr-padding">
       <div className="row reverse">
         <div className="column two">
             <img className="about-image" src={props.humanpic.src} alt={props.humanpic.alt}/>

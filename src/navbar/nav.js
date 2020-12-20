@@ -36,7 +36,7 @@ export function NavLogo(props){
 
 export function NavBar (props){
   return(
-    <ul className="nav-bar">
+    <ul className="nav-bar lr-padding">
       {props.children}
     </ul>
   );

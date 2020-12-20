@@ -8,10 +8,9 @@ export default function AboutMe(){
     <AboutPage
       greeting="Hello!"
       name="I'm Enoch."
-      blurb={<>I'm a masters student at UC Irvine studying Embedded and Cyber-Physical systems. 
-        I completed my B.S. at UCI in Electrical Engineering. 
-        I'm interested in the merging of electronics and the internet through IoT. 
-        When I'm not in front of the computer, I like to cook and climb rocks.</>}
+      blurb={<>I'm a new grad; I finished my bachelor's in Electrical Engineering at UC Irvine in June 2020. 
+      I'm interested in electronics, firmware, web dev, and their baby: IoT. 
+      When I'm not in front of the computer, I like to cook, climb rocks, and mess with keyboards.</>}
       email="enoch965@gmail.com"
       mountainproject="https://www.mountainproject.com/user/200380484/enoch-chau"
       linkedin="https://linkedin.com/in/enoch-chau-a2a522126/"
