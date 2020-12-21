@@ -18,10 +18,9 @@
   --green-hover: #adca94;
   --purple: #B48EAD;
   --purple-hover: #c9a0c1;
-  --lr-padding: 15%;
+  --lr-padding: 15vw;
 }
 .lr-padding{
-  width: calc(100vw - 2*var(--lr-padding));
   padding-left:var(--lr-padding);
   padding-right: var(--lr-padding);
 }
@@ -368,9 +367,6 @@ div.video-frame{
 }
 div.figure{
   padding:15px;
-  align-items: center;
-  display: relative;
-  justify-content: center;
 }
 div.figure-container{
   display:flex;
@@ -378,6 +374,7 @@ div.figure-container{
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+  width:100%;
 }
 li.project-description{
   padding-top:5px;
@@ -447,7 +444,6 @@ ul.project-description{
   width:fit-content;
 }
 div.figure-container.app{
-  width: calc(100vw - 2*(var(--head-foot-lr-padding)));
   display:relative;
   align-items: flex-start;
   justify-content: flex-start;

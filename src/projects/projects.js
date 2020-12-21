@@ -14,8 +14,9 @@ export function FKRestoration(){
       dates="October 2020"
       description={
         <>
-          I found a <a href="https://deskthority.net/wiki/Focus_FK-2001">Focus FK-2001</a>terminal keyboard in the garage. 
-          My dad first used it in the 90's when he started programming.
+          I found a <a href="https://deskthority.net/wiki/Focus_FK-2001">Focus FK-2001</a> terminal keyboard in the garage. 
+          My dad first used it in the 90's when he started programming. 
+          It's honestly still pretty nice for being in storage for 10+ years.
           <MediaFormat
             img1src="/pics/fk2001/fk-0.JPG"
             img1head="Focus FK-2001 (Asian 102 layout)"
@@ -25,11 +26,12 @@ export function FKRestoration(){
           Looks kinda janky, but I'll fix that in a sec.
           <MediaFormat
             img1src="/pics/fk2001/fk-5.JPG"
+            img1head="The Chain of Adapters"
           />
           First things first, I took it apart and cleaned it throughly. 
           I dusted out the innards with an air duster and wiped down all the keycaps.
           I found that some of the keys (space and left ctrl) seemed to be double pressing. 
-          I desoldered and swapped the troublesome switches with less used but working switches.
+          I desoldered and swapped the troublesome switches with working switches.
           <MediaFormat
             img1src="/pics/fk2001/fk-1.JPG"
             img2src="/pics/fk2001/fk-2.JPG"
@@ -38,30 +40,33 @@ export function FKRestoration(){
           The switches are Alps SKCM whites or a clone, I'm not entirely sure.
           <MediaFormat
             img1src="/pics/fk2001/fk-3.JPG"
+            img1head="Alps Keycaps"
             img2src="/pics/fk2001/fk-4.JPG"
+            img2head="Alps Style Switch"
           />
           Since the adapter chain is bit unsightly, I decided to use a <a href="https://www.sparkfun.com/products/12640">Pro-Micro </a>
-          to adapter the keyboard to use USB.
+          to adapt the keyboard to use USB.
           The pins of the original cable connector are labelled C, D, G, and V for clock, data, ground, and voltage respectivley.
           I connected these pins to the Pro-Micro's PD0, PD1, RAW, and GND, 
           then I flashed the Pro-Micro with  
           <a href="https://github.com/tmk/tmk_keyboard/tree/master/converter/ibmpc_usb"> Hasu's terminal keyboard converter</a>. 
           <MediaFormat
             img1src="/pics/fk2001/fk-6.JPG"
+            img1head="The Setup"
             img2src="/pics/fk2001/fk-7.JPG"
+            img2head="C, D, G, V labels on the pcb"
           />
           Luckily, there was a hole in the back of the case that was just big enough for a USB mini port so I didn't have to do any drilling.
-          And yes, I did hot glue the wires for insulation (don't worry, I soldered them first).
-          I didn't have heat shrink at the time so I went for the next best option.
+          I didn't have heat shrink at the time so I hotglued the wires for insulation and stability (don't worry, I soldered them first).
           I also used a stack of cardboard and electrical tape to support the Pro-Micro in the case.
-          Not the prettiest solution, but no one's going to see it anyways.
+          Not the prettiest solution, but no one's going to see it inside the case.
           <MediaFormat
             img1src="/pics/fk2001/fk-8.JPG"
+            img1head="Pro-Micro in Place"
             img2src="/pics/fk2001/fk-9.JPG"
-          />
-          <MediaFormat
-            img1src="/pics/fk2001/fk-10.JPG"
-            img1head="Restored FK-2001"
+            img2head="USB Mini-B Port"
+            img3src="/pics/fk2001/fk-10.JPG"
+            img3head="Restored FK-2001"
           />
         </>
       }
@@ -147,10 +152,8 @@ export function WorkoutTimer(){
       title="Workout Timer"
       dates="April 2020"
       buttons={[{title: 'GitHub',url: 'https://github.com/ec965/workout_timer', color: 'purple' }]}
-      media={
-        <div className="lr-padding">
-          <WorkoutApp/>
-        </div>
+      description={
+        <WorkoutApp/>
       }
     />
   );

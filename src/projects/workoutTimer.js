@@ -300,7 +300,7 @@ export default function WorkoutApp (){
   
   return(
     <>
-      <div className='figure-container app'> 
+      <div className='figure-container app lr-padding'> 
         <div className="app-item">
           <WorkoutForm
             onSubmit={handleSubmit}
