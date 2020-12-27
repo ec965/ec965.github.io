@@ -90,8 +90,12 @@ export function MacroPad(){
       }
       media={
         <MediaFormat 
-          img1src="/pics/macropad/pcb_schem.png"
-          img1head="PCB"
+          img3src="/pics/macropad/pcb_schem.png"
+          img3head="CAD Design"
+          img2src="/pics/macropad/pcb-top-down.JPG"
+          img2head="PCB (rev0.1)"
+          img1src="/pics/macropad/pcb-pretty.JPG"
+          img1head="PCB with ProMicro and switches"
         />
       }
     />
