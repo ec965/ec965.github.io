@@ -39,12 +39,12 @@ function Projects (props){
     },
     {
       url: url + '/macropad',
-      img: 'pics/macropad/pcb_schem.png',
+      img: 'pics/macropad/pcb-pretty.JPG',
       alt: 'macropad',
       title: 'Macro Pad',
       text: '2020',
       component: <MacroPad/>,
-      axis: "w-image"
+      axis: "h-image"
     },
     {
       url: url + '/boulderField',

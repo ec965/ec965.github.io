@@ -82,21 +82,27 @@ export function MacroPad(){
       buttons={[{title: 'GitHub', url: 'https://github.com/ec965/dropout-numpad', color:"purple"}]}
       description={
         <>
-          I've been getting into mechanical keyboards recently. 
-          This mechanical macro pad (or num pad) takes mx-style switches and includes a rotary encoder. 
-          It uses a <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the controller because I wanted the whole thing to be relatively easy to hand solder. 
-          The ProMicro is also compatible with <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source keyboard firmware, which I will use in the completed build.
+          I can't quite remember how I got into mechanical keyboards...
+          but they sure are pretty.
+          With my background in electrical engineering, I figured it'd be fun to make my own keyboard.
+          I'm currently using a 60% keyboard and I was feeling the need for a numpad.
+          <MediaFormat
+            img3src="/pics/macropad/pcb-pretty.JPG"
+            img3head="Rev 0.1 PCB with ProMicro and switches"
+          />
+          My design uses a <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the controller because I wanted the whole thing to be relatively easy to hand solder. 
+          The ProMicro is also compatible with <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source keyboard firmware.
+          <MediaFormat
+            img1src="/pics/macropad/populated.JPG"
+            img1head="Rev0.1 Populated PCB"
+            img2src="/pics/macropad/pcb-top-down.JPG"
+            img2head="Rev0.1 PCB"
+          />
+          <MediaFormat 
+            img1src="/pics/macropad/pcb_schem.png"
+            img1head="Rev0 CAD design"
+          />
         </>
-      }
-      media={
-        <MediaFormat 
-          img3src="/pics/macropad/pcb_schem.png"
-          img3head="CAD Design"
-          img2src="/pics/macropad/pcb-top-down.JPG"
-          img2head="PCB (rev0.1)"
-          img1src="/pics/macropad/pcb-pretty.JPG"
-          img1head="PCB with ProMicro and switches"
-        />
       }
     />
 
