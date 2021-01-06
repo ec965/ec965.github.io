@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: enochchau.com
+Token: 07fd6848a1a58a3c84c5726f0096abcd295ab54b5c8109630504d15465086773
