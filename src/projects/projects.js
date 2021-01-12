@@ -6,7 +6,37 @@ const calplugLogos = [
   {src: "/pics/logos/calpluglogo.png", url: 'http://calplug.org/', alt: 'calplugLogo'},
   {src: "/pics/logos/Calit2.png", url: 'http://calit2.uci.edu/', alt: 'calit2Logo'}
 ];
-
+export function EspTemp(){
+  return(
+    <ProjectPage
+      title="Esp Temp"
+      dates="January 2021"
+      buttons={[
+        {title:"GitHub", url:"https://github.com/ec965/esp-temp", color:"purple"},
+      ]}
+      description={
+        <>
+          Recently, I made an IoT tempeerature probe.
+          It shows data physically over a seven segment display but it can also stream data over WiFi using MQTT.
+          At first I didn't really know what I could use it for, but it's come in handy for MQTT testing.
+          The probe gives me an easy way to start an MQTT publisher.
+          I mean, I could just write a script to do that, but that's not cool.
+          Besides, hand wiring is fun... right?
+        </>  
+      }
+      media={
+        <MediaFormat
+          img1src="/pics/iot_temp/perfboard_front.JPG"
+          img1head="Perfboard Prototype"
+          img2src="/pics/iot_temp/perfboard_back.JPG"
+          img2head="Hand wiring is fun... right?"
+          img3src="/pics/iot_temp/breadboard.JPG"
+          img3head="Breadboard Prototype"
+          />
+      }
+    />
+  );
+}
 export function FKRestoration(){
   return(
     <ProjectPage
@@ -87,6 +117,8 @@ export function MacroPad(){
           With my background in electrical engineering, I figured it'd be fun to make my own keyboard.
           I'm currently using a 60% keyboard and I was feeling the need for a numpad.
           <MediaFormat
+            img2src="pics/macropad/rev0.5.jpg"
+            img2head="Rev 0.5"
             img3src="/pics/macropad/pcb-pretty.JPG"
             img3head="Rev 0.1 PCB with ProMicro and switches"
           />
@@ -94,13 +126,13 @@ export function MacroPad(){
           The ProMicro is also compatible with <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source keyboard firmware.
           <MediaFormat
             img1src="/pics/macropad/populated.JPG"
-            img1head="Rev0.1 Populated PCB"
+            img1head="Rev 0.1 Populated PCB"
             img2src="/pics/macropad/pcb-top-down.JPG"
-            img2head="Rev0.1 PCB"
+            img2head="Rev 0.1 PCB"
           />
           <MediaFormat 
             img1src="/pics/macropad/pcb_schem.png"
-            img1head="Rev0 CAD design"
+            img1head="Rev 0 CAD design"
           />
         </>
       }

@@ -13,7 +13,8 @@ import {
   ProjectorBuddy, 
   WCBuddy, 
   BoulderField, 
-  MacroPad 
+  MacroPad,
+  EspTemp,
 } from './projects';
 //routing
 import {
@@ -29,13 +30,13 @@ function Projects (props){
   let { path, url } = useRouteMatch();    
   const projects = [
     {
-      url: url + '/fk2001',
-      img: 'pics/fk2001/fk-1.JPG',
-      alt: 'fk2001',
-      title: 'FK-2001 Restoration',
-      text: '2020',
-      component: <FKRestoration/>,
-      axis: "h-image"
+      url: url + '/esp_temp',
+      img: 'pics/iot_temp/perfboard_front.JPG',
+      alt: 'esp_temp',
+      title: 'Esp Temp',
+      text: '2021',
+      component: <EspTemp/>,
+      axis:"h-image"
     },
     {
       url: url + '/macropad',
@@ -44,6 +45,15 @@ function Projects (props){
       title: 'Macro Pad',
       text: '2020',
       component: <MacroPad/>,
+      axis: "h-image"
+    },
+    {
+      url: url + '/fk2001',
+      img: 'pics/fk2001/fk-1.JPG',
+      alt: 'fk2001',
+      title: 'FK-2001 Restoration',
+      text: '2020',
+      component: <FKRestoration/>,
       axis: "h-image"
     },
     {
