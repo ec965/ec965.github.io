@@ -4,12 +4,6 @@ import ReactDOM from 'react-dom';
 import './css/stylesheet.css';
 //fonts
 import './font/stylesheet.css';
-import Navigation from './navbar/index.js';
-
-function App(props){
-  return(
-    <Navigation/>
-  );
-}
+import App from './home/index.js';
 
 ReactDOM.render(<App/>, document.getElementById('root'));

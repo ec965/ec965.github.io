@@ -236,7 +236,8 @@ export function WCBuddy(){
         </>
       }
       media={
-        <MediaFormat img1head="Main and Interface PCB" img1src="\pics\WCB\wcb_pcb.jpg"
+        <MediaFormat 
+        img1head="Main and Interface PCB" img1src="\pics\WCB\wcb_pcb.jpg"
           img2head="Watercooler" img2src="\pics\WCB\WCB_outside.JPG"
           img3head="Demo User Interface" img3src="\pics\WCB\WCB_fake_front.JPG"
         />
