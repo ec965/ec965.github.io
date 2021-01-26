@@ -26,7 +26,7 @@
   --green1: #adca94;
   --purple0: #B48EAD;
   --purple1: #c9a0c1;
-  --lr-padding: 2vw;
+  --lr-padding: 12vw;
 }
 
 .courier{
@@ -141,6 +141,11 @@ button:hover{
   padding-right: var(--lr-padding);
 }
 
+.matrix{
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 /*-----NAV-----*/
 .nav-bar {
   display: flex;
@@ -211,7 +216,7 @@ img.footer-logo:hover{
 /*-----CARD-----*/
 
 div.card{
-  width:220px;
+  width:400px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -238,8 +243,8 @@ div.card-body{
 
 img.card{
   border-radius: 5%;
-  height:120px;
-  width:220px;
+  height:300px;
+  width:400px;
   object-fit: cover;
 }
 

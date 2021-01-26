@@ -3,6 +3,7 @@ import {Page, Row} from '../components/layout';
 import {Card} from '../components/card.js';
 import {Link, Switch, Route, useRouteMatch} from "react-router-dom";
 import PageFramework from '../components/framework';
+import { ScrollToTop } from '../util';
 
 const subpath = 'project'
 const projects = [
@@ -246,6 +247,11 @@ const projects = [
       {text: 'GitHub', link: "https://github.com/ec965/the_all_C-ing_eye"},
       {text: 'DevPost', link: "https://devpost.com/software/the-c-ing-hat"},
     ],
+    media:[
+      {yt:"https://www.youtube.com/embed/SFQxsU8La4k", text: "Demo", thumbnail:"https://i.ytimg.com/vi/SFQxsU8La4k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNNePoW3PnWJ_bCpQLEPnvltOt8A"},
+      {img:"/pics/cing_hat/Cing_hat_2019.jpg", text: "Side View"},
+      {img:'/pics/cing_hat/Cing_hat_2019 (2).jpg', text:"Topdown"},
+    ],
     body:
     <p>
       A prototype hat for object detection. Checkout the DevPost for more information.
@@ -287,6 +293,7 @@ const MainProject = (props) => {
   const routes = projects.map((p, i) => {
     return(
       <Route key={i} path={path + p.path}>
+        <ScrollToTop/>
         {p.custom ? p.custom : 
         <PageFramework 
           title={p.title} 
@@ -324,7 +331,7 @@ const CardMatrix = (props) => {
   });
 
   return(
-    <Row>
+    <Row className="matrix">
       {cards}
     </Row>
   );

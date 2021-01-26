@@ -14,7 +14,7 @@ const MyNav = (props) => {
   return(
     <NavBar>
       <NavLogo>
-        <Link to="/"><h3>Enoch</h3></Link>
+        <Link to="/"><h3>Enoch Chau</h3></Link>
       </NavLogo>
 
       <NavGroup>
