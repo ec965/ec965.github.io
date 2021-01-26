@@ -9,7 +9,7 @@ export const PageFramework = (props) => {
       <MediaStage media={props.media}/>
       <Column className="project-text">
         <h3>{props.title}</h3>
-        <h6>{props.subtitle}</h6>
+        <h6 className="courier">{props.subtitle}</h6>
         {props.children}
         <Row className="buttons">
           {props.buttons && 
@@ -67,7 +67,7 @@ const Buttons = (props) => {
     <>
     {props.buttons.map((b,i) => {
       return(
-        <ButtonLink className={b.className} key={i} link={b.link}>{b.text}</ButtonLink>
+        <ButtonLink className={b.className + " courier"} key={i} link={b.link}>{b.text}</ButtonLink>
       );
     })}
     </>

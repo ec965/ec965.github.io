@@ -11,6 +11,7 @@ const About = (props) => {
         subtitle="I'm Enoch"
         media={[{img:'pics/IMG_2745.JPG', text: 'Red Rock, Las Vegas, NV 2019'}]}
         icons={<Icons/>}
+        buttons={[{text: 'Resume', link:'./public_resume.pdf'}]}
       >
         <p>
           I'm interested in electronics, firmware, web dev, and IoT. 
@@ -18,7 +19,6 @@ const About = (props) => {
           When I'm not in front of the computer, I like to cook, climb rocks, and mess with keyboards.
         </p>
       </PageFramework>
-      <Pdf src='/public_resume.pdf'/>
     </Column>
   );
 }

@@ -1,9 +1,8 @@
 import React from 'react';
-import {Page, Row} from '../components/layout';
-import {Card} from '../components/card.js';
-import {Link, Switch, Route, useRouteMatch} from "react-router-dom";
+import {Page, Row, Column} from '../components/layout';
+// import {Card} from '../components/card.js';
+// import {Link, Switch, Route, useRouteMatch} from "react-router-dom";
 import PageFramework from '../components/framework';
-import { ScrollToTop } from '../util';
 
 const subpath = 'project'
 const projects = [
@@ -193,7 +192,7 @@ const projects = [
     img: "/pics/projector_buddy/image.png",
     title: 'Projector Buddy',
     text: 'Calplug 2019',
-    subtitle: "March 2019 - June 2020",
+    subtitle: "California Plug Load Center: March 2019 - June 2020",
     buttons:[
       {link: 'http://calplug.org/', text:'CalPlug'},
       {link: 'https://www.calit2.uci.edu/', text: 'CalIT2'},
@@ -217,7 +216,7 @@ const projects = [
     img: '/pics/3phase/3phase_watt_demo.jpg',
     title: "3-phase Wattmeter",
     text: 'Calplug 2019',
-    subtitle: "March 2019 - June 2019",
+    subtitle: "California Plug Load Center: March 2019 - June 2019",
     buttons:[
       {link: "https://github.com/CalPlug/ADE9078-3PhaseWattmeter", text: 'GitHub'},
       {link: 'http://calplug.org/', text:'CalPlug'},
@@ -281,60 +280,56 @@ const Main = (props) => {
   return(
     <Page>
       <MainProject/>
-      <CardMatrix/>
     </Page>
   );
 }
 
 
 const MainProject = (props) => {
-  let {path,url} = useRouteMatch();
-
   const routes = projects.map((p, i) => {
     return(
-      <Route key={i} path={path + p.path}>
-        <ScrollToTop/>
-        {p.custom ? p.custom : 
-        <PageFramework 
-          title={p.title} 
-          subtitle={p.subtitle} 
-          media={p.media} 
-          buttons={p.buttons}
-        >
-          {p.body}
-        </PageFramework>}
-      </Route>
+      <Row className="bottom-border">
+      {p.custom ? p.custom : 
+      <PageFramework 
+        title={p.title} 
+        subtitle={p.subtitle} 
+        media={p.media} 
+        buttons={p.buttons}
+      >
+        {p.body}
+      </PageFramework>}
+      </Row>
     );
   });
 
   return(
-    <Switch>
-    {routes}
-    </Switch>
+    <Column>
+      {routes}
+    </Column>
   );
 }
 
-const CardMatrix = (props) => {
-  let {path,url} = useRouteMatch();
+// const CardMatrix = (props) => {
+//   let {path,url} = useRouteMatch();
   
-  const cards = projects.map((p,i) => {
-    return(
-      <Link key={i} to={path + p.path}>
-        <Card
-          title={p.title}
-          img={p.img}
-        >
-          {p.text}
-        </Card>
-      </Link>
-    );
-  });
+//   const cards = projects.map((p,i) => {
+//     return(
+//       <Link key={i} to={path + p.path}>
+//         <Card
+//           title={p.title}
+//           img={p.img}
+//         >
+//           {p.text}
+//         </Card>
+//       </Link>
+//     );
+//   });
 
-  return(
-    <Row className="matrix">
-      {cards}
-    </Row>
-  );
-}
+//   return(
+//     <Row className="matrix">
+//       {cards}
+//     </Row>
+//   );
+// }
 
 export default Main;

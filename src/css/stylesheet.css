@@ -106,8 +106,8 @@ a:hover{
 button {
   border-style: none;
   border-radius: 12px;
-  height:28px;
-  width:72px;
+  height:32px;
+  width:80px;
   background-color: var(--base02);
   color: var(--base1);
   letter-spacing: .05ch;
@@ -144,6 +144,9 @@ button:hover{
 .matrix{
   justify-content: space-between;
   align-items: stretch;
+}
+.bottom-border{
+  border-bottom: 1px solid var(--base2);
 }
 
 /*-----NAV-----*/
@@ -199,7 +202,7 @@ footer{
   font-weight:600;
 }
 .footer-logo{
-  padding-left: 12px;
+  padding-right: 12px;
 }
 i.footer-logo{
   font-size: 2.1em;
@@ -250,7 +253,7 @@ img.card{
 
 /*----Projects-----*/
 .project .project-text{
-  width:420px;
+  width:620px;
   margin: 16px;
   align-items: stretch;
 }
@@ -260,7 +263,7 @@ img.card{
   display: flex;
 }
 .project button{
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .row.buttons{
   margin-top:5px;
