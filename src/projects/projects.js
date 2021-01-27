@@ -25,12 +25,15 @@ const Projects = [
       Building off of Esp Temp, I'm planning to build more IoT sensor for home automation.
       I wanted a dashboard so that I could log data and monitor my sensors.
       My initial idea was to write a front-end client to interface with a MQTT broker websocket, but then I wouldn't be able to log messages. 
-      To both log messages and see real time data, I used a Raspberry Pi as a proxy.
+      To both log messages and see real time data, I used a Raspberry Pi as a proxy server.
       The Pi logs messages into a database and publish relevant messages over a websocket.
+      The client can also use the websocket to publish MQTT messages to the sensors.
+      In addition to the websocket, I also made a REST API for non-live data analysis.
     <br/><br/>
-      I've wanting to learn backend web development for some time.
-      This project helped me learn Node, Express, and SQLite3 with Sequelize so I'd call it fairly succesful.
+      I've wanted to learn backend web development for some time.
+      This project allowed me to pick up Node, Express, and SQLite3 with Sequelize so I'd call it fairly succesful.
       If you're interested in learning more about MCutie, there's a detailed write up on the GitHub repository.
+      I may port the app over to PostgreSQL for a cloud deployment sometime in the future.
     </p>
   },
   {
@@ -76,11 +79,11 @@ const Projects = [
     <p>
       I can't quite remember how I got into mechanical keyboards...
       but they sure are pretty.
-      With my background in electrical engineering, I figured it'd be fun to make my own keyboard.
+      I have to find ways to use my Electrical Engineering degree somehow, so I figured it'd be fun to make my own keyboard.
       I'm currently using a 60% keyboard and I was feeling the need for a numpad.
       My design uses a <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the controller because I wanted the whole thing to be relatively easy to hand solder. 
       The ProMicro is also compatible with <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source keyboard firmware.
-      Right now, I'm waiting for switches to arrive.
+      Right now, I'm waiting for switches to arrive, after which I'll be making a build guide.
     </p>
   },
   {
