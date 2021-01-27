@@ -15,15 +15,15 @@ const MyNav = (props) => {
   return(
     <NavBar>
       <NavLogo>
-        <Link to="/"><h3>Enoch Chau</h3></Link>
+        <Link to="/"><h3 className="link">Enoch Chau</h3></Link>
       </NavLogo>
 
       <NavGroup>
         <NavItem>
-          <Link to="/about"><h4>About</h4></Link>
+          <Link to="/about"><h4 className="link">About</h4></Link>
         </NavItem>
         <NavItem>
-          <Link to="/gallery"><h4>Gallery</h4></Link>
+          <Link to="/gallery"><h4 className="link">Gallery</h4></Link>
         </NavItem>
       </NavGroup>
 

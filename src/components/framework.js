@@ -28,6 +28,7 @@ export const PageFramework = (props) => {
 }
 
 // Media stage is like a theatre with a stage and an audience.
+// Everyone gets a turn to be on stage.
 /* props.media = [
   {img: "/path/to/image, text:"caption"},
   {video: "/path/to/video", text: "caption", thumbnail: "path/to/thumbnail"},
