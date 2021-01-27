@@ -7,6 +7,33 @@ const subpath = 'project';
 
 const Projects = [
   {
+    path: subpath + '/mcutie',
+    img: '/pics/mcutie/dashboard.png',
+    text: '2021',
+    title: 'MCutie',
+    subtitle: 'January 2021',
+    buttons:[
+      {text: 'GitHub', link: 'https://github.com/ec965/MCutie/'}
+    ],
+    media: [
+      {img: '/pics/mcutie/dashboard.png', text: 'MQTT Dashboard'},
+      {img: '/pics/mcutie/graph.png', text: 'Live Websocket Graph'},
+    ], 
+    body:
+    <p>
+      MCutie is a web app that provides logging and real time data graphs for MQTT sensor data.
+      Building off of Esp Temp, I'm planning to build more IoT sensor for home automation.
+      I wanted a dashboard so that I could log data and monitor my sensors.
+      My initial idea was to write a front-end client to interface with a MQTT broker websocket, but then I wouldn't be able to log messages. 
+      To both log messages and see real time data, I used a Raspberry Pi as a proxy.
+      The Pi logs messages into a database and publish relevant messages over a websocket.
+    <br/><br/>
+      I've wanting to learn backend web development for some time.
+      This project helped me learn Node, Express, and SQLite3 with Sequelize so I'd call it fairly succesful.
+      If you're interested in learning more about MCutie, there's a detailed write up on the GitHub repository.
+    </p>
+  },
+  {
     path: subpath + '/espTemp',
     img: '/pics/iot_temp/perfboard_front.JPG',
     text: '2021',
