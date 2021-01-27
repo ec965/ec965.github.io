@@ -1,19 +1,25 @@
 import React, {useState} from 'react';
 import { Row,Column } from './layout';
 import {ButtonLink} from './button';
-import {Video, YTVideo} from './video.js';
+import MultiMediaItem from './multimedia.js';
 
 export const PageFramework = (props) => {
   return(
-    <Row className="project">
-      <MediaStage media={props.media}/>
+    <Row className={props.className + " project"} onClick={props.onClick}>
+      {props.media &&
+        <MediaStage media={props.media}/>
+      }
+
       <Column className="project-text">
         <h3>{props.title}</h3>
         <h6 className="courier">{props.subtitle}</h6>
         {props.children}
         <Row className="buttons">
+
           {props.buttons && 
-          <Buttons buttons={props.buttons}/>}
+            <Buttons buttons={props.buttons}/>
+          }
+
           {props.icons}
         </Row>
       </Column>
@@ -27,11 +33,17 @@ export const PageFramework = (props) => {
   {video: "/path/to/video", text: "caption", thumbnail: "path/to/thumbnail"},
   {ytvideo: "link", text: "caption", thumbnail: "link to thumbnail"}
 ]*/
-const MediaStage = (props) => {
+export const MediaStage = (props) => {
   const [stage, setStage] = useState(props.media[0]);
+  const [zoom, setZoom] = useState(false);
 
   const handleClick = (event) => {
     setStage(props.media[event.target.name]);
+    setZoom(false);
+  }
+
+  const handleZoom = (event) => {
+    setZoom(!zoom);
   }
 
   const audience = props.media.map((m, i) => {
@@ -48,12 +60,13 @@ const MediaStage = (props) => {
 
   return(
     <Column className="gallery">
-      {stage.img &&
-        <img className="gallery-stage" src={stage.img} alt={'img ' + stage} />}
-      {stage.vid &&
-        <Video className="gallery-stage" src={stage.vid} alt={'vid ' + stage}/>}
-      {stage.yt && 
-        <YTVideo className="gallery-stage" src={stage.yt} alt={'yt ' +stage}/>}
+      <div className="stage-frame">
+        <MultiMediaItem
+          media={stage}
+          className={zoom ? "stage-zoom" : "stage"}
+          onClick={handleZoom}
+        />
+      </div>
       <p className="caption">{stage.text}</p>
       <Row>
         {props.media.length > 1 && audience}
@@ -61,6 +74,7 @@ const MediaStage = (props) => {
     </Column>
   );
 }
+
 
 const Buttons = (props) => {
   return(

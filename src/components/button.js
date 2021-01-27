@@ -12,7 +12,7 @@ export const ButtonLink = (props) => {
     window.open(props.link);
   }
   return(
-    <button type="button" className={props.className} onClick={handleClick}>
+    <button type="button" className={props.className} onClick={props.onClick || handleClick}>
       {props.children}
     </button>
   );

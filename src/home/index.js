@@ -3,6 +3,7 @@ import {NavBar, NavGroup, NavLogo, NavItem} from '../components/navbar.js';
 import {FooterGroup, Footer} from '../components/footer.js';
 import Main from '../projects/index.js';
 import About from '../about/index.js';
+import ArtGallery from '../art/index.js';
 import {
   BrowserRouter as Router,
   Route,
@@ -37,7 +38,7 @@ const MyBody = (props) => {
         <About/>
       </Route>
       <Route path="/gallery">
-        <h1>hi2</h1>
+        <ArtGallery/>
       </Route>
       <Route path="/">
         <Main/>

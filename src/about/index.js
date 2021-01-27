@@ -1,11 +1,10 @@
 import React from 'react';
-import {Row, Column} from '../components/layout';
+import {Row, Page} from '../components/layout';
 import PageFramework from '../components/framework.js';
-import Pdf from '../components/pdf';
 
 const About = (props) => {
   return(
-    <Column>
+    <Page>
       <PageFramework
         title="Hello!"
         subtitle="I'm Enoch"
@@ -19,7 +18,7 @@ const About = (props) => {
           When I'm not in front of the computer, I like to cook, climb rocks, and mess with keyboards.
         </p>
       </PageFramework>
-    </Column>
+    </Page>
   );
 }
 
