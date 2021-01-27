@@ -1,4 +1,4 @@
-# enochchau.com
+# [enochchau.com](https://enochchau.com/)
 My personal portfolio.
 
 ## Making Reusable Components

@@ -380,3 +380,44 @@ iframe.art-stage, video.art-stage{
   height:100vh;
   width: 100%;
 }
+
+/*-----mobile -----*/
+@media (max-width:830px){
+  :root{
+    --gallery-width: 256px;
+    --lr-padding: 1vw;
+  }
+  .stage{
+    height:144px;
+  }
+  .gallery-audience{
+    width:80px;
+    height:45px;
+  }
+  button{
+    margin-top: 10px;
+  }
+  .nav-bar {
+    height: auto;
+  }
+  .art-stage{
+    width: 256px;
+    border-width: 18px;
+  }
+  iframe.art-stage, video.art-stage{
+    width:256px;
+    height:144px;
+  }
+  .row.buttons{
+    margin-top:5px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-logo{
+    padding: 12px;
+  }
+  .footer-text{
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
