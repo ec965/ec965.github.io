@@ -213,7 +213,9 @@ const Projects = [
     ],
     body:
     <p>
-      Scale Up can calculate caloric data based on weight of foods. Google Vision was used to find food types while the USDA Nutrition API to find cloric information. Checkout the DevPost for more infromation.
+      Scale Up can calculate caloric data based on weight of foods. 
+      Google Vision was used to find food types while the USDA Nutrition API to find caloric information. 
+      Checkout the DevPost for more infromation.
     </p>
   },
   {

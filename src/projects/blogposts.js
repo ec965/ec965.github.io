@@ -58,8 +58,8 @@ export const FK2001 = (props) => {
       </p>
       <MediaStage
         media={[
+          {img:"/pics/fk2001/fk-7.JPG", text:"C, D, G, V labels on the pcb"},
           {img:"/pics/fk2001/fk-6.JPG", text:"The Setup"},
-          {img:"/pics/fk2001/fk-7.JPG", text:"C, D, G, V labels on the pcb"}
         ]}
       />
       <p>

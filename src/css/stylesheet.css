@@ -134,7 +134,7 @@ button:hover{
 }
 
 /*-----LAYOUT-----*/
-.col, .row, .page {
+.col, .row{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,7 +270,8 @@ img.card{
 }
 
 /*----Projects-----*/
-.project .project-text{
+.project-text{
+  text-align:justify;
   width:var(--gallery-width); /* same as gallery width*/
   margin: 16px;
   align-items: stretch;
