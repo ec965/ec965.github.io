@@ -13,7 +13,8 @@ const Projects = [
     title: 'MCutie',
     subtitle: 'January 2021',
     buttons:[
-      {text: 'GitHub', link: 'https://github.com/ec965/MCutie/'}
+      {text: 'GitHub', link: 'https://github.com/ec965/MCutie/'},
+      {text: 'Demo', link: 'https://m-cutie.herokuapp.com/'}
     ],
     media: [
       {img: '/pics/mcutie/dashboard.png', text: 'MQTT Dashboard'},
@@ -33,7 +34,9 @@ const Projects = [
       I've wanted to learn backend web development for some time.
       This project allowed me to pick up Node, Express, and SQLite3 with Sequelize so I'd call it fairly succesful.
       If you're interested in learning more about MCutie, there's a detailed write up on the GitHub repository.
-      I may port the app over to PostgreSQL for a cloud deployment sometime in the future.
+    <br/><br/>
+      I've also ported the project over to PostgreSQL for a cloud deployment on Heroku.
+      Check out the demo!
     </p>
   },
   {
@@ -43,7 +46,7 @@ const Projects = [
     title: 'Esp Temp',
     subtitle: 'January 2021',
     buttons:[
-      {text: 'GitHub', link: 'https://github.com/ec965/esp-temp'}
+      {text: 'GitHub', link: 'https://github.com/ec965/esp-temp'},
     ],
     media: [
       {img: "/pics/iot_temp/perfboard_front.JPG", text: 'Esp Temp'},
