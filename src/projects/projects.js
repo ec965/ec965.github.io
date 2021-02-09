@@ -2,14 +2,46 @@ import React from 'react';
 import ExpandingBlogFramework from '../components/blog.js';
 import {FK2001} from './blogposts.js';
 
-const subpath = ''
+const subpath = '';
 const Projects = [
+  {
+    path: subpath + 'Mosaic',
+    img: '/pics/mosaic/mosaic.png',
+    text: '2021',
+    title: 'Mosaic',
+    subtitle: 'January 2021 - February 2021',
+    buttons: [
+      {text: 'GitHub', link: 'https://github.com/ec965/mosaic'},
+      {text: 'Website', link: 'https://mosaiorama.herokuapp.com/'},
+    ],
+    media: [
+      {img: '/pics/mosaic/mosaic.png', text: 'mosaic'},
+    ],
+    body:
+    <p>
+      Mosaic is a user based full stack web app made using MongoDB, Express.js, Node.js and React.js.
+      On Mosaic, you can create mosaic style images from a base image or from randomly generated rgb pixel values.
+      <br/><br/>
+      My inspiration was to make something artistic using only CSS and HTML elements.
+      I considered using the HTML canvas element but instead went with using div elements because of it's customizability with CSS.
+      <br/><br/>
+      In the database, the mosaics are represented as a 2D array of RGB pixel objects with other customization data.
+      I originally chose to use PostgreSQL but that was restrictive on adding more customization options for the mosaics.
+      Using MongoDB allows me to continue to expand options and tools for the mosaics without having to overhaul the databse.
+      <br/><br/>
+      To implement users, I used JSON web tokens (JWT) to protect client side routes and API end points from unauthorized users.
+      Local storage and session storage hold the JWT on the client side.
+      Using local storage allows me to parse the JWT to personalize content according to the current users information.
+      I considered using cookies to store the JWT but then I wouldn't be able to safely access the JWT on the client side.
+      Also I don't want to get sued by the EU.
+    </p>
+  },
   {
     path: subpath + 'mcutie',
     img: '/pics/mcutie/dashboard.png',
     text: '2021',
     title: 'MCutie',
-    subtitle: 'January 2021',
+    subtitle: 'January 2021 - February 2021',
     buttons:[
       {text: 'GitHub', link: 'https://github.com/ec965/MCutie/'},
       {text: 'Demo', link: 'https://m-cutie.herokuapp.com/'}
