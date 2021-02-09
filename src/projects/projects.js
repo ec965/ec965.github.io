@@ -2,12 +2,10 @@ import React from 'react';
 import ExpandingBlogFramework from '../components/blog.js';
 import {FK2001} from './blogposts.js';
 
-
-const subpath = 'project';
-
+const subpath = ''
 const Projects = [
   {
-    path: subpath + '/mcutie',
+    path: subpath + 'mcutie',
     img: '/pics/mcutie/dashboard.png',
     text: '2021',
     title: 'MCutie',
@@ -40,7 +38,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/espTemp',
+    path: subpath + 'espTemp',
     img: '/pics/iot_temp/perfboard_front.JPG',
     text: '2021',
     title: 'Esp Temp',
@@ -63,7 +61,7 @@ const Projects = [
         Besides, hand wiring is fun... right?
       </p>,
   },{
-    path: subpath + '/macropad',
+    path: subpath + 'macropad',
     img: '/pics/macropad/pcb-pretty.JPG',
     text: '2020',
     title: 'Macro Pad',
@@ -90,7 +88,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/fk2001',
+    path: subpath + 'fk2001',
     img: '/pics/fk2001/fk-1.JPG',
     title: 'FK-2001',
     subtitle: 'October 2020',
@@ -111,7 +109,7 @@ const Projects = [
       </ExpandingBlogFramework>
   },
   {
-    path: subpath + '/boulderField',
+    path: subpath + 'boulderField',
     img: '/pics/boulderField/dataTable.png',
     text: '2020',
     title: 'Boulder Field',
@@ -131,7 +129,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/coffeeGrams',
+    path: subpath + 'coffeeGrams',
     img: '/pics/coffee_grams/3d_rev2.jpg',
     text: '2020',
     title: 'Coffee Grams',
@@ -158,7 +156,7 @@ const Projects = [
   //   custom: <h1>placeholder</h1>
   // },
   {
-    path: subpath + '/GPSSS',
+    path: subpath + 'GPSSS',
     img: '/pics/GPSSS/GPSSS_1.jpg',
     text: 'Senior Design 2020',
     title: 'GPS Sound Sensor',
@@ -179,7 +177,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/waterCoolerBuddy',
+    path: subpath + 'waterCoolerBuddy',
     img: '/pics/WCB/wcb_pcb.jpg',
     title: 'Water Cooler Buddy',
     text: 'Calplug 2019',
@@ -201,7 +199,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/scaleUp',
+    path: subpath + 'scaleUp',
     img: '/pics/scale_up/hardware_all_view.JPG',
     title: 'Scale Up',
     text: 'SD Hacks 2019',
@@ -222,7 +220,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/hc2',
+    path: subpath + 'hc2',
     img: '/pics/hc2.JPG',
     title: 'HC2: IoT Sensor',
     text: '2019',
@@ -238,7 +236,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/projectorBuddy',
+    path: subpath + 'projectorBuddy',
     img: "/pics/projector_buddy/image.png",
     title: 'Projector Buddy',
     text: 'Calplug 2019',
@@ -262,7 +260,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/polyPhase',
+    path: subpath + 'polyPhase',
     img: '/pics/3phase/3phase_watt_demo.jpg',
     title: "3-phase Wattmeter",
     text: 'Calplug 2019',
@@ -287,7 +285,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/cingHat',
+    path: subpath + 'cingHat',
     img: '/pics/cing_hat/Cing_hat_2019.jpg',
     title: 'The C-ing Hat',
     text: 'Hack UCI 2019',
@@ -307,7 +305,7 @@ const Projects = [
     </p>
   },
   {
-    path: subpath + '/micromouse',
+    path: subpath + 'micromouse',
     img: '/pics/micromouse/micromosue_2019.JPG',
     title: 'MicroMouse',
     text: '2019',

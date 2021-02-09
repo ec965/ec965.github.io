@@ -12,6 +12,7 @@ const ExpandingBlogFramework = (props) => {
   return(
     <Column>
       <PageFramework
+        id={props.id}
         title={props.title}
         subtitle={props.subtitle}
         media={props.media}

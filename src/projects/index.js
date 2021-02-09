@@ -17,7 +17,7 @@ const Main = (props) => {
 const ProjectList = (props) => {
   const routes = Projects.map((p, i) => {
     return(
-      <>
+      <div key={i} id={p.path}>
       {p.custom ? p.custom : 
       <PageFramework 
         title={p.title} 
@@ -29,7 +29,7 @@ const ProjectList = (props) => {
       </PageFramework>}
       {i !== Projects.length-1 &&  // don't use a bottom border for the last item
         <div className="bottom-border"/> /* this is just a white line*/}
-      </>
+      </div>
     );
   });
 
