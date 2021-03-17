@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.a32f40c9.chunk.css",
-    "main.js": "/static/js/main.541f154d.chunk.js",
-    "main.js.map": "/static/js/main.541f154d.chunk.js.map",
+    "main.css": "/static/css/main.2e3af08f.chunk.css",
+    "main.js": "/static/js/main.f62e7f8c.chunk.js",
+    "main.js.map": "/static/js/main.f62e7f8c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
     "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
     "static/js/2.76a0d04d.chunk.js": "/static/js/2.76a0d04d.chunk.js",
     "static/js/2.76a0d04d.chunk.js.map": "/static/js/2.76a0d04d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3fe25193d7f1984516ddaf6a04e0c42e.js": "/precache-manifest.3fe25193d7f1984516ddaf6a04e0c42e.js",
+    "precache-manifest.fe62436ea88d19259e1b7df237ac389b.js": "/precache-manifest.fe62436ea88d19259e1b7df237ac389b.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.a32f40c9.chunk.css.map": "/static/css/main.a32f40c9.chunk.css.map",
+    "static/css/main.2e3af08f.chunk.css.map": "/static/css/main.2e3af08f.chunk.css.map",
     "static/js/2.76a0d04d.chunk.js.LICENSE.txt": "/static/js/2.76a0d04d.chunk.js.LICENSE.txt",
     "static/media/stylesheet.css": "/static/media/mada-regular-webfont.6e4ab6fa.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.83c3e0c4.js",
     "static/js/2.76a0d04d.chunk.js",
-    "static/css/main.a32f40c9.chunk.css",
-    "static/js/main.541f154d.chunk.js"
+    "static/css/main.2e3af08f.chunk.css",
+    "static/js/main.f62e7f8c.chunk.js"
   ]
 }
