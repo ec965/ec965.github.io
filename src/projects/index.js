@@ -1,5 +1,5 @@
 import React from 'react';
-import {Page, Row, Column} from '../components/layout';
+import {Page, Column} from '../components/layout';
 // import {Card} from '../components/card.js';
 // import {Link, Switch, Route, useRouteMatch} from "react-router-dom";
 import PageFramework from '../components/framework';

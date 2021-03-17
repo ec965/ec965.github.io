@@ -285,9 +285,10 @@ img.card{
   margin-right: 12px;
 }
 .row.buttons{
-  margin-top:5px;
+  margin-top:8px;
   justify-content: flex-start;
   align-items: stretch;
+  margin-bottom:8px;
 }
 
 /*------BLOG STYLE ------*/

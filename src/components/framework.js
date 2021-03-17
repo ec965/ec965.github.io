@@ -13,7 +13,6 @@ export const PageFramework = (props) => {
       <Column className="project-text">
         <h3 id={props.id}>{props.title}</h3>
         <h6 className="courier">{props.subtitle}</h6>
-        {props.children}
         <Row className="buttons">
 
           {props.buttons && 
@@ -22,6 +21,7 @@ export const PageFramework = (props) => {
 
           {props.icons}
         </Row>
+        {props.children}
       </Column>
     </Row>
   );
