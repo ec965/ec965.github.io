@@ -102,6 +102,7 @@ const Projects = [
       {text: 'GitHub', link: 'https://github.com/ec965/dropout-numpad'}
     ],
     media:[
+      {img: "/pics/macropad/completed_dropout.jpg", text: "macropad"},
       {img: "/pics/macropad/rev0.5.jpg", text:"Rev 0.5"},
       {img: "/pics/macropad/pcb-pretty.JPG", text:"Rev 0.1 PCB with ProMicro and switches"},
       {img:"/pics/macropad/populated.JPG", text: "Rev 0.1 Populated PCB"},
@@ -116,7 +117,6 @@ const Projects = [
       I'm currently using a 60% keyboard and I was feeling the need for a numpad.
       My design uses a <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the controller because I wanted the whole thing to be relatively easy to hand solder. 
       The ProMicro is also compatible with <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source keyboard firmware.
-      Right now, I'm waiting for switches to arrive, after which I'll be making a build guide.
     </p>
   },
   {
