@@ -17,7 +17,6 @@ const Projects = [
     media: [
       {img: '/pics/mosaic/image_editor.png', text: 'Image Editor'},
       {img: '/pics/mosaic/feed.png', text: 'Feed'},
-      {img: '/pics/mosaic/landing.png', text: 'Landing Page'},
       {img: '/pics/mosaic/login.png', text: 'Login Form'},
       {img: '/pics/mosaic/post.png', text: 'Post with Comments'},
       {img: '/pics/mosaic/profile.png', text: 'User Profile'},
