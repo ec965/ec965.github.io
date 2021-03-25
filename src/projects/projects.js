@@ -15,7 +15,13 @@ const Projects = [
       {text: 'Website', link: 'https://mosaiorama.herokuapp.com/'},
     ],
     media: [
-      {img: '/pics/mosaic/mosaic.png', text: 'mosaic'},
+      {img: '/pics/mosaic/image_editor.png', text: 'Image Editor'},
+      {img: '/pics/mosaic/feed.png', text: 'Feed'},
+      {img: '/pics/mosaic/landing.png', text: 'Landing Page'},
+      {img: '/pics/mosaic/login.png', text: 'Login Form'},
+      {img: '/pics/mosaic/post.png', text: 'Post with Comments'},
+      {img: '/pics/mosaic/profile.png', text: 'User Profile'},
+      {img: '/pics/mosaic/random_editor.png', text: 'Random Editor'}
     ],
     body:
     <p>
