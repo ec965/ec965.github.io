@@ -15,6 +15,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.3.0",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -24,7 +25,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "style": "prettier --write src/*",
+    "lint": "eslint src/*",
+    "lint:fix": "eslint --fix src/*",
+    "type": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +50,16 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
-  }
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.23.2",
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.3.0"
+  },
+  "pre-commit": [
+    "style"
+  ] 
 }
