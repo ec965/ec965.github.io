@@ -1,21 +1,11 @@
 {
-  "short_name": "Portfolio",
-  "name": "Enoch Chau's Portfolio",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
-      "src": "pics/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "pics/scale_up/hardware_all_view.JPG",
-      "type": "image/jpg",
-      "sizes": "192x192"
-    },
-    {
-      "src": "",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "start_url": ".",
