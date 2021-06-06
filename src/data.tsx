@@ -1,5 +1,5 @@
 import { PostData } from "./types";
-import * as React from 'react';
+import * as React from "react";
 
 export const postData: PostData[] = [
   {
@@ -17,21 +17,19 @@ export const postData: PostData[] = [
       { src: "/pics/mosaic/profile.png", alt: "User Profile" },
       { src: "/pics/mosaic/random_editor.png", alt: "Random Editor" },
     ],
-    body: "Mosaic is a user based full stack web app made using MongoDB, Express.js, Node.js and React.js. " 
-    + "On Mosaic, you can create mosaic style images from a base image or from randomly generated rgb pixel values."
-
-    + "\nMy inspiration was to make something artistic using only CSS and HTML elements. "
-    + "I considered using the HTML canvas element but instead went with using div elements because of it's customizability with CSS."
-
-    + "\nIn the database, the mosaics are represented as a 2D array of RGB pixel objects with other customization data. "
-    + "I originally chose to use PostgreSQL but that was restrictive on adding more customization options for the mosaics. " 
-    + "Using MongoDB allows me to continue to expand options and tools for the mosaics without having to overhaul the databse." 
-
-    + "\nTo implement users, I used JSON web tokens (JWT) to protect client side routes and API end points from unauthorized users. " 
-    + "Local storage and session storage hold the JWT on the client side. "
-    + "Using local storage allows me to parse the JWT to personalize content according to the current users information. "
-    + "I considered using cookies to store the JWT but then I wouldn't be able to safely access the JWT on the client side. "
-    + "Also I don't want to get sued by the EU.",
+    body:
+      "Mosaic is a user based full stack web app made using MongoDB, Express.js, Node.js and React.js. " +
+      "On Mosaic, you can create mosaic style images from a base image or from randomly generated rgb pixel values." +
+      "\nMy inspiration was to make something artistic using only CSS and HTML elements. " +
+      "I considered using the HTML canvas element but instead went with using div elements because of it's customizability with CSS." +
+      "\nIn the database, the mosaics are represented as a 2D array of RGB pixel objects with other customization data. " +
+      "I originally chose to use PostgreSQL but that was restrictive on adding more customization options for the mosaics. " +
+      "Using MongoDB allows me to continue to expand options and tools for the mosaics without having to overhaul the databse." +
+      "\nTo implement users, I used JSON web tokens (JWT) to protect client side routes and API end points from unauthorized users. " +
+      "Local storage and session storage hold the JWT on the client side. " +
+      "Using local storage allows me to parse the JWT to personalize content according to the current users information. " +
+      "I considered using cookies to store the JWT but then I wouldn't be able to safely access the JWT on the client side. " +
+      "Also I don't want to get sued by the EU.",
   },
   {
     title: "MCutie",
@@ -44,18 +42,17 @@ export const postData: PostData[] = [
       { src: "/pics/mcutie/dashboard.png", alt: "MQTT Dashboard" },
       { src: "/pics/mcutie/graph.png", alt: "Live Websocket Graph" },
     ],
-    body: "MCutie is a web app that provides logging and real time data graphs for MQTT sensor data. " 
-    + "Building off of Esp Temp, I'm planning to build more IoT sensor for home automation. "
-    + "I wanted a dashboard so that I could log data and monitor my sensors. "
-    + "My initial idea was to write a front-end client to interface with a MQTT broker websocket, but then I wouldn't be able to log messages. "
-    + "To both log messages and see real time data, I used a Raspberry Pi as a proxy server. "
-    + "The Pi logs messages into a database and publish relevant messages over a websocket. "
-    + "The client can also use the websocket to publish MQTT messages to the sensors. In addition to the websocket, I also made a REST API for non-live data analysis."
-
-    + "\nI've wanted to learn backend web development for some time. This project allowed me to pick up Node, Express, and SQLite3 with Sequelize so I'd call it fairly succesful. "
-    + "If you're interested in learning more about MCutie, there's a detailed write up on the GitHub repository."
-
-    + "\nI've also ported the project over to PostgreSQL for a cloud deployment on Heroku. Check out the demo!",
+    body:
+      "MCutie is a web app that provides logging and real time data graphs for MQTT sensor data. " +
+      "Building off of Esp Temp, I'm planning to build more IoT sensor for home automation. " +
+      "I wanted a dashboard so that I could log data and monitor my sensors. " +
+      "My initial idea was to write a front-end client to interface with a MQTT broker websocket, but then I wouldn't be able to log messages. " +
+      "To both log messages and see real time data, I used a Raspberry Pi as a proxy server. " +
+      "The Pi logs messages into a database and publish relevant messages over a websocket. " +
+      "The client can also use the websocket to publish MQTT messages to the sensors. In addition to the websocket, I also made a REST API for non-live data analysis." +
+      "\nI've wanted to learn backend web development for some time. This project allowed me to pick up Node, Express, and SQLite3 with Sequelize so I'd call it fairly succesful. " +
+      "If you're interested in learning more about MCutie, there's a detailed write up on the GitHub repository." +
+      "\nI've also ported the project over to PostgreSQL for a cloud deployment on Heroku. Check out the demo!",
   },
   {
     title: "Esp Temp",
@@ -69,11 +66,12 @@ export const postData: PostData[] = [
       },
       { src: "/pics/iot_temp/breadboard.JPG", alt: "Breadboarding" },
     ],
-    body: "Recently, I made an IoT temperature probe. "
-    + "It shows data physically over a seven segment display but it can also stream data over WiFi using MQTT. "
-    + "At first I didn't really know what I could use it for, but it's come in handy for MQTT testing. " 
-    + "The probe gives me an easy way to start an MQTT publisher. "
-    + "I mean, I could just write a script to do that, but that's not cool. Besides, hand wiring is fun... right?",
+    body:
+      "Recently, I made an IoT temperature probe. " +
+      "It shows data physically over a seven segment display but it can also stream data over WiFi using MQTT. " +
+      "At first I didn't really know what I could use it for, but it's come in handy for MQTT testing. " +
+      "The probe gives me an easy way to start an MQTT publisher. " +
+      "I mean, I could just write a script to do that, but that's not cool. Besides, hand wiring is fun... right?",
   },
   {
     title: "Macro Pad",
@@ -92,20 +90,20 @@ export const postData: PostData[] = [
       { src: "/pics/macropad/pcb-top-down.JPG", alt: "Rev 0.1 PCB" },
       { src: "/pics/macropad/pcb_schem.png", alt: "Rev 0 CAD design" },
     ],
-    body: 
-      (<React.Fragment>
-        I can&apos;t quite remember how I got into mechanical keyboards... but they
-        sure are pretty. I have to find ways to use my Electrical Engineering
-        degree somehow, so I figured it&apos;d be fun to make my own keyboard. I&apos;m
-        currently using a 60% keyboard and I was feeling the need for a numpad.
-        My design uses a{" "}
+    body: (
+      <React.Fragment>
+        I can&apos;t quite remember how I got into mechanical keyboards... but
+        they sure are pretty. I have to find ways to use my Electrical
+        Engineering degree somehow, so I figured it&apos;d be fun to make my own
+        keyboard. I&apos;m currently using a 60% keyboard and I was feeling the
+        need for a numpad. My design uses a{" "}
         <a href="https://www.sparkfun.com/products/12640">ProMicro</a> as the
         controller because I wanted the whole thing to be relatively easy to
         hand solder. The ProMicro is also compatible with{" "}
         <a href="https://github.com/qmk/qmk_firmware">QMK</a>, an open source
         keyboard firmware.
-      </React.Fragment>)
-    ,
+      </React.Fragment>
+    ),
   },
   // {
   //   title: "FK-2001",
@@ -151,9 +149,7 @@ export const postData: PostData[] = [
   {
     title: "Coffee Grams",
     subtitle: "March 2020 - June 2020, December 2020",
-    links: [
-      { text: "GitHub", href: "https://github.com/ec965/coffee_grams" },
-    ],
+    links: [{ text: "GitHub", href: "https://github.com/ec965/coffee_grams" }],
     images: [
       { src: "/pics/coffee_grams/pcb_rev2.jpg", alt: "PCB" },
       { src: "/pics/coffee_grams/3d_rev2.jpg", alt: "3-D Render of PCB" },
@@ -180,9 +176,7 @@ export const postData: PostData[] = [
   {
     title: "GPS Sound Sensor",
     subtitle: "September 2019 - March 2020",
-    links: [
-      { text: "GitHub", href: "https://github.com/ec965/coffee_grams" },
-    ],
+    links: [{ text: "GitHub", href: "https://github.com/ec965/coffee_grams" }],
     images: [
       // {
       //   vid: "/pics/GPSSS/gpsss_vid.mp4",
@@ -216,8 +210,8 @@ export const postData: PostData[] = [
     body: (
       <React.Fragment>
         Water Cooler Buddy is an energy management system for a water cooler.
-        Water Cooler Buddy controls it&apos;s sensors, relays, and user interface
-        using an ESP32 microcontroller.
+        Water Cooler Buddy controls it&apos;s sensors, relays, and user
+        interface using an ESP32 microcontroller.
         <br />
         My primary contribution was firmware development. I updated firmware for
         ESP32 implementation and created an RTOS scheduling system. I also
@@ -370,7 +364,8 @@ export const postData: PostData[] = [
       <React.Fragment>
         MicroMouse is a world wide competition in the promotion of autonomous
         vehicles. Using IR transcievers to detect distance from walls, the mouse
-        can navigate through a maze using it&apos;s microcontroller &quot;brain&quot;.
+        can navigate through a maze using it&apos;s microcontroller
+        &quot;brain&quot;.
       </React.Fragment>
     ),
   },

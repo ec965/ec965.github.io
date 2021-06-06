@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderMain = styled.header`
@@ -10,9 +10,9 @@ export const HeaderMain = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 3em;
-  background-color: ${props => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.secondary};
 
-  @media ${props => props.theme.screenSize.mobile} {
+  @media ${(props) => props.theme.screenSize.mobile} {
     position: static;
   }
 `;
@@ -25,7 +25,9 @@ export const HeaderGroup = styled.nav<HeaderGroupProps>`
   display: flex;
   flex-direction: row;
   font-family: ${(props) =>
-    props.monospace ? props.theme.fontFamily.monospace : props.theme.fontFamily.sansSerif};
+    props.monospace
+      ? props.theme.fontFamily.monospace
+      : props.theme.fontFamily.sansSerif};
 
   & a {
     margin-left: 12px;

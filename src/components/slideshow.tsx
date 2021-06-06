@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { ImageData } from "../types";
-const tabletWidth = '500px';
-const mobileWidth = '300px';
+const tabletWidth = "500px";
+const mobileWidth = "300px";
 
 const SlideDeck = styled.section`
   display: flex;

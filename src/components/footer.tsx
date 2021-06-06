@@ -11,7 +11,7 @@ export const FooterMain = styled.footer`
   align-items: center;
   flex-direction: row;
 
-  @media ${props => props.theme.screenSize.mobile} {
+  @media ${(props) => props.theme.screenSize.mobile} {
     justify-content: center;
   }
 `;
@@ -37,8 +37,8 @@ export const FooterGroup = styled.div<FooterGroupProps>`
     width: 24px;
     height: 24px;
   }
-  @media ${props => props.theme.screenSize.mobile} {
-    display: ${props => props.mobileHide ? 'none': 'flex'}
+  @media ${(props) => props.theme.screenSize.mobile} {
+    display: ${(props) => (props.mobileHide ? "none" : "flex")};
   }
 `;
 

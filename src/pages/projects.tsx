@@ -18,7 +18,6 @@ interface ProjectPageProps {
 export const ProjectPage = ({ data }: ProjectPageProps) => {
   return (
     <React.Fragment>
-
       {data.map((post) => (
         <PostContainer
           key={post.title}

@@ -19,7 +19,7 @@ const Container = styled.article`
     padding-right: 10px;
   }
 
-  @media ${props => props.theme.screenSize.tablet}{
+  @media ${(props) => props.theme.screenSize.tablet} {
     flex-direction: column;
     justify-content: center;
     & ${ArticleMain} {
@@ -31,7 +31,6 @@ const Container = styled.article`
       padding-right: 0px;
       padding-bottom: 10px;
     }
-
   }
 `;
 
@@ -43,7 +42,12 @@ export const Post = ({ data }: PostProps) => {
   return (
     <Container>
       <SlideShow images={data.images} />
-      <Article title={data.title} body={data.body} subtitle={data.subtitle} links={data.links} />
+      <Article
+        title={data.title}
+        body={data.body}
+        subtitle={data.subtitle}
+        links={data.links}
+      />
     </Container>
   );
 };

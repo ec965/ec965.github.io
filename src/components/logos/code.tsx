@@ -13,7 +13,7 @@ interface CodeLogoProps {
   href?: string;
 }
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const CodeLogo  = ({ href }: CodeLogoProps) => {
+export const CodeLogo = ({ href }: CodeLogoProps) => {
   return (
     <CodeLogoDiv href={href}>
       <GoCode />
