@@ -55,14 +55,14 @@ export const Footer = () => {
         <p>Enoch Chau © 2021</p>
       </FooterGroup>
       <FooterGroup right mobileHide>
-        <span title="Linkedin">
-          <a href="https://www.linkedin.com/in/enoch-chau-a2a522126/">
-            <SiLinkedin />
-          </a>
-        </span>
         <span title="Github">
           <a href="https://github.com/ec965">
             <SiGithub />
+          </a>
+        </span>
+        <span title="Linkedin">
+          <a href="https://www.linkedin.com/in/enoch-chau-a2a522126/">
+            <SiLinkedin />
           </a>
         </span>
       </FooterGroup>

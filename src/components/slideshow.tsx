@@ -4,29 +4,17 @@ import { ImageData } from "../types";
 const tabletWidth = "500px";
 const mobileWidth = "300px";
 
-const SlideDeck = styled.section`
+const SlideDeck = styled.div`
   display: flex;
   overflow: auto;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-right: 3px;
+  flex-direction: row;
+  padding-right: 0px;
+  padding-top: 6px;
   & img {
-    margin-bottom: 6px;
+    margin-bottom: 0px;
+    margin-right: 6px;
   }
-
-  @media ${(props) => props.theme.screenSize.tablet} {
-    flex-direction: row;
-    padding-right: 0px;
-    padding-top: 6px;
-    align-items: center;
-    justify-content: center;
-    & img {
-      margin-bottom: 0px;
-      margin-right: 6px;
-    }
-    width: ${tabletWidth};
-  }
+  width: ${tabletWidth};
 
   @media ${(props) => props.theme.screenSize.mobile} {
     width: ${mobileWidth};
@@ -50,14 +38,9 @@ const Thumbnail = styled.img`
 
 export const SlideShowMain = styled.article`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-
-  @media ${(props) => props.theme.screenSize.tablet} {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
+  flex-direction: column;
 `;
 
 const BigScreen = styled.img`
@@ -95,20 +78,22 @@ export const SlideShow = ({ images }: SlideShowProps) => {
   );
   return (
     <SlideShowMain>
-      <SlideDeck>
-        {images.map((thumbnail) => (
-          <Thumbnail
-            key={thumbnail.src}
-            src={thumbnail.src}
-            alt={thumbnail.alt}
-            onClick={() => setMainImage(thumbnail)}
-          />
-        ))}
-      </SlideDeck>
       <BigScreenMain>
         <BigScreen src={mainImage.src} alt={mainImage.alt} />
         <p>{mainImage.alt}</p>
       </BigScreenMain>
+      {images.length > 1 && (
+        <SlideDeck>
+          {images.map((thumbnail) => (
+            <Thumbnail
+              key={thumbnail.src}
+              src={thumbnail.src}
+              alt={thumbnail.alt}
+              onClick={() => setMainImage(thumbnail)}
+            />
+          ))}
+        </SlideDeck>
+      )}
     </SlideShowMain>
   );
 };

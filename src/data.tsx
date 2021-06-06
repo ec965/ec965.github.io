@@ -7,7 +7,7 @@ export const postData: PostData[] = [
     subtitle: "January 2021 - February 2021",
     links: [
       { text: "GitHub", href: "https://github.com/ec965/mosaic" },
-      { text: "Website", href: "https://mosaiorama.herokuapp.com/" },
+      { text: "Demo", href: "https://mosaiorama.herokuapp.com/" },
     ],
     images: [
       { src: "/pics/mosaic/image_editor.png", alt: "Image Editor" },
@@ -105,26 +105,70 @@ export const postData: PostData[] = [
       </React.Fragment>
     ),
   },
-  // {
-  //   title: "FK-2001",
-  //   subtitle: "October 2020",
-  //   text: "2020",
-  //   custom: (
-  //     <ExpandingBlogFramework
-  //       title="FK-2001"
-  //       subtitle="October 2020"
-  //       media={[{ src: "/pics/fk2001/fk-1.JPG", text: "FK-2001" }]}
-  //       abstract={
-  //         <p>
-  //           Updating an ancient keyboard for the modern era. Click the arrow to
-  //           read more.
-  //         </p>
-  //       }
-  //     >
-  //       <FK2001 />
-  //     </ExpandingBlogFramework>
-  //   ),
-  // },
+  {
+    title: "FK-2001",
+    subtitle: "October 2020",
+    links: [],
+    images: [
+      { src: "/pics/fk2001/fk-0.JPG", alt: "Focus FK-2001 (Asian 102 layout)" },
+      { src: "/pics/fk2001/fk-5.JPG", alt: "The Chain of Adapters" },
+      { src: "/pics/fk2001/fk-1.JPG", alt: "Out of the Case" },
+      { src: "/pics/fk2001/fk-2.JPG", alt: "Keycaps Off" },
+      { src: "/pics/fk2001/fk-3.JPG", alt: "Alps Keycaps" },
+      { src: "/pics/fk2001/fk-4.JPG", alt: "Alps Style Switch" },
+      { src: "/pics/fk2001/fk-7.JPG", alt: "C, D, G, V labels on the pcb" },
+      { src: "/pics/fk2001/fk-6.JPG", alt: "The Setup" },
+      { src: "/pics/fk2001/fk-8.JPG", alt: "Pro-Micro in Place" },
+      { src: "/pics/fk2001/fk-9.JPG", alt: "USB Mini-B Port" },
+      { src: "/pics/fk2001/fk-10.JPG", alt: "Restored FK-2001" },
+    ],
+    body: (
+      <React.Fragment>
+        I found a{" "}
+        <a href="https://deskthority.net/wiki/Focus_FK-2001">Focus FK-2001</a>{" "}
+        terminal keyboard in the garage. My dad first used it in the 90&apos;s
+        when he started programming. It&apos;s honestly still pretty nice for
+        being in storage for 10+ years.
+        <br />
+        <br />
+        Initially, to connect the 5 pin DIN cable to my modern computer, I used
+        a 5 pin DIN to PS/2 adapter and a PS/2 to USB adapter.
+        <br />
+        <br />
+        First things first, I took it apart and cleaned it throughly. I dusted
+        out the innards with an air duster and wiped down all the keycaps. I
+        found that some of the keys (space and left ctrl) seemed to be double
+        pressing. I desoldered and swapped the troublesome switches with working
+        switches.
+        <br />
+        <br />
+        I really like the beige retro color of tech from this time period. The
+        switches are Alps SKCM whites or a clone, I&apos;m not entirely sure.
+        <br />
+        <br />
+        Since the adapter chain is bit unsightly, I decided to use a{" "}
+        <a href="https://www.sparkfun.com/products/12640">Pro-Micro </a>
+        to adapt the keyboard to use USB. The pins of the original cable
+        connector are labelled C, D, G, and V for clock, data, ground, and
+        voltage respectivley. I connected these pins to the Pro-Micro&apos;s
+        PD0, PD1, RAW, and GND, then I flashed the Pro-Micro with
+        <a href="https://github.com/tmk/tmk_keyboard/tree/master/converter/ibmpc_usb">
+          {" "}
+          Hasu&apos;s terminal keyboard converter
+        </a>
+        .
+        <br />
+        <br />
+        Luckily, there was a hole in the back of the case that was just big
+        enough for a USB mini port so I didn&apos;t have to do any drilling. I
+        didn&apos;t have heat shrink at the time so I hotglued the wires for
+        insulation and stability (don&apos;t worry, I soldered them first). I
+        also used a stack of cardboard and electrical tape to support the
+        Pro-Micro in the case. Not the prettiest solution, but no one&apos;s
+        going to see it inside the case.
+      </React.Fragment>
+    ),
+  },
   {
     title: "Boulder Field",
     subtitle: "August 2020",
@@ -213,6 +257,7 @@ export const postData: PostData[] = [
         Water Cooler Buddy controls it&apos;s sensors, relays, and user
         interface using an ESP32 microcontroller.
         <br />
+        <br />
         My primary contribution was firmware development. I updated firmware for
         ESP32 implementation and created an RTOS scheduling system. I also
         assisted with PCB population and water cooler wiring.
@@ -281,6 +326,7 @@ export const postData: PostData[] = [
         projectors internal electronics and bulb, a soft shutdown is initiated
         using an IR blaster.
         <br />
+        <br />
         My primary contribution was firmware development. I implemented freeRTOS
         firmware, updated the control algorithm, and created IR Reciever and IR
         Emitter functionality.
@@ -317,6 +363,7 @@ export const postData: PostData[] = [
         detect faults in a three phase motor. By performing a Fast Fourier
         Transform (FFT) on the power data and looking for irregularites, we were
         able to determine if the motor was faulty.
+        <br />
         <br />
         My primary contribution was configuring the waveform buffer firmware and
         creating a graphical interface for FFT.

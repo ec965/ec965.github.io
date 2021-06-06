@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { LinkData } from "../types";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export const ArticleMain = styled.article`
   & header {
@@ -16,6 +17,11 @@ const LinkContainer = styled.div`
   flex-direction: row;
   & a {
     margin-right: 6px;
+  }
+  & svg {
+    padding-bottom: 3px;
+    width: 24px;
+    height: 24px;
   }
 `;
 
@@ -35,7 +41,13 @@ export const Article = ({ links, title, subtitle, body }: ArticleProps) => {
         <LinkContainer>
           {links.map((link) => (
             <a key={link.href} href={link.href}>
-              <h3>{link.text}</h3>
+              {link.text.toLowerCase() === "github" ? (
+                <SiGithub />
+              ) : link.text.toLowerCase() === "linkedin" ? (
+                <SiLinkedin />
+              ) : (
+                <h3>{link.text}</h3>
+              )}
             </a>
           ))}
         </LinkContainer>
