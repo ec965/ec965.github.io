@@ -7,12 +7,24 @@ declare module "styled-components" {
       secondary: string;
       highlight: string;
     };
-    lrPadding: string;
-  fontSize: {
-    h1: string,
-    h2: string,
-    h3: string,
-    p: string,
-  }
+    lrSpacing: string;
+    fontSize: {
+      h1: string;
+      h2: string;
+      h3: string;
+      p: string;
+    };
+    fontFamily: {
+      monospace: string;
+      sansSerif: string;
+    };
+    screenSize: {
+      mobile: string;
+      tablet: string;
+    };
+    hover: {
+      opacity: string;
+      time: string;
+    };
   }
 }
