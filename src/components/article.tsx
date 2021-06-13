@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import { LinkData } from "../types";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { LinkData } from "../types";
 
 export const ArticleMain = styled.article`
   & header {

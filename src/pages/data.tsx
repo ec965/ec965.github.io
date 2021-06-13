@@ -1,5 +1,5 @@
-import { PostData } from "./types";
 import * as React from "react";
+import { PostData } from "../types";
 
 export const postData: PostData[] = [
   {
@@ -202,25 +202,17 @@ export const postData: PostData[] = [
         alt: "Raspberry Pi Prototype",
       },
     ],
-    body: (
-      <React.Fragment>
-        IoT Coffee Scale PCB design and LAMP stack webapp.{" "}
-        <a href="./cg_example/Coffee Grams.html">Click here</a> for a static
-        example of the webapp.
-      </React.Fragment>
-    ),
+    body: "IoT Coffee Scale PCB design and LAMP stack webapp.",
   },
-  // {
-  //   path: subpath + '/workoutTimer',
-  //   src: '/pics/wo1.png',
-  //   title: 'Workout Timer',
-  //   text: '2020',
-  //   custom: <h1>placeholder</h1>
-  // },
   {
     title: "GPS Sound Sensor",
     subtitle: "September 2019 - March 2020",
-    links: [{ text: "GitHub", href: "https://github.com/ec965/coffee_grams" }],
+    links: [
+      {
+        text: "Project Site",
+        href: "http://projects.eng.uci.edu/projects/2019-2020/gps-sound-sensor-rescue-assistance",
+      },
+    ],
     images: [
       // {
       //   vid: "/pics/GPSSS/gpsss_vid.mp4",

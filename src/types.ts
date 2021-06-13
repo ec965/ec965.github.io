@@ -1,5 +1,4 @@
-import * as React from "react";
-
+import { ReactNode } from "react";
 export type ImageData = {
   src: string;
   alt: string;
@@ -13,7 +12,7 @@ export type LinkData = {
 export type PostData = {
   title: string;
   subtitle: string;
-  body: string | React.ReactNode;
+  body: string | ReactNode;
   links: LinkData[];
   images: ImageData[];
 };

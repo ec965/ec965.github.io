@@ -1,5 +1,4 @@
 import * as React from "react";
-import { postData } from "./data";
 // styles
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, mainTheme } from "./styles/theme";
@@ -23,11 +22,11 @@ export const App = () => {
             <AboutPage />
           </Route>
           <Route path="/">
-            <ProjectPage data={postData} />
+            <ProjectPage />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </ThemeProvider>
   );
 };

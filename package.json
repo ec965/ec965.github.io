@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "style": "prettier --write src/*",
+    "style": "prettier --write .",
     "lint": "eslint src/*",
     "lint:fix": "eslint --fix src/*",
     "type": "tsc --noEmit",

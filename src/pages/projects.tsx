@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Post } from "../components/post";
-import { PostData } from "../types";
+import { postData } from "./data";
 
 const PostContainer = styled.div`
   padding-top: 20px;
@@ -11,14 +11,11 @@ const PostContainer = styled.div`
   }
 `;
 
-interface ProjectPageProps {
-  data: PostData[];
-}
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const ProjectPage = ({ data }: ProjectPageProps) => {
+export const ProjectPage = () => {
   return (
     <React.Fragment>
-      {data.map((post) => (
+      {postData.map((post) => (
         <PostContainer
           key={post.title}
           id={post.title.split(" ").join("") || undefined}
