@@ -1,14 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { barContentMixin } from "./mixins";
 
 export const HeaderMain = styled.header`
+  ${barContentMixin}
   z-index: 1;
   position: sticky;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 3em;
   background-color: ${(props) => props.theme.colors.secondary};
 
@@ -23,7 +22,6 @@ interface HeaderGroupProps {
 }
 export const HeaderGroup = styled.nav<HeaderGroupProps>`
   display: flex;
-  flex-direction: row;
   font-family: ${(props) =>
     props.monospace
       ? props.theme.fontFamily.monospace

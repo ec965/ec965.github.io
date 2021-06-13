@@ -9,7 +9,7 @@ export const postData: PostData[] = [
       { text: "GitHub", href: "https://github.com/ec965/mosaic" },
       { text: "Demo", href: "https://mosaiorama.herokuapp.com/" },
     ],
-    images: [
+    media: [
       { src: "/pics/mosaic/image_editor.png", alt: "Image Editor" },
       { src: "/pics/mosaic/feed.png", alt: "Content Feed" },
       { src: "/pics/mosaic/login.png", alt: "Login Form" },
@@ -38,7 +38,7 @@ export const postData: PostData[] = [
       { text: "GitHub", href: "https://github.com/ec965/MCutie/" },
       { text: "Demo", href: "https://m-cutie.herokuapp.com/" },
     ],
-    images: [
+    media: [
       { src: "/pics/mcutie/dashboard.png", alt: "MQTT Dashboard" },
       { src: "/pics/mcutie/graph.png", alt: "Live Websocket Graph" },
     ],
@@ -58,7 +58,7 @@ export const postData: PostData[] = [
     title: "Esp Temp",
     subtitle: "January 2021",
     links: [{ text: "GitHub", href: "https://github.com/ec965/esp-temp" }],
-    images: [
+    media: [
       { src: "/pics/iot_temp/perfboard_front.JPG", alt: "Esp Temp" },
       {
         src: "/pics/iot_temp/perfboard_back.JPG",
@@ -79,7 +79,7 @@ export const postData: PostData[] = [
     links: [
       { text: "GitHub", href: "https://github.com/ec965/dropout-numpad" },
     ],
-    images: [
+    media: [
       { src: "/pics/macropad/completed_dropout.jpg", alt: "macropad" },
       { src: "/pics/macropad/rev0.5.jpg", alt: "Rev 0.5" },
       {
@@ -109,7 +109,7 @@ export const postData: PostData[] = [
     title: "FK-2001",
     subtitle: "October 2020",
     links: [],
-    images: [
+    media: [
       { src: "/pics/fk2001/fk-0.JPG", alt: "Focus FK-2001 (Asian 102 layout)" },
       { src: "/pics/fk2001/fk-5.JPG", alt: "The Chain of Adapters" },
       { src: "/pics/fk2001/fk-1.JPG", alt: "Out of the Case" },
@@ -176,7 +176,7 @@ export const postData: PostData[] = [
       { text: "GitHub", href: "https://github.com/ec965/MP-Recs" },
       { text: "Demo", href: "https://ec965.github.io/MP-Recs/index.html" },
     ],
-    images: [
+    media: [
       {
         src: "/pics/boulderField/dataTable.png",
         alt: "Bouldering Suggestions",
@@ -194,7 +194,7 @@ export const postData: PostData[] = [
     title: "Coffee Grams",
     subtitle: "March 2020 - June 2020, December 2020",
     links: [{ text: "GitHub", href: "https://github.com/ec965/coffee_grams" }],
-    images: [
+    media: [
       { src: "/pics/coffee_grams/pcb_rev2.jpg", alt: "PCB" },
       { src: "/pics/coffee_grams/3d_rev2.jpg", alt: "3-D Render of PCB" },
       {
@@ -213,12 +213,15 @@ export const postData: PostData[] = [
         href: "http://projects.eng.uci.edu/projects/2019-2020/gps-sound-sensor-rescue-assistance",
       },
     ],
-    images: [
-      // {
-      //   vid: "/pics/GPSSS/gpsss_vid.mp4",
-      //   text: "Infomercial",
-      //   thumbnail: "/pics/GPSSS/video_thumbnail.png",
-      // },
+    media: [
+      {
+        src: "/pics/GPSSS/gpsss_vid.mp4",
+        title: "Infomercial",
+        thumbnail: {
+          src: "/pics/GPSSS/video_thumbnail.png",
+          alt: "gpsss demo video",
+        },
+      },
       { src: "/pics/GPSSS/GPSSS_1.jpg", alt: "GPSSS" },
       { alt: "Sensor Internals", src: "/pics/GPSSS/GPSSS_2.jpg" },
     ],
@@ -238,7 +241,7 @@ export const postData: PostData[] = [
       { href: "http://calplug.org/", text: "CalPlug" },
       { href: "https://www.calit2.uci.edu/", text: "CalIT2" },
     ],
-    images: [
+    media: [
       { alt: "Main and Interface PCB", src: "/pics/WCB/wcb_pcb.jpg" },
       { alt: "Watercooler", src: "/pics/WCB/WCB_outside.JPG" },
       { alt: "Demo User Interface", src: "/pics/WCB/WCB_fake_front.JPG" },
@@ -263,13 +266,15 @@ export const postData: PostData[] = [
       { text: "GitHub", href: "https://github.com/ec965/smart_scale" },
       { text: "DevPost", href: "https://devpost.com/software/scale-up" },
     ],
-    images: [
-      // {
-      //   yt: "https://www.youtube.com/embed/G3OunuLPnXA",
-      //   text: "Demo",
-      //   thumbnail:
-      //     "https://i.ytimg.com/vi/G3OunuLPnXA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCMlsjDf9e4NW0HvUQB-UBF4JSjQ",
-      // },
+    media: [
+      {
+        src: "https://www.youtube.com/embed/G3OunuLPnXA",
+        title: "Demo",
+        thumbnail: {
+          alt: "Scale Up Demo",
+          src: "https://i.ytimg.com/vi/G3OunuLPnXA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCMlsjDf9e4NW0HvUQB-UBF4JSjQ",
+        },
+      },
       { src: "/pics/scale_up/hardware_all_view_labeled.JPG", alt: "Scale Up" },
     ],
     body: (
@@ -286,7 +291,7 @@ export const postData: PostData[] = [
     links: [
       { text: "GitHub", href: "https://github.com/ec965/HC2_arduino_python" },
     ],
-    images: [
+    media: [
       { src: "/pics/hc2.JPG", alt: "HC2, Moteino (LoRa), & Raspberry Pi" },
     ],
     body: (
@@ -306,7 +311,7 @@ export const postData: PostData[] = [
       { href: "http://calplug.org/", text: "CalPlug" },
       { href: "https://www.calit2.uci.edu/", text: "CalIT2" },
     ],
-    images: [
+    media: [
       { src: "/pics/projector_buddy/topdown.jpg", alt: "Topdown View" },
       { alt: "Side View", src: "/pics/projector_buddy/PIR_pic.jpg" },
     ],
@@ -336,13 +341,16 @@ export const postData: PostData[] = [
       { href: "http://calplug.org/", text: "CalPlug" },
       { href: "https://www.calit2.uci.edu/", text: "CalIT2" },
     ],
-    images: [
+    media: [
       { alt: "Demo Setup", src: "/pics/3phase/3phase_watt_demo.jpg" },
-      // {
-      //   vid: "/pics/3phase/3phasewatt_sin.mov",
-      //   text: "Power Graph",
-      //   thumbnail: "/pics/3phase/video_thumbnail.png",
-      // },
+      {
+        src: "/pics/3phase/3phasewatt_sin.mov",
+        title: "Power Graph",
+        thumbnail: {
+          src: "/pics/3phase/video_thumbnail.png",
+          alt: "power graph",
+        },
+      },
       {
         alt: "FFT Processing Graph",
         src: "/pics/3phase/3phase_watt_processing.png",
@@ -369,13 +377,15 @@ export const postData: PostData[] = [
       { text: "GitHub", href: "https://github.com/ec965/the_all_C-ing_eye" },
       { text: "DevPost", href: "https://devpost.com/software/the-c-ing-hat" },
     ],
-    images: [
-      // {
-      //   yt: "https://www.youtube.com/embed/SFQxsU8La4k",
-      //   text: "Demo",
-      //   thumbnail:
-      //     "https://i.ytimg.com/vi/SFQxsU8La4k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNNePoW3PnWJ_bCpQLEPnvltOt8A",
-      // },
+    media: [
+      {
+        src: "https://www.youtube.com/embed/SFQxsU8La4k",
+        title: "Demo",
+        thumbnail: {
+          alt: "c-ing hat demo",
+          src: "https://i.ytimg.com/vi/SFQxsU8La4k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNNePoW3PnWJ_bCpQLEPnvltOt8A",
+        },
+      },
       { src: "/pics/cing_hat/Cing_hat_2019.jpg", alt: "Side View" },
       { src: "/pics/cing_hat/Cing_hat_2019 (2).jpg", alt: "Topdown" },
     ],
@@ -392,7 +402,7 @@ export const postData: PostData[] = [
     links: [
       { text: "GitHub", href: "https://github.com/ec965/micromouse_2019" },
     ],
-    images: [
+    media: [
       { src: "/pics/micromouse/micromosue_2019.JPG", alt: "Micromouse" },
       {
         src: "/pics/micromouse/labeled_top_down_micromouse_2019.png",

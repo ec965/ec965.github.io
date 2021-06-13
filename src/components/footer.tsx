@@ -2,14 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { CodeLogo } from "./logos/code";
+import { barContentMixin } from "./mixins";
 
 export const FooterMain = styled.footer`
+  ${barContentMixin}
   padding-top: 9px;
   padding-bottom: 9px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
 
   @media ${(props) => props.theme.screenSize.mobile} {
     justify-content: center;
@@ -24,7 +22,6 @@ interface FooterGroupProps {
 export const FooterGroup = styled.div<FooterGroupProps>`
   display: flex;
   align-items: flex-end;
-  flex-direction: row;
   width: 200px;
   justify-content: ${(props) => {
     if (props.left) return "flex-start";
@@ -32,7 +29,7 @@ export const FooterGroup = styled.div<FooterGroupProps>`
     else return "center";
   }};
   & svg {
-    margin-left: ${(props) => (props.right ? "6px" : "0px")};
+    margin-left: ${(props) => (props.right ? "12px" : "0px")};
     margin-right: ${(props) => (props.left ? "6px" : "0px")};
     width: 24px;
     height: 24px;
@@ -55,16 +52,15 @@ export const Footer = () => {
         <p>Enoch Chau © 2021</p>
       </FooterGroup>
       <FooterGroup right mobileHide>
-        <span title="Github">
-          <a href="https://github.com/ec965">
-            <SiGithub />
-          </a>
-        </span>
-        <span title="Linkedin">
-          <a href="https://www.linkedin.com/in/enoch-chau-a2a522126/">
-            <SiLinkedin />
-          </a>
-        </span>
+        <a href="https://github.com/ec965" title="Github">
+          <SiGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/enoch-chau-a2a522126/"
+          title="Linkedin"
+        >
+          <SiLinkedin />
+        </a>
       </FooterGroup>
     </FooterMain>
   );

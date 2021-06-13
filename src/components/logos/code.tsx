@@ -1,11 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import { GoCode } from "react-icons/go";
+import { flexCenterMixin } from "../mixins";
 
 const CodeLogoDiv = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenterMixin}
   flex-direction: row;
 `;
 

@@ -41,7 +41,7 @@ interface PostProps {
 export const Post = ({ data }: PostProps) => {
   return (
     <Container>
-      <SlideShow images={data.images} />
+      <SlideShow media={data.media} />
       <Article
         title={data.title}
         body={data.body}

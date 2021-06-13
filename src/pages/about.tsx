@@ -16,10 +16,14 @@ export const AboutPage = () => {
           },
           {
             href: "https://www.mountainproject.com/user/200380484/enoch-chau",
-            text: "MP",
+            text: "MountainProject",
+          },
+          {
+            text: "Resume",
+            href: "./public_resume.pdf",
           },
         ],
-        images: [
+        media: [
           { src: "pics/IMG_2745.JPG", alt: "Red Rock, Las Vegas, NV 2019" },
         ],
         body: "I'm interested in electronics and web development. Right now, I work at GoSite building software to help small buisnesses. When I'm not in front of the computer, I like to cook, climb rocks, and mess with keyboards.",

@@ -4,6 +4,12 @@ export type ImageData = {
   alt: string;
 };
 
+export type VideoData = {
+  title: string;
+  src: string;
+  thumbnail: ImageData;
+};
+
 export type LinkData = {
   href: string;
   text: string;
@@ -14,5 +20,5 @@ export type PostData = {
   subtitle: string;
   body: string | ReactNode;
   links: LinkData[];
-  images: ImageData[];
+  media: (VideoData | ImageData)[];
 };

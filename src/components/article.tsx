@@ -2,10 +2,14 @@ import * as React from "react";
 import styled from "styled-components";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { LinkData } from "../types";
+import { MountainProjectLogo } from "./logos/mountainProject";
 
 export const ArticleMain = styled.article`
   & header {
     padding-bottom: 5px;
+    & h2 {
+      padding-bottom: 5px;
+    }
   }
   & p {
     text-align: justify;
@@ -16,7 +20,7 @@ const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   & a {
-    margin-right: 6px;
+    margin-right: 12px;
   }
   & svg {
     padding-bottom: 3px;
@@ -40,11 +44,13 @@ export const Article = ({ links, title, subtitle, body }: ArticleProps) => {
         <h2>{subtitle}</h2>
         <LinkContainer>
           {links.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a key={link.href} href={link.href} title={link.text}>
               {link.text.toLowerCase() === "github" ? (
                 <SiGithub />
               ) : link.text.toLowerCase() === "linkedin" ? (
                 <SiLinkedin />
+              ) : link.text.toLowerCase() === "mountainproject" ? (
+                <MountainProjectLogo width="24px" />
               ) : (
                 <h3>{link.text}</h3>
               )}
