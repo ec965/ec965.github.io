@@ -29,7 +29,8 @@
     "lint:fix": "eslint --fix src/*",
     "type": "tsc",
     "lint-type": "npm-run-all --parallel lint type",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "img": "img-diff -o public/pics -i public/rawpics -r"
   },
   "eslintConfig": {
     "extends": [

@@ -10,6 +10,10 @@ export const HeaderMain = styled.header`
   top: 0;
   height: 3em;
   background-color: ${(props) => props.theme.colors.secondary};
+  border-radius: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
   @media ${(props) => props.theme.screenSize.mobile} {
     position: static;
@@ -37,7 +41,7 @@ export const Header = () => {
   return (
     <HeaderMain id="header">
       <HeaderGroup>
-        <h1>Enoch Chau</h1>
+        <h2>Enoch Chau</h2>
       </HeaderGroup>
       <HeaderGroup monospace>
         <Link to="/">

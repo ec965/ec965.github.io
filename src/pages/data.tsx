@@ -215,7 +215,7 @@ export const postData: PostData[] = [
     ],
     media: [
       {
-        src: "/pics/GPSSS/gpsss_vid.mp4",
+        src: "/videos/gpsss_vid.mp4",
         title: "Infomercial",
         thumbnail: {
           src: "/pics/GPSSS/video_thumbnail.png",
@@ -344,7 +344,7 @@ export const postData: PostData[] = [
     media: [
       { alt: "Demo Setup", src: "/pics/3phase/3phase_watt_demo.jpg" },
       {
-        src: "/pics/3phase/3phasewatt_sin.mov",
+        src: "/videos/3phasewatt_sin.mov",
         title: "Power Graph",
         thumbnail: {
           src: "/pics/3phase/video_thumbnail.png",
