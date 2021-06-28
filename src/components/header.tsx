@@ -7,13 +7,14 @@ export const HeaderMain = styled.header`
   ${barContentMixin}
   z-index: 1;
   position: sticky;
-  top: 0;
+  top: 10px;
   height: 3em;
   background-color: ${(props) => props.theme.colors.secondary};
   border-radius: 6px;
+  margin-top: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
 
   @media ${(props) => props.theme.screenSize.mobile} {
     position: static;

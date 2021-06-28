@@ -51,3 +51,11 @@ export const Post = ({ data }: PostProps) => {
     </Container>
   );
 };
+
+export const PostContainer = styled.div`
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media ${(props) => props.theme.screenSize.tablet} {
+    border-bottom: 1px solid ${(props) => props.theme.colors.highlight};
+  }
+`;

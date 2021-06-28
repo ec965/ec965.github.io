@@ -36,6 +36,7 @@ const Thumbnail = styled.img`
   width: 90px;
   height: 60px;
   border-radius: 5px;
+  border: 2px solid ${(props) => props.theme.colors.highlight};
   object-fit: cover;
   opacity: ${(props) => props.theme.hover.opacity};
   transition: ${(props) => props.theme.hover.time};
@@ -53,8 +54,6 @@ export const SlideShowMain = styled.article`
 `;
 
 const BigScreenImg = styled.img`
-  padding-left: 3px;
-  padding-right: 3px;
   ${mediaWidthMixin}
 `;
 
@@ -65,6 +64,7 @@ const videoStyles = css`
   display: block;
   height: 100%;
 `;
+
 const BigScreenVideo = styled.video`
   ${videoStyles}
 `;

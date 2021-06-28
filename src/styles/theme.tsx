@@ -6,6 +6,7 @@ export const mainTheme: DefaultTheme = {
     main: "#000",
     secondary: "#FFF",
     highlight: "#cf4868",
+    grey: "#808080",
   },
   fontSize: {
     h1: "32px",

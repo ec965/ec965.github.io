@@ -6,6 +6,7 @@ declare module "styled-components" {
       main: string;
       secondary: string;
       highlight: string;
+      grey: string;
     };
     lrSpacing: string;
     fontSize: {
