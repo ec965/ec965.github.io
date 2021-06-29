@@ -1,4 +1,4 @@
-import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R as m,d}from"./vendor.2b9467bd.js";const h={lrSpacing:"10vw",colors:{main:"#2c2c2c",secondary:"#f8f8f8",highlight:"#cf4868",grey:"#808080"},fontSize:{h1:"32px",h2:"26px",h3:"22px",p:"18px"},fontFamily:{monospace:'"Lucida Console", "Courier New", monospace',sansSerif:"Arial, Verdana, Helvetica"},screenSize:{mobile:"(max-width: 600px)",tablet:"(max-width: 1100px)"},hover:{opacity:"60%",time:"0.3s"}},u=(e,t)=>parseInt(e)-t+"px",g=e`
+import{$ as e,A as t,q as o,r,S as a,a as i,L as n,G as s,b as l,H as c,c as p,R as m,d}from"./vendor.2b9467bd.js";const h={lrSpacing:"10vw",colors:{main:"#2c2c2c",secondary:"#f8f8f8",highlight:"#cf4868",grey:"#808080"},fontSize:{h1:"32px",h2:"26px",h3:"22px",p:"18px"},fontFamily:{monospace:'"Lucida Console", "Courier New", monospace',sansSerif:"Arial, Verdana, Helvetica"},screenSize:{mobile:"(max-width: 600px)",tablet:"(max-width: 1100px)"},hover:{opacity:"60%",time:"0.3s"}},u=(e,t)=>parseInt(e)-t+"px",g=e`
   body {
     color: ${e=>e.theme.colors.main};
     background-color: ${e=>e.theme.colors.secondary};
@@ -108,18 +108,18 @@ import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R
 `,k=o.article`
   ${f}
   flex-direction: column;
-`,S=o.img`
+`,v=o.img`
   ${w}
-`,v=t`
+`,S=t`
   ${w}
   object-fit: cover;
   transition: 0.2s;
   display: block;
   height: 100%;
 `,P=o.video`
-  ${v}
+  ${S}
 `,I=o.div`
-  ${v}
+  ${S}
   padding-bottom: 56.25%;
   position: relative;
 
@@ -137,7 +137,7 @@ import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R
     font-family: ${e=>e.theme.fontFamily.monospace};
     padding-top: 9px;
   }
-`,$=({media:e})=>{const[t,o]=r.exports.useState(e.length>0?e[0]:{src:"",alt:"N/A"});return r.exports.createElement(k,null,r.exports.createElement(C,null,"alt"in t?r.exports.createElement(S,{src:t.src,alt:t.alt}):t.src.includes("youtube.com")?r.exports.createElement(I,null,r.exports.createElement("iframe",{title:t.title,src:t.src,frameBorder:"0",allow:"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:!0})):r.exports.createElement(P,{controls:!0},r.exports.createElement("source",{src:t.src})),r.exports.createElement("p",null,"alt"in t?t.alt:t.title)),e.length>1&&r.exports.createElement(y,null,e.map((e=>{const t="thumbnail"in e?e.thumbnail:e;return r.exports.createElement(E,{key:t.src,src:t.src,alt:t.alt,onClick:()=>o(e)})}))))},G=o.img`
+`,$=({media:e})=>{const[t,o]=r.exports.useState(e.length>0?e[0]:{src:"",alt:"N/A"});return r.exports.createElement(k,null,r.exports.createElement(C,null,"alt"in t?r.exports.createElement(v,{src:t.src,alt:t.alt}):t.src.includes("youtube.com")?r.exports.createElement(I,null,r.exports.createElement("iframe",{title:t.title,src:t.src,frameBorder:"0",allow:"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:!0})):r.exports.createElement(P,{controls:!0},r.exports.createElement("source",{src:t.src})),r.exports.createElement("p",null,"alt"in t?t.alt:t.title)),e.length>1&&r.exports.createElement(y,null,e.map((e=>{const t="thumbnail"in e?e.thumbnail:e;return r.exports.createElement(E,{key:t.src,src:t.src,alt:t.alt,onClick:()=>o(e)})}))))},G=o.img`
   width: ${e=>e.width||""};
   height: ${e=>e.height||""};
   filter: hue-rotate(123deg);
@@ -162,7 +162,7 @@ import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R
     width: 24px;
     height: 24px;
   }
-`,M=({links:e,title:t,subtitle:o,body:s})=>r.exports.createElement(F,null,r.exports.createElement("header",null,r.exports.createElement("h1",null,t),r.exports.createElement("h2",null,o),r.exports.createElement(_,null,e.map((e=>r.exports.createElement("a",{key:e.href,href:e.href,title:e.text},"github"===e.text.toLowerCase()?r.exports.createElement(a,null):"linkedin"===e.text.toLowerCase()?r.exports.createElement(i,null):"mountainproject"===e.text.toLowerCase()?r.exports.createElement(j,{width:"24px"}):r.exports.createElement("h3",null,e.text)))))),r.exports.createElement("section",null,"string"==typeof s?s.split("\n").map(((e,t,o)=>t!==o.length-1?r.exports.createElement(r.exports.Fragment,{key:t},r.exports.createElement("p",null,e),r.exports.createElement("br",null)):r.exports.createElement("p",{key:t},e))):r.exports.createElement("p",null,s))),T=o.article`
+`,M=({links:e,title:t,subtitle:o,body:n})=>r.exports.createElement(F,null,r.exports.createElement("header",null,r.exports.createElement("h1",null,t),r.exports.createElement("h2",null,o),r.exports.createElement(_,null,e.map((e=>r.exports.createElement("a",{key:e.href,href:e.href,title:e.text},"github"===e.text.toLowerCase()?r.exports.createElement(a,null):"linkedin"===e.text.toLowerCase()?r.exports.createElement(i,null):"mountainproject"===e.text.toLowerCase()?r.exports.createElement(j,{width:"24px"}):r.exports.createElement("h3",null,e.text)))))),r.exports.createElement("section",null,"string"==typeof n?n.split("\n").map(((e,t,o)=>t!==o.length-1?r.exports.createElement(r.exports.Fragment,{key:t},r.exports.createElement("p",null,e),r.exports.createElement("br",null)):r.exports.createElement("p",{key:t},e))):r.exports.createElement("p",null,n))),T=o.article`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -232,7 +232,7 @@ import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R
   }
 `,N=o.a`
   ${U}
-`,Q=o(s)`
+`,Q=o(n)`
   ${U}
 `,q=o.section`
   ${H}
@@ -251,10 +251,10 @@ import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R
   }
 `,O=o.p`
   font-family: ${e=>e.theme.fontFamily.monospace};
-`,K=()=>r.exports.createElement(D,null,r.exports.createElement(q,null,r.exports.createElement("h1",null,"Hi!"),r.exports.createElement("h2",null,"I'm"," ",r.exports.createElement(N,{title:"Linkedin",href:"https://www.linkedin.com/in/enoch-chau-a2a522126/"},"Enoch")),r.exports.createElement("p",null,"I'm interested in electronics and web development. Right now, I work at"," ",r.exports.createElement(N,{title:"gosite.com",href:"https://www.gosite.com"},"GoSite")," ","building software to help small businesses. I used to keep track of"," ",r.exports.createElement(Q,{to:"/projects"},"my projects"),", but now-a-days all my stuff is on"," ",r.exports.createElement(N,{title:"Github",href:"https://github.com/ec965"},"Github"),". If I'm not in front of the computer, I'm probably out at"," ",r.exports.createElement(N,{title:"Mountain Project",href:"https://www.mountainproject.com/user/200380484/enoch-chau"},"the crag"),".")),r.exports.createElement(W,{src:"public/me2.png",alt:"enoch"}),r.exports.createElement(O,null,"San Francisco, CA, 2021")),V=o.a`
+`,K=()=>r.exports.createElement(D,null,r.exports.createElement(q,null,r.exports.createElement("h1",null,"Hi!"),r.exports.createElement("h2",null,"I'm"," ",r.exports.createElement(N,{title:"Linkedin",href:"https://www.linkedin.com/in/enoch-chau-a2a522126/"},"Enoch")),r.exports.createElement("p",null,"I'm interested in electronics and web development. Right now, I work at"," ",r.exports.createElement(N,{title:"gosite.com",href:"https://www.gosite.com"},"GoSite")," ","building software to help small businesses. I used to keep track of"," ",r.exports.createElement(Q,{to:"/projects"},"my projects"),", but I keep everything on"," ",r.exports.createElement(N,{title:"Github",href:"https://github.com/ec965"},"Github"),". If I'm not in front of the computer, I'm probably out at"," ",r.exports.createElement(N,{title:"Mountain Project",href:"https://www.mountainproject.com/user/200380484/enoch-chau"},"the crag"),".")),r.exports.createElement(W,{src:"public/me2.png",alt:"enoch"}),r.exports.createElement(O,null,"San Francisco, CA, 2021")),V=o.a`
   ${f}
   flex-direction: row;
-`,X=({href:e})=>r.exports.createElement(V,{href:e},r.exports.createElement(n,null),r.exports.createElement("p",null,"Source Code")),Y=o.footer`
+`,X=({href:e})=>r.exports.createElement(V,{href:e},r.exports.createElement(s,null),r.exports.createElement("p",null,"Source Code")),Y=o.footer`
   ${x}
   padding-top: 9px;
   padding-bottom: 9px;
@@ -299,4 +299,4 @@ import{$ as e,A as t,q as o,r,S as a,a as i,L as s,G as n,b as l,H as c,c as p,R
   & a {
     margin-left: 12px;
   }
-`,re=()=>r.exports.createElement(te,{id:"header"},r.exports.createElement(oe,null,r.exports.createElement(s,{to:"/"},r.exports.createElement("h2",null,"Enoch Chau"))),r.exports.createElement(oe,{monospace:!0},r.exports.createElement(s,{to:"/projects"},r.exports.createElement("h2",null,"Projects")),r.exports.createElement(s,{to:"/about"},r.exports.createElement("h2",null,"About")))),ae=({children:e})=>r.exports.createElement(r.exports.Fragment,null,r.exports.createElement(re,null),e,r.exports.createElement(ee,null)),ie=()=>r.exports.createElement(l,{theme:h},r.exports.createElement(g,null),r.exports.createElement(c,null,r.exports.createElement(p,null,r.exports.createElement(m,{path:"/about"},r.exports.createElement(ae,null,r.exports.createElement(z,null))),r.exports.createElement(m,{path:"/projects"},r.exports.createElement(ae,null,r.exports.createElement(R,null))),r.exports.createElement(m,{path:"/"},r.exports.createElement(K,null)))));d.render(r.exports.createElement(ie,null),document.getElementById("root"));
+`,re=()=>r.exports.createElement(te,{id:"header"},r.exports.createElement(oe,null,r.exports.createElement(n,{to:"/"},r.exports.createElement("h2",null,"Enoch Chau"))),r.exports.createElement(oe,{monospace:!0},r.exports.createElement(n,{to:"/projects"},r.exports.createElement("h2",null,"Projects")),r.exports.createElement(n,{to:"/about"},r.exports.createElement("h2",null,"About")))),ae=({children:e})=>r.exports.createElement(r.exports.Fragment,null,r.exports.createElement(re,null),e,r.exports.createElement(ee,null)),ie=()=>r.exports.createElement(l,{theme:h},r.exports.createElement(g,null),r.exports.createElement(c,null,r.exports.createElement(p,null,r.exports.createElement(m,{path:"/about"},r.exports.createElement(ae,null,r.exports.createElement(z,null))),r.exports.createElement(m,{path:"/projects"},r.exports.createElement(ae,null,r.exports.createElement(R,null))),r.exports.createElement(m,{path:"/"},r.exports.createElement(K,null)))));d.render(r.exports.createElement(ie,null),document.getElementById("root"));
