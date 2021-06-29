@@ -112,7 +112,7 @@ export const LandingPage = () => {
           .
         </p>
       </TextContainer>
-      <Image src="public/me2.png" alt="enoch" />
+      <Image src="me2.png" alt="enoch" />
       <Monospace>San Francisco, CA, 2021</Monospace>
     </Center>
   );
