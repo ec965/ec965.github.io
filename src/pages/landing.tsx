@@ -97,7 +97,7 @@ export const LandingPage = () => {
             GoSite
           </AfterLink>{" "}
           building software to help small businesses. I used to keep track of{" "}
-          <AfterRRLink to="/projects">my projects</AfterRRLink>, but I keep
+          <AfterRRLink to="/projects">my projects</AfterRRLink>, but now I keep
           everything on{" "}
           <AfterLink title="Github" href="https://github.com/ec965">
             Github
