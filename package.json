@@ -30,7 +30,7 @@
     "type": "tsc",
     "lint-type": "npm-run-all --parallel lint type",
     "prepare": "husky install",
-    "img": "img-diff -o public/pics -i public/rawpics -r"
+    "img": "img-diff -o public/pics -i public/rawpics -r -w 600 -b \"#f8f8f8\""
   },
   "eslintConfig": {
     "extends": [

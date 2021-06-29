@@ -3,10 +3,10 @@ import * as React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, mainTheme } from "./styles/theme";
 // components
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
 import { ProjectPage } from "./pages/projects";
 import { AboutPage } from "./pages/about";
+import { LandingPage } from "./pages/landing";
+import { Layout } from "./components/layout";
 // router
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -16,16 +16,21 @@ export const App = () => {
     <ThemeProvider theme={mainTheme}>
       <GlobalStyle />
       <Router>
-        <Header />
         <Switch>
           <Route path="/about">
-            <AboutPage />
+            <Layout>
+              <AboutPage />
+            </Layout>
+          </Route>
+          <Route path="/projects">
+            <Layout>
+              <ProjectPage />
+            </Layout>
           </Route>
           <Route path="/">
-            <ProjectPage />
+            <LandingPage />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </ThemeProvider>
   );

@@ -42,10 +42,12 @@ export const Header = () => {
   return (
     <HeaderMain id="header">
       <HeaderGroup>
-        <h2>Enoch Chau</h2>
+        <Link to="/">
+          <h2>Enoch Chau</h2>
+        </Link>
       </HeaderGroup>
       <HeaderGroup monospace>
-        <Link to="/">
+        <Link to="/projects">
           <h2>Projects</h2>
         </Link>
         <Link to="/about">

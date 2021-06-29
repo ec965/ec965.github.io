@@ -3,8 +3,8 @@ import { DefaultTheme, createGlobalStyle } from "styled-components";
 export const mainTheme: DefaultTheme = {
   lrSpacing: "10vw",
   colors: {
-    main: "#000",
-    secondary: "#FFF",
+    main: "#2c2c2c",
+    secondary: "#f8f8f8",
     highlight: "#cf4868",
     grey: "#808080",
   },
@@ -41,10 +41,11 @@ export const GlobalStyle = createGlobalStyle`
     padding-left: ${(props) => props.theme.lrSpacing};
     padding-right: ${(props) => props.theme.lrSpacing};
   }
-  p, a {
+  p {
     font-size: ${(props) => props.theme.fontSize.p};
   }
   a {  
+    position: relative; 
     color: ${(props) => props.theme.colors.highlight};
     text-decoration: none;
     transition: ${(props) => props.theme.hover.time};
@@ -53,6 +54,7 @@ export const GlobalStyle = createGlobalStyle`
       transition: ${(props) => props.theme.hover.time};
       opacity: ${(props) => props.theme.hover.opacity};
     }
+
   }
   h1, h2, h3 {
     font-weight: 600;

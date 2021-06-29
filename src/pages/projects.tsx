@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 import { Post, PostContainer } from "../components/post";
 import { postData } from "./data";
 
