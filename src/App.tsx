@@ -16,21 +16,19 @@ export const App = () => {
     <ThemeProvider theme={mainTheme}>
       <GlobalStyle />
       <Router>
-        <Switch>
-          <Route path="/about">
-            <Layout>
+        <Layout>
+          <Switch>
+            {/* <Route path="/about">
               <AboutPage />
-            </Layout>
-          </Route>
-          <Route path="/projects">
-            <Layout>
+            </Route> */}
+            <Route path="/projects">
               <ProjectPage />
-            </Layout>
-          </Route>
-          <Route path="/">
-            <LandingPage />
-          </Route>
-        </Switch>
+            </Route>
+            <Route path="/">
+              <LandingPage />
+            </Route>
+          </Switch>
+        </Layout>
       </Router>
     </ThemeProvider>
   );

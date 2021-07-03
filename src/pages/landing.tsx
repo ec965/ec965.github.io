@@ -17,10 +17,8 @@ const mb = css`
 const Center = styled.article`
   ${flexCenterMixin}
   flex-direction: column;
-  padding-top: 10vh;
-  @media ${(props) => props.theme.screenSize.mobile} {
-    padding-top: 20px;
-  }
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const Image = styled.img`
@@ -91,12 +89,12 @@ export const LandingPage = () => {
           </AfterLink>
         </h2>
         <p>
-          I&apos;m interested in electronics and web development. Right now, I
-          work at{" "}
+          I&apos;m interested in electronics and web development. Previously, I
+          worked at{" "}
           <AfterLink title="gosite.com" href="https://www.gosite.com">
             GoSite
           </AfterLink>{" "}
-          building software to help small businesses. I used to keep track of{" "}
+          as a full stack software engineer. I used to keep track of{" "}
           <AfterRRLink to="/projects">my projects</AfterRRLink>, but now I keep
           everything on{" "}
           <AfterLink title="Github" href="https://github.com/ec965">
@@ -111,6 +109,11 @@ export const LandingPage = () => {
           </AfterLink>
           .
         </p>
+        <h3>
+          <AfterLink title="resume" href="./public_resume.pdf">
+            Resume
+          </AfterLink>
+        </h3>
       </TextContainer>
       <Image src="me2.png" alt="enoch" />
       <Monospace>San Francisco, CA, 2021</Monospace>

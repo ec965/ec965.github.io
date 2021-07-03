@@ -25,7 +25,7 @@ export const AboutPage = () => {
             },
           ],
           media: [{ src: "me.JPG", alt: "Red Rock, Las Vegas, NV 2019" }],
-          body: "I'm interested in electronics and web development. Right now, I work at GoSite building software to help small buisnesses. When I'm not in front of the computer, I like to cook, climb rocks, and mess with keyboards.",
+          body: "I'm interested in electronics and web development. Previously, I worked at GoSite building software to help small buisnesses. When I'm not in front of the computer, I like to cook, climb rocks, and mess with keyboards.",
         }}
       />
     </PostContainer>
