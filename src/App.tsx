@@ -4,7 +4,6 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle, mainTheme } from "./styles/theme";
 // components
 import { ProjectPage } from "./pages/projects";
-import { AboutPage } from "./pages/about";
 import { LandingPage } from "./pages/landing";
 import { Layout } from "./components/layout";
 // router
@@ -18,9 +17,6 @@ export const App = () => {
       <Router>
         <Layout>
           <Switch>
-            {/* <Route path="/about">
-              <AboutPage />
-            </Route> */}
             <Route path="/projects">
               <ProjectPage />
             </Route>

@@ -3,6 +3,33 @@ import { PostData } from "../types";
 
 export const postData: PostData[] = [
   {
+    title: "GIS",
+    subtitle: "April 2021 - May 2021",
+    links: [{ text: "GitHub", href: "https://github.com/ec965/GIS" }],
+    media: [
+      {
+        src: "https://github.com/ec965/GIS/raw/master/pics/built.jpg",
+        alt: "Built keyboard",
+      },
+      {
+        src: "https://github.com/ec965/GIS/raw/master/pics/front.jpg",
+        alt: "PCB front",
+      },
+      {
+        src: "https://github.com/ec965/GIS/raw/master/pics/back.jpg",
+        alt: "PCB back",
+      },
+    ],
+    body: (
+      <React.Fragment>
+        GIS is a split keyboard that uses low profile choc switches. The key
+        layout draws inspiration from the{" "}
+        <a href="https://github.com/josefadamcik/SofleKeyboard">Sofle</a>{" "}
+        keyboard.
+      </React.Fragment>
+    ),
+  },
+  {
     title: "Mosaic",
     subtitle: "January 2021 - February 2021",
     links: [

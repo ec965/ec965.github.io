@@ -94,9 +94,9 @@ export const LandingPage = () => {
           <AfterLink title="gosite.com" href="https://www.gosite.com">
             GoSite
           </AfterLink>{" "}
-          as a full stack software engineer. I used to keep track of{" "}
-          <AfterRRLink to="/projects">my projects</AfterRRLink>, but now I keep
-          everything on{" "}
+          as a full stack software engineer. I keep track of{" "}
+          <AfterRRLink to="/projects">my projects</AfterRRLink> on this website
+          but my most recent work will be on{" "}
           <AfterLink title="Github" href="https://github.com/ec965">
             Github
           </AfterLink>
